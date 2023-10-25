@@ -19,6 +19,11 @@ button {
   border: none;
 }
 
+input {
+  border: none;
+  outline: none;
+}
+
 .container {
   max-width: 1920px;
   margin: 0 auto;
@@ -74,4 +79,8 @@ button {
   color: #000;
   font-size: 16px;
   font-weight: 550;
+}
+
+.bot-right-nav .bot-nav-iconText .rIcons {
+  font-size: 23px;
 }
