@@ -81,6 +81,71 @@ input {
   font-weight: 550;
 }
 
-.bot-right-nav .bot-nav-iconText .rIcons {
+.bot-nav-iconText .rIcons {
   font-size: 23px;
+}
+
+.bot-right-nav {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.bot-right-nav .bot-nav-iconText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottom-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 27px 150px;
+}
+
+.nav-search-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 37%;
+  padding: 3px;
+  border-radius: 8px;
+  background: #186fd4;
+}
+
+.nav-search-input button {
+  padding: 13px 21px;
+  border-radius: 8px;
+  background: #186fd4;
+
+  color: #fff;
+  font-size: 20px;
+}
+
+.nav-search-input input {
+  padding: 16px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.nav-catalog-btn button {
+  display: flex;
+  padding: 16px 29px;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  border-radius: 8px;
+  background: #186fd4;
+
+  /*font style*/
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px; /* 138.462% */
+  text-transform: uppercase;
+}
+
+.nav-catalog-btn button .btn-icon{
+  font-size: 23px; 
 }
