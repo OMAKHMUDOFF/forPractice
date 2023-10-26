@@ -17,6 +17,7 @@ a {
 }
 button {
   border: none;
+  cursor: pointer;
 }
 
 input {
@@ -152,9 +153,162 @@ input {
 
 .swiper-button-next {
   opacity: 1 !important;
-  right: 0 !important`;
+  right: 0 !important;
+}
+
+.homePage {
+  padding: 28px 150px 110px;
 }
 
 .mainSliders-Swiper {
-  padding: 0 150px;
+  border-radius: 10px;
+  background: linear-gradient(
+      270deg,
+      rgba(238, 245, 252, 0.95) 8.96%,
+      rgba(205, 219, 234, 0) 55.04%
+    ),
+    url("../assets/img/mainSliderIMG/slider1.png"),
+    lightgray -418.357px -175.743px / 186.048% 166.798% no-repeat,
+    url("../assets/img/mainSliderIMG/slider2.png"),
+    lightgray -465.556px 0px / 194.138% 100% no-repeat, #eef2f9;
+}
+
+.swiper-slide {
+  position: relative;
+}
+
+.slider-text-btn {
+  z-index: 1;
+  position: absolute;
+  bottom: 122px;
+  left: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.slider-text-btn h1 {
+  color: #2c333d;
+  width: 45%;
+  /* H1 */
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 54px; /* 112.5% */
+}
+.slider-text-btn p {
+  width: 53%;
+  color: #2c333d;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27px; /* 158.824% */
+}
+
+.gtp-btn button {
+  padding: 24px 27px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #011120;
+
+  /*btn font style */
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 17px; /* 130.769% */
+  text-transform: uppercase;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  width: 60px !important;
+  height: 60px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-family: swiper-icons;
+  color: #2c333d;
+  background: #fff;
+  font-size: 20px !important;
+
+  position: absolute;
+}
+
+.information-home {
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.information-home div {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.information-home .i-icons {
+  font-size: 18px;
+  color: #117fe3;
+}
+
+.information-home p {
+  color: #3b3c3f;
+  font-size: 15px;
+  font-weight: 550;
+  line-height: 19px; /* 126.667% */
+}
+
+.information-home span {
+  display: inline-block;
+  width: 1px;
+  height: 23px;
+  background: #e7e7e8;
+}
+
+.home-catalog-cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(8, calc(100% / 8 - 20px));
+}
+
+.home-catalog-cards > div:not(.go-to-catalog) {
+  cursor: pointer;
+  border-radius: 15px;
+  background: #f3f4f5;
+  padding-inline: 10px;
+  display: flex;
+  width: 185px;
+  height: 197px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.go-to-catalog {
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 15px;
+  border: 2px solid #f6f7f9;
+  gap: 30px;
+  padding-inline: 20px;
+}
+
+.go-to-catalog .chevron-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #f3f4f5;
+  color: gray;
 }
