@@ -146,6 +146,15 @@ input {
   text-transform: uppercase;
 }
 
-.nav-catalog-btn button .btn-icon{
-  font-size: 23px; 
+.nav-catalog-btn button .btn-icon {
+  font-size: 23px;
+}
+
+.swiper-button-next {
+  opacity: 1 !important;
+  right: 0 !important`;
+}
+
+.mainSliders-Swiper {
+  padding: 0 150px;
 }

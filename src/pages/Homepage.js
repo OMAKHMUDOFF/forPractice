@@ -1,48 +1,35 @@
 import React from "react";
-import Slider from "react-slick";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
+import slider1 from "../assets/img/mainSliderIMG/slider1.png";
+import slider2 from "../assets/img/mainSliderIMG/slider2.png";
 
-export default function HomePage() {
-  function SampleNextArrow(props) {
-    const { className, onClick } = props;
-    return <div className={className} onClick={onClick} />;
-  }
-
-  function SamplePrevArrow(props) {
-    const { className, onClick } = props;
-    return <div className={className} onClick={onClick} />;
-  }
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-  };
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+function Homepage() {
   return (
-    <div>
-      <h2> Single Item</h2>
-      <Slider {...settings}>
-        <div>
-          <h3>1</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-      </Slider>
+    <div className="mainSliders-Swiper">
+      <Swiper
+        modules={[Navigation, Pagination, A11y, Autoplay]}
+        spaceBetween={50}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+      >
+        <SwiperSlide>
+          <img src={slider1} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slider2} alt="" />
+        </SwiperSlide>
+      </Swiper>
     </div>
   );
 }
+export default Homepage;
