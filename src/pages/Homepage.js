@@ -1,10 +1,13 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
-import { FiChevronRight } from "react-icons/fi";
+import { HiOutlineShoppingCart } from "react-icons/hi";
+import { FiChevronRight, FiBarChart2 } from "react-icons/fi";
 import { TbCreditCard, TbBoxSeam } from "react-icons/tb";
 import { RiListCheck2 } from "react-icons/ri";
 import { CiPercent } from "react-icons/ci";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -154,11 +157,18 @@ function Homepage() {
       </div>
       <div className="bestSellers">
         <div className="bSeller-label">
-          <h1>Хиты продаж</h1>
+          <h2>Хиты продаж</h2>
           <div className="bSeller-category-btns">
             {categories.map((elem, i) => {
               return (
-                <button onClick={() => dispatch(chooseCategory(elem))} key={i}>
+                <button
+                  onClick={() => dispatch(chooseCategory(elem))}
+                  key={i}
+                  style={{
+                    background: elem === setCategory ? "#F6F8FB" : "#fff",
+                    color: elem === setCategory ? "#117fe3" : "#5b5b5c",
+                  }}
+                >
                   {elem == "" ? "Все товары" : elem}
                 </button>
               );
@@ -166,35 +176,108 @@ function Homepage() {
           </div>
         </div>
         <div className="bSeller-prod-cards">
-          <Swiper spaceBetween={20} slidesPerView={4} loop={true}>
-            {bestSellers.map((elem, i) => {
-              return (
-                <SwiperSlide key={elem.id}>
-                  <div className="bSeller-card-img">
-                    <img src={elem.img} alt={elem.prodName} />
-                  </div>
-                  <div className="bSeller-articul">
-                    <span>{elem.art}</span>
-                  </div>
-                  <div className="bSeller-prod-name">
-                    <h3>{elem.prodName}</h3>
-                  </div>
-                  {elem.disc > 0 ? (
-                    <div className="bSeller-price">
-                      <span>
-                        <del>{elem.price}₽</del>
-                        {parseInt(elem.price - (elem.price / 100) * elem.disc)}₽
-                      </span>
+          <Swiper
+            modules={[Navigation]}
+            spaceBetween={20}
+            slidesPerView={4}
+            navigation
+            loop={true}
+          >
+            {bestSellers
+              .filter((elem) => {
+                if (
+                  elem.category
+                    .toLowerCase()
+                    .trim()
+                    .includes(setCategory.toLowerCase().trim())
+                ) {
+                  return elem;
+                } else {
+                  return false;
+                }
+              })
+              .map((elem) => {
+                return (
+                  <SwiperSlide key={elem.id}>
+                    <div className="btitle-img">
+                      <div className="bestTitle">
+                        <span>Хит</span>
+                      </div>
+                      <div className="bSeller-card-img">
+                        <img src={elem.img} alt={elem.prodName} />
+                      </div>
                     </div>
-                  ) : (
-                    <div className="bSeller-price">
-                      <span>{elem.price}₽</span>
+                    <div className="bSeller-card-bottom">
+                      <div className="bSeller-articul">
+                        <span>{elem.art}</span>
+                      </div>
+                      <div className="bSeller-prod-name">
+                        <h4>{elem.prodName}</h4>
+                      </div>
+                      {elem.disc > 0 ? (
+                        <div className="bSeller-price">
+                          <span>
+                            <del>{elem.price} ₽</del>
+                            {parseInt(
+                              elem.price - (elem.price / 100) * elem.disc
+                            )}{" "}
+                            ₽
+                          </span>
+                          <div className="bSeller-disc">
+                            <span>-{elem.disc}%</span>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="bSeller-price">
+                          <span>{elem.price} ₽</span>
+                        </div>
+                      )}
+                      <div className="bSeller-card-btns">
+                        <div className="cart-btn">
+                          <button>
+                            <HiOutlineShoppingCart />
+                            Купить
+                          </button>
+                        </div>
+                        <div className="like-cart-btn">
+                          <button>
+                            {elem.like ? <AiFillHeart /> : <AiOutlineHeart />}
+                          </button>
+                          <button>
+                            <FiBarChart2 />
+                          </button>
+                        </div>
+                      </div>
                     </div>
-                  )}
-                </SwiperSlide>
-              );
-            })}
+                  </SwiperSlide>
+                );
+              })}
           </Swiper>
+          <div className="hurry-up-buy">
+            <div className="hurry-disc">
+              <span>Успейте купить по скидке</span>
+              <span>-{bestSellers[4].disc}%</span>
+            </div>
+            <div className="hurry-img">
+              <img src={bestSellers[4].img} alt="" />
+            </div>
+            <div className="hurry-title">{bestSellers[4].prodName}</div>
+            <div className="hurry-price">
+              <span>
+                <del>{bestSellers[4].price}₽</del>
+                {parseInt(
+                  bestSellers[4].price -
+                    (bestSellers[4].price / 100) * bestSellers[4].disc
+                )}
+              </span>
+            </div>
+            <div className="hurry-cart">
+              <button>
+                <HiOutlineShoppingCart />
+                Добавить в корзину
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
