@@ -23,7 +23,13 @@ import drell from "../../assets/img/homePage_IMG/drell_gladiator.png";
 import circular from "../../assets/img/homePage_IMG/circular.png";
 import vodno_kley from "../../assets/img/homePage_IMG/vodno_kley.png";
 
+import news1 from "../../assets/img/homePage_IMG/news1.png";
+import news2 from "../../assets/img/homePage_IMG/news2.png";
+import news3 from "../../assets/img/homePage_IMG/news3.png";
+import news4 from "../../assets/img/homePage_IMG/news4.png";
+
 import { HomeTypes } from "../action/ActionTypes";
+
 let HomeData = {
   discInfo: [
     {
@@ -192,11 +198,41 @@ let HomeData = {
       prodName: "Водно-дисперсионный клей Cob",
       price: 15999,
       like: false,
-      disc: 12,
+      disc: 15,
       category: "Инструменты",
       img: vodno_kley,
       sale: false,
       new: false,
+    },
+  ],
+  news: [
+    {
+      img: news1,
+      title: "Масштабное обновление каталога инструментов",
+      description:
+        "С радостью сообщаем вам о крупном пополнении нашего каталога инструментов.",
+      date: "5 августа 2023",
+    },
+    {
+      img: news2,
+      title: "Масштабное обновление каталога инструментов",
+      description:
+        "С радостью сообщаем вам о крупном пополнении нашего каталога инструментов.",
+      date: "5 августа 2023",
+    },
+    {
+      img: news3,
+      title: "Масштабное обновление каталога инструментов",
+      description:
+        "С радостью сообщаем вам о крупном пополнении нашего каталога инструментов.",
+      date: "5 августа 2023",
+    },
+    {
+      img: news4,
+      title: "Масштабное обновление каталога инструментов",
+      description:
+        "С радостью сообщаем вам о крупном пополнении нашего каталога инструментов.",
+      date: "5 августа 2023",
     },
   ],
   categories: ["", "Инструменты", "Сантехника", "Для дома", "Для сада"],

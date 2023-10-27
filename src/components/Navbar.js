@@ -1,35 +1,16 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { HiOutlineBars2 } from "react-icons/hi2";
-import { HiOutlineShoppingCart } from "react-icons/hi";
-import { FiBarChart2, FiSearch } from "react-icons/fi";
-import { AiOutlineGift, AiOutlineHeart } from "react-icons/ai";
-import { TbUserSquareRounded } from "react-icons/tb";
+
+import { FiSearch } from "react-icons/fi";
+
 import logo from "../assets/img/homePage_IMG/logo 1.png";
+import { useSelector } from "react-redux";
 
 function Navbar() {
-  let botRN = [
-    {
-      icon: <AiOutlineGift />,
-      title: "Все Акции",
-    },
-    {
-      icon: <TbUserSquareRounded />,
-      title: "Войти",
-    },
-    {
-      icon: <FiBarChart2 />,
-      title: "Сравнение",
-    },
-    {
-      icon: <AiOutlineHeart />,
-      title: "Избранное",
-    },
-    {
-      icon: <HiOutlineShoppingCart />,
-      title: "Корзина",
-    },
-  ];
+  let state = useSelector((state) => state.NavbarRedux);
+  let { botRN } = state;
+
   return (
     <>
       <nav>
@@ -37,7 +18,7 @@ function Navbar() {
           <div className="nav-links">
             <ul>
               <li>
-                <NavLink to="/about">О компании</NavLink>
+                <NavLink to="/about-company">О компании</NavLink>
               </li>
               <li>
                 <NavLink to="/payment">Оплата</NavLink>

@@ -21,9 +21,11 @@ import drell from "../assets/img/homePage_IMG/image 3.png";
 import boards from "../assets/img/homePage_IMG/klipartz 1.png";
 import const_materials from "../assets/img/homePage_IMG/pngegg 1.png";
 import sauna_bath from "../assets/img/homePage_IMG/image 13.png";
+import repairSet from "../assets/img/homePage_IMG/repairSetTools.png";
 
 import { useDispatch, useSelector } from "react-redux";
 import { chooseCategory1 } from "../redux/action/HomeAction";
+import { NavLink } from "react-router-dom";
 
 function Homepage() {
   let state = useSelector((state) => state.HomeRedux);
@@ -36,6 +38,7 @@ function Homepage() {
     popularBrands,
     setBOffer,
     bestOffers,
+    news,
   } = state;
 
   return (
@@ -391,6 +394,92 @@ function Homepage() {
                         <FiBarChart2 />
                       </button>
                     </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div className="about-store">
+        <div className="left-about">
+          <div className="about-texts">
+            <div className="about-title">
+              <h2>О нашем магазине</h2>
+            </div>
+            <div className="about-text">
+              <p>
+                Цель и главная задача компании- создать сервис, который не
+                ограничится продажей строительных и отделочных материалов, а
+                будет решать задачи и трудности, с которыми сталкиваются люди во
+                время ремонта.
+              </p>
+            </div>
+            <div className="about-information">
+              <div className="first">
+                <h4>
+                  17 805,3 м<sup>2</sup>
+                </h4>
+                <p>торговых и складских помещений</p>
+              </div>
+              <div className="second">
+                <h4>50 000+</h4>
+                <p>наименований товара</p>
+              </div>
+              <div className="third">
+                <h4>2 500+</h4>
+                <p>постоянных клиентов</p>
+              </div>
+              <div className="fourth">
+                <h4>440</h4>
+                <p>опытных сотрудников</p>
+              </div>
+            </div>
+            <div className="about-sec-text">
+              <p>
+                Уже второе десятилетие мы готовы воплотить в реальность Вашу
+                мечту о красивом, комфортабельном доме, благоустроенном
+                современном офисе, уютной теплой даче, помочь реализовать любые
+                строительные и дизайнерские фантазии и с минимальными затратами
+                времени и денежных средств.
+              </p>
+            </div>
+          </div>
+          <div className="more-about-btn">
+            <NavLink to={"/about-company"}>
+              <button>
+                Подробнее о компании <FiChevronRight />
+              </button>
+            </NavLink>
+          </div>
+        </div>
+        <div className="right-about-img">
+          <img src={repairSet} alt="" />
+        </div>
+      </div>
+      <div className="last-news">
+        <div className="news-title-btn">
+          <h2>Последние новости</h2>
+          <NavLink to={"/news"}>
+            <button>Больше новостей</button>
+          </NavLink>
+        </div>
+        <div className="news-cards">
+          {news.map((elem, i) => {
+            return (
+              <div className="news-card" key={i}>
+                <div className="news-img">
+                  <img src={elem.img} alt="news_img" />
+                </div>
+                <div className="news-text">
+                  <div className="news-title">
+                    <h3>{elem.title}</h3>
+                  </div>
+                  <div className="news-description">
+                    <p>{elem.description}</p>
+                  </div>
+                  <div className="news-date">
+                    <span>{elem.date}</span>
                   </div>
                 </div>
               </div>

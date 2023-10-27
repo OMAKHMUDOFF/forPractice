@@ -4,4 +4,8 @@ let HomeTypes = {
   category: "category",
 };
 
-export { HomeTypes };
+let NavbarTypes = {
+  catalog: "catalog",
+};
+
+export { HomeTypes, NavbarTypes };
