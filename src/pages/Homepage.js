@@ -18,49 +18,29 @@ import drell from "../assets/img/homePage_IMG/image 3.png";
 import boards from "../assets/img/homePage_IMG/klipartz 1.png";
 import const_materials from "../assets/img/homePage_IMG/pngegg 1.png";
 import sauna_bath from "../assets/img/homePage_IMG/image 13.png";
-import hardware from "../assets/img/homePage_IMG/Rectangle 31.png";
-import varnishes from "../assets/img/homePage_IMG/Rectangle 31 (1).png";
-import coverings from "../assets/img/homePage_IMG/Rectangle 31 (2).png";
-import heating from "../assets/img/homePage_IMG/Rectangle 31 (3).png";
+
+import { useDispatch, useSelector } from "react-redux";
+import { chooseCategory } from "../redux/action/HomeAction";
 
 function Homepage() {
-  let discInfo = [
-    {
-      img: hardware,
-      title: "Метизные изделия",
-      disc: 15,
-    },
-    {
-      img: varnishes,
-      title: "Лакокрасочные материалы",
-      disc: 30,
-    },
-    {
-      img: coverings,
-      title: "Наполные покрытия",
-      disc: 25,
-    },
-    {
-      img: heating,
-      title: "Все для отопления",
-      disc: 30,
-    },
-  ];
+  let state = useSelector((state) => state.HomeRedux);
+  let dispatch = useDispatch();
+  let { discInfo, categories, setCategory, bestSellers } = state;
 
   return (
     <div className="homePage">
       <div className="mainSliders-Swiper">
         <Swiper
           modules={[Navigation, Pagination, A11y, Autoplay]}
-          spaceBetween={50}
+          spaceBetween={0}
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
           loop={true}
-          // autoplay={{
-          //   delay: 2500,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
         >
           <SwiperSlide>
             <img src={slider1} alt="first slider" />
@@ -157,6 +137,64 @@ function Homepage() {
             <FiChevronRight />
           </div>
           <span>Перейти в каталог</span>
+        </div>
+      </div>
+      <div className="discounts-info">
+        {discInfo.map((item, i) => {
+          return (
+            <div className="disc-info-card" key={item.id}>
+              <img src={item.img} alt="bg" />
+              <div className="disc-text">
+                <span>{item.title}</span>
+                <span>до -{item.disc}%</span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="bestSellers">
+        <div className="bSeller-label">
+          <h1>Хиты продаж</h1>
+          <div className="bSeller-category-btns">
+            {categories.map((elem, i) => {
+              return (
+                <button onClick={() => dispatch(chooseCategory(elem))} key={i}>
+                  {elem == "" ? "Все товары" : elem}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+        <div className="bSeller-prod-cards">
+          <Swiper spaceBetween={20} slidesPerView={4} loop={true}>
+            {bestSellers.map((elem, i) => {
+              return (
+                <SwiperSlide key={elem.id}>
+                  <div className="bSeller-card-img">
+                    <img src={elem.img} alt={elem.prodName} />
+                  </div>
+                  <div className="bSeller-articul">
+                    <span>{elem.art}</span>
+                  </div>
+                  <div className="bSeller-prod-name">
+                    <h3>{elem.prodName}</h3>
+                  </div>
+                  {elem.disc > 0 ? (
+                    <div className="bSeller-price">
+                      <span>
+                        <del>{elem.price}₽</del>
+                        {parseInt(elem.price - (elem.price / 100) * elem.disc)}₽
+                      </span>
+                    </div>
+                  ) : (
+                    <div className="bSeller-price">
+                      <span>{elem.price}₽</span>
+                    </div>
+                  )}
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
       </div>
     </div>

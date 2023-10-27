@@ -312,3 +312,43 @@ input {
   background: #f3f4f5;
   color: gray;
 }
+
+.discounts-info {
+  padding: 50px 0;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, calc(100% / 4 - 20px));
+}
+
+.disc-info-card {
+  position: relative;
+}
+
+.disc-text {
+  top: 43px;
+  left: 36px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.disc-text span:first-child {
+  display: inline-block;
+  color: #2c333d;
+  font-size: 22px;
+  font-weight: 550;
+  line-height: 26px;
+}
+.disc-text span:last-child {
+  padding: 6px 8px;
+  color: #fff;
+  border-radius: 6px;
+  background: #011120;
+  width: 73px;
+
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px; /* 135.714% */
+}
