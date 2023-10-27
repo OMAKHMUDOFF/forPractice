@@ -8,6 +8,21 @@ import smesitel from "../../assets/img/homePage_IMG/smesitel.png";
 import leska from "../../assets/img/homePage_IMG/leska.png";
 import unitaz from "../../assets/img/homePage_IMG/unitaz.png";
 import kley from "../../assets/img/homePage_IMG/kley.png";
+
+import keramin from "../../assets/img/homePage_IMG/image 22.png";
+import electrolux from "../../assets/img/homePage_IMG/image 19.png";
+import bosch from "../../assets/img/homePage_IMG/image 18.png";
+import oasis from "../../assets/img/homePage_IMG/image 17.png";
+import kinplast from "../../assets/img/homePage_IMG/image 20.png";
+import ceresit from "../../assets/img/homePage_IMG/image 21.png";
+import bauproffe from "../../assets/img/homePage_IMG/image 23.png";
+
+import nabor from "../../assets/img/homePage_IMG/nabor.png";
+import termostat from "../../assets/img/homePage_IMG/termostat.png";
+import drell from "../../assets/img/homePage_IMG/drell_gladiator.png";
+import circular from "../../assets/img/homePage_IMG/circular.png";
+import vodno_kley from "../../assets/img/homePage_IMG/vodno_kley.png";
+
 import { HomeTypes } from "../action/ActionTypes";
 let HomeData = {
   discInfo: [
@@ -88,15 +103,111 @@ let HomeData = {
       img: kley,
     },
   ],
+  popularBrands: [
+    {
+      id: 1,
+      img: keramin,
+    },
+    {
+      id: 2,
+      img: electrolux,
+    },
+    {
+      id: 3,
+      img: bosch,
+    },
+    {
+      id: 4,
+      img: oasis,
+    },
+    {
+      id: 5,
+      img: kinplast,
+    },
+    {
+      id: 6,
+      img: ceresit,
+    },
+    {
+      id: 7,
+      img: bauproffe,
+    },
+    {
+      id: 8,
+      img: kinplast,
+    },
+  ],
+  bestOffers: [
+    {
+      id: 6,
+      art: "XJ89YHGO",
+      prodName: "Набор гравировальных насадок Nozzle-Tok",
+      price: 15999,
+      like: false,
+      disc: 15,
+      category: "Инструменты",
+      img: nabor,
+      sale: false,
+      new: false,
+    },
+    {
+      id: 7,
+      art: "XJ89YHGO",
+      prodName: "Термостат для душа Torso V-6000",
+      price: 1789,
+      like: false,
+      disc: 0,
+      category: "Сантехника",
+      img: termostat,
+      sale: true,
+      new: false,
+    },
+    {
+      id: 8,
+      art: "XJ89YHGO",
+      prodName: "Аккумуляторный шуруповерт «Гладиатор»",
+      price: 312,
+      like: false,
+      disc: 10,
+      category: "Для дома",
+      img: drell,
+      new: false,
+      sale: false,
+    },
+    {
+      id: 9,
+      art: "XJ89YHGO",
+      prodName: "Унитаз подвесной Aragio с двойным сливом",
+      price: 15999,
+      like: false,
+      disc: 12,
+      category: "Для дома",
+      img: circular,
+      sale: false,
+      new: true,
+    },
+    {
+      id: 10,
+      art: "XJ89YHGO",
+      prodName: "Водно-дисперсионный клей Cob",
+      price: 15999,
+      like: false,
+      disc: 12,
+      category: "Инструменты",
+      img: vodno_kley,
+      sale: false,
+      new: false,
+    },
+  ],
   categories: ["", "Инструменты", "Сантехника", "Для дома", "Для сада"],
-  setCategory: "",
+  setBSeller: "",
+  setBOffer: "",
 };
 
 export default function MainRedux(state = HomeData, { type, payload }) {
   switch (type) {
     case HomeTypes.category:
-      state = { ...state, setCategory: payload };
-      console.log(state.setCategory);
+      state = { ...state, setBSeller: payload };
       return state;
     default:
       return state;

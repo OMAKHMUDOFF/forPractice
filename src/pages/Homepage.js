@@ -23,12 +23,20 @@ import const_materials from "../assets/img/homePage_IMG/pngegg 1.png";
 import sauna_bath from "../assets/img/homePage_IMG/image 13.png";
 
 import { useDispatch, useSelector } from "react-redux";
-import { chooseCategory } from "../redux/action/HomeAction";
+import { chooseCategory1 } from "../redux/action/HomeAction";
 
 function Homepage() {
   let state = useSelector((state) => state.HomeRedux);
   let dispatch = useDispatch();
-  let { discInfo, categories, setCategory, bestSellers } = state;
+  let {
+    discInfo,
+    categories,
+    setBSeller,
+    bestSellers,
+    popularBrands,
+    setBOffer,
+    bestOffers,
+  } = state;
 
   return (
     <div className="homePage">
@@ -156,20 +164,20 @@ function Homepage() {
         })}
       </div>
       <div className="bestSellers">
-        <div className="bSeller-label">
+        <div className="total-label">
           <h2>Хиты продаж</h2>
-          <div className="bSeller-category-btns">
+          <div className="total-category-btns">
             {categories.map((elem, i) => {
               return (
                 <button
-                  onClick={() => dispatch(chooseCategory(elem))}
+                  onClick={() => dispatch(chooseCategory1(elem))}
                   key={i}
                   style={{
-                    background: elem === setCategory ? "#F6F8FB" : "#fff",
-                    color: elem === setCategory ? "#117fe3" : "#5b5b5c",
+                    background: elem === setBSeller ? "#F6F8FB" : "#fff",
+                    color: elem === setBSeller ? "#117fe3" : "#5b5b5c",
                   }}
                 >
-                  {elem == "" ? "Все товары" : elem}
+                  {elem === "" ? "Все товары" : elem}
                 </button>
               );
             })}
@@ -189,7 +197,7 @@ function Homepage() {
                   elem.category
                     .toLowerCase()
                     .trim()
-                    .includes(setCategory.toLowerCase().trim())
+                    .includes(setBSeller.toLowerCase().trim())
                 ) {
                   return elem;
                 } else {
@@ -258,18 +266,21 @@ function Homepage() {
               <span>Успейте купить по скидке</span>
               <span>-{bestSellers[4].disc}%</span>
             </div>
-            <div className="hurry-img">
-              <img src={bestSellers[4].img} alt="" />
-            </div>
-            <div className="hurry-title">{bestSellers[4].prodName}</div>
-            <div className="hurry-price">
-              <span>
-                <del>{bestSellers[4].price}₽</del>
-                {parseInt(
-                  bestSellers[4].price -
-                    (bestSellers[4].price / 100) * bestSellers[4].disc
-                )}
-              </span>
+            <div className="hurry-bot">
+              <div className="hurry-img">
+                <img src={bestSellers[4].img} alt="" />
+              </div>
+              <div className="hurry-title">{bestSellers[4].prodName}</div>
+              <div className="hurry-price">
+                <span>
+                  <del>{bestSellers[4].price} ₽</del>
+                  {parseInt(
+                    bestSellers[4].price -
+                      (bestSellers[4].price / 100) * bestSellers[4].disc
+                  )}{" "}
+                  ₽
+                </span>
+              </div>
             </div>
             <div className="hurry-cart">
               <button>
@@ -278,6 +289,113 @@ function Homepage() {
               </button>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="popular-brands">
+        <div className="popular-title">
+          <h2>Популярные бренды</h2>
+        </div>
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          spaceBetween={20}
+          slidesPerView={7}
+          navigation
+          loop={true}
+          autoplay={{
+            delay: 1000,
+          }}
+        >
+          {popularBrands.map((elem) => {
+            return (
+              <SwiperSlide key={elem.id}>
+                <img src={elem.img} alt="brands" />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
+      <div className="bestoffers">
+        <div className="total-label">
+          <h2>Лучшие предложения</h2>
+          <div className="total-category-btns">
+            {categories.map((elem, i) => {
+              return (
+                <button
+                  key={i}
+                  style={{
+                    background: elem === setBOffer ? "#F6F8FB" : "#fff",
+                    color: elem === setBOffer ? "#117fe3" : "#5b5b5c",
+                  }}
+                >
+                  {elem === "" ? "Все товары" : elem}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+        <div className="bestOffer-cards">
+          {bestOffers.map((elem) => {
+            return (
+              <div className="bestOffer-card" key={elem.id}>
+                <div className="sale-or-new">
+                  {elem.sale ? (
+                    <div className="sale-info">Распродажа</div>
+                  ) : elem.new ? (
+                    <div className="new-info">Новинка</div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                <div className="btitle-img">
+                  <div className="bOffer-card-img">
+                    <img src={elem.img} alt={elem.prodName} />
+                  </div>
+                </div>
+                <div className="bSeller-card-bottom">
+                  <div className="bSeller-articul">
+                    <span>{elem.art}</span>
+                  </div>
+                  <div className="bSeller-prod-name">
+                    <h4>{elem.prodName}</h4>
+                  </div>
+                  {elem.disc > 0 ? (
+                    <div className="bSeller-price">
+                      <span>
+                        <del>{elem.price} ₽</del>
+                        {parseInt(
+                          elem.price - (elem.price / 100) * elem.disc
+                        )}{" "}
+                        ₽
+                      </span>
+                      <div className="bSeller-disc">
+                        <span>-{elem.disc}%</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="bSeller-price">
+                      <span>{elem.price} ₽</span>
+                    </div>
+                  )}
+                  <div className="bSeller-card-btns">
+                    <div className="cart-btn">
+                      <button>
+                        <HiOutlineShoppingCart />
+                        Купить
+                      </button>
+                    </div>
+                    <div className="like-cart-btn">
+                      <button>
+                        {elem.like ? <AiFillHeart /> : <AiOutlineHeart />}
+                      </button>
+                      <button>
+                        <FiBarChart2 />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
