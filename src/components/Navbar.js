@@ -5,14 +5,18 @@ import { HiOutlineBars2 } from "react-icons/hi2";
 import { FiSearch } from "react-icons/fi";
 
 import logo from "../assets/img/homePage_IMG/logo 1.png";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { catalogOpen } from "../redux/action/NavbarAction";
+import CatalogWindow from "./CatalogWindow";
+import { AiOutlineClose } from "react-icons/ai";
 
 function Navbar() {
   let state = useSelector((state) => state.NavbarRedux);
-  let { botRN } = state;
+  let dispatch = useDispatch();
+  let { botRN, catalogIsOpen } = state;
 
   return (
-    <>
+    <div className="catalog-navbar">
       <nav>
         <div className="top-navbar">
           <div className="nav-links">
@@ -60,9 +64,12 @@ function Navbar() {
             <img src={logo} alt="logo" />
           </div>
           <div className="nav-catalog-btn">
-            <button>
+            <button
+              onClick={() => dispatch(catalogOpen())}
+              style={{ background: catalogIsOpen ? "#011120" : "#186fd4" }}
+            >
               <div className="btn-icon">
-                <HiOutlineBars2 />
+                {catalogIsOpen ? <AiOutlineClose /> : <HiOutlineBars2 />}
               </div>
               Каталог
             </button>
@@ -88,8 +95,9 @@ function Navbar() {
           </div>
         </div>
       </nav>
+      <CatalogWindow isOpen={catalogIsOpen} />
       <Outlet />
-    </>
+    </div>
   );
 }
 

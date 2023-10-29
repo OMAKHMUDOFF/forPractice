@@ -46,7 +46,7 @@ function Homepage() {
       <div className="mainSliders-Swiper">
         <Swiper
           modules={[Navigation, Pagination, A11y, Autoplay]}
-          spaceBetween={0}
+          spaceBetween={20}
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}

@@ -132,13 +132,13 @@ input {
 }
 
 .nav-catalog-btn button {
+  transition: 0.5s;
   display: flex;
   padding: 16px 29px;
   justify-content: center;
   align-items: center;
   gap: 17px;
   border-radius: 8px;
-  background: #186fd4;
 
   /*font style*/
   color: #fff;
@@ -149,7 +149,9 @@ input {
 }
 
 .nav-catalog-btn button .btn-icon {
+  transition: 0.4s;
   font-size: 23px;
+  color: #fff;
 }
 
 .swiper-button-next {
@@ -1137,4 +1139,45 @@ footer hr {
   font-weight: 400;
   line-height: 26px; /* 185.714% */
   text-decoration-line: underline;
+}
+
+.catalog-navbar {
+  position: relative;
+}
+
+.closedCatalogBar {
+  height: 0;
+  width: 100%;
+  display: none;
+}
+
+.openedCatalogBar {
+  width: 100%;
+  padding: 25px 150px;
+  z-index: 1000;
+  background: #f9fafb;
+  box-shadow: 0px 9px 15px 0px rgba(0, 0, 0, 0.09);
+  height: auto;
+  position: absolute;
+  display: block;
+}
+
+.catalog-win-cards {
+  display: grid;
+  grid-template-columns: repeat(4, calc(100% / 4 - 23px));
+  gap: 30px;
+}
+
+:is(.catalog-win-card, .mappedCatalog) li {
+  cursor: pointer;
+  padding: 15px 25px;
+  border-bottom: 1px solid #ebf2f6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.catalog-win-card,
+.mappedCatalog {
+  border-radius: 8px;
+  background: #fff;
 }
