@@ -1272,3 +1272,127 @@ footer hr {
   font-weight: 400;
   line-height: 20px; /* 133.333% */
 }
+
+.order-call-closed {
+  display: none;
+}
+.order-call-opened {
+  display: block;
+}
+
+.call-order-bg {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1111;
+  background: rgba(1, 17, 32, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-order-btn {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.close-order-btn button {
+  background: none;
+  color: #fff;
+  font-size: 32px;
+}
+
+.call-order-form form {
+  border-radius: 8px;
+  background: #ffffff;
+  display: flex;
+  width: 618px;
+  padding: 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.order-call-input-label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-call-input-label input {
+  padding: 25px 20px;
+  border-radius: 7px;
+  border: 1px solid #ebeef0;
+  background: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.07) inset;
+  font-size: 15px;
+}
+
+.order-call-input-label input::placeholder {
+  color: #adb1b7;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 11px; /* 73.333% */
+}
+
+.order-call-input-label label {
+  color: #011120;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 11px; /* 78.571% */
+}
+
+.order-call-input-label span {
+  color: #e52b0e;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 11px;
+}
+
+.agreement-checkbox input {
+  border-radius: 4px;
+  border: 1px solid #dfe0e2;
+  background: #fff;
+  width: 26px;
+  height: 26px;
+}
+
+.agreement-checkbox {
+  display: flex;
+  gap: 10px;
+}
+
+.agreement-checkbox p {
+  color: #696d70;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 21px; /* 161.538% */
+}
+
+.call-me-back {
+  width: 100%;
+}
+
+.order-call-input-label input::-webkit-outer-spin-button,
+.order-call-input-label input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.call-me-back button {
+  width: 100%;
+
+  padding: 25px 32px;
+  border-radius: 8px;
+  background: #186fd4;
+
+  /*button font style*/
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 17px; /* 130.769% */
+  text-transform: uppercase;
+}

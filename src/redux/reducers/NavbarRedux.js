@@ -1880,6 +1880,7 @@ let NavData = {
   ],
   mappedCatal: [],
   mappedTool: [],
+  orderCall: false,
 };
 
 export default function NavbarRedux(state = NavData, { type, payload }) {
@@ -1892,6 +1893,14 @@ export default function NavbarRedux(state = NavData, { type, payload }) {
       return state;
     case NavbarTypes.mapTools:
       state = { ...state, mappedTool: payload.toolsType };
+      return state;
+    case NavbarTypes.reqCall:
+      document.body.style.overflow = "hidden";
+      state = { ...state, orderCall: true };
+      return state;
+    case NavbarTypes.closeReqCall:
+      document.body.style.overflow = "scroll";
+      state = { ...state, orderCall: false };
       return state;
     default:
       return state;

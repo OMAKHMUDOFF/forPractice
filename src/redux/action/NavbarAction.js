@@ -19,4 +19,15 @@ function mappedTools(p) {
   };
 }
 
-export { catalogOpen, mappedCatalog, mappedTools };
+function orderCall() {
+  return {
+    type: NavbarTypes.reqCall,
+  };
+}
+function closeOrderCall() {
+  return {
+    type: NavbarTypes.closeReqCall,
+  };
+}
+
+export { catalogOpen, mappedCatalog, mappedTools, orderCall, closeOrderCall };

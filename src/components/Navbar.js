@@ -6,7 +6,7 @@ import { FiSearch } from "react-icons/fi";
 
 import logo from "../assets/img/homePage_IMG/logo 1.png";
 import { useDispatch, useSelector } from "react-redux";
-import { catalogOpen } from "../redux/action/NavbarAction";
+import { catalogOpen, orderCall } from "../redux/action/NavbarAction";
 import CatalogWindow from "./CatalogWindow";
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -55,7 +55,9 @@ function Navbar() {
               <a href="tel: 88004440065">8 800 444 00 65</a>
             </div>
             <div className="nav-order-btn">
-              <button>Заказать звонок</button>
+              <button onClick={() => dispatch(orderCall())}>
+                Заказать звонок
+              </button>
             </div>
           </div>
         </div>

@@ -26,6 +26,7 @@ import repairSet from "../assets/img/homePage_IMG/repairSetTools.png";
 import { useDispatch, useSelector } from "react-redux";
 import { chooseCategory1 } from "../redux/action/HomeAction";
 import { NavLink } from "react-router-dom";
+import CallOrder from "../components/CallOrder";
 
 function Homepage() {
   let state = useSelector((state) => state.HomeRedux);
@@ -43,6 +44,7 @@ function Homepage() {
 
   return (
     <div className="homePage">
+      <CallOrder />
       <div className="mainSliders-Swiper">
         <Swiper
           modules={[Navigation, Pagination, A11y, Autoplay]}
