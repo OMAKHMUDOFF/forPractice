@@ -1,12 +1,13 @@
 import { FiChevronRight } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 // import { NavLink } from "react-router-dom";
-import { mappedCatalog } from "../redux/action/NavbarAction";
+import { mappedCatalog, mappedTools } from "../redux/action/NavbarAction";
 
 function CatalogWindow({ isOpen }) {
   let state = useSelector((state) => state.NavbarRedux);
   let dispatch = useDispatch();
-  let { catalogArr, mappedCatal } = state;
+  let { catalogArr, mappedCatal, mappedTool } = state;
+
   return (
     <div className={isOpen ? "openedCatalogBar" : "closedCatalogBar"}>
       <div className="catalog-win-cards">
@@ -26,10 +27,32 @@ function CatalogWindow({ isOpen }) {
             <ul>
               {mappedCatal.map((elem) => {
                 return (
-                  <li key={elem.id}>
+                  <li key={elem.id} onClick={() => dispatch(mappedTools(elem))}>
                     {elem.title} <FiChevronRight />
                   </li>
                 );
+              })}
+            </ul>
+          </div>
+        ) : (
+          ""
+        )}
+        {mappedTool.length > 0 ? (
+          <div className="mappedTools">
+            <ul>
+              {mappedTool.slice(0, 13).map((elem, i) => {
+                return <li key={i}>{elem}</li>;
+              })}
+            </ul>
+          </div>
+        ) : (
+          ""
+        )}
+        {mappedTool.length > 0 ? (
+          <div className="mappedTools">
+            <ul>
+              {mappedTool.slice(13).map((elem, i) => {
+                return <li key={i}>{elem}</li>;
               })}
             </ul>
           </div>

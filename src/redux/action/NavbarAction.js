@@ -12,5 +12,11 @@ function mappedCatalog(p) {
     payload: p,
   };
 }
+function mappedTools(p) {
+  return {
+    type: NavbarTypes.mapTools,
+    payload: p,
+  };
+}
 
-export { catalogOpen, mappedCatalog };
+export { catalogOpen, mappedCatalog, mappedTools };
