@@ -365,10 +365,7 @@ function Homepage() {
                     <div className="bSeller-price">
                       <span>
                         <del>{elem.price} ₽</del>
-                        {parseInt(
-                          elem.price - (elem.price / 100) * elem.disc
-                        )}{" "}
-                        ₽
+                        {parseInt(elem.price - (elem.price / 100) * elem.disc)}₽
                       </span>
                       <div className="bSeller-disc">
                         <span>-{elem.disc}%</span>

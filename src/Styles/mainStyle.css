@@ -1175,9 +1175,100 @@ footer hr {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: #fff;
 }
 .catalog-win-card,
 .mappedCatalog {
   border-radius: 8px;
-  background: #fff;
+}
+
+.mappedTools ul {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mappedTools li {
+  cursor: pointer;
+}
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  padding: 0 150px 110px;
+}
+
+.error-title h1 {
+  color: #2c333d;
+
+  /* H1 */
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 54px; /* 112.5% */
+}
+
+.error-main {
+  margin: 0 auto;
+  width: 45%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 55px;
+}
+
+.error-desc p {
+  color: #535557;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px; /* 161.111% */
+}
+
+.back-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.back-btns a button {
+  border-radius: 8px;
+  padding: 25px 32px;
+}
+
+.back-btns a:first-child button {
+  background: #f6f8fb;
+  color: #117fe3;
+  font-size: 15px;
+  font-weight: 550;
+}
+
+.back-btns button:last-child {
+  padding: 25px 64px;
+  background: #186fd4;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.notFound .navigation {
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.notFound .navigation a:first-child {
+  color: #2c333d;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+}
+.notFound .navigation a:last-child {
+  color: #91969d;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
 }

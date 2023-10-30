@@ -7,6 +7,7 @@ let HomeTypes = {
 let NavbarTypes = {
   catalog: "catalog",
   mapCatalog: "mapCatalog",
+  mapTools: "mapTools",
 };
 
 export { HomeTypes, NavbarTypes };
