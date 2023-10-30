@@ -328,7 +328,6 @@ export default function NavbarRedux(state = NavData, { type, payload }) {
       return state;
     case NavbarTypes.mapCatalog:
       state = { ...state, mappedCatal: payload.toolsCategory };
-      console.log(state.mappedCatal);
       return state;
     default:
       return state;
