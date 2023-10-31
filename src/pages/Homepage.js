@@ -24,7 +24,7 @@ import sauna_bath from "../assets/img/homePage_IMG/image 13.png";
 import repairSet from "../assets/img/homePage_IMG/repairSetTools.png";
 
 import { useDispatch, useSelector } from "react-redux";
-import { chooseCategory1 } from "../redux/action/HomeAction";
+import { chooseCategory1, setLike } from "../redux/action/HomeAction";
 import { NavLink } from "react-router-dom";
 import CallOrder from "../components/CallOrder";
 
@@ -233,7 +233,7 @@ function Homepage() {
                             <del>{elem.price} ₽</del>
                             {parseInt(
                               elem.price - (elem.price / 100) * elem.disc
-                            )}{" "}
+                            )}
                             ₽
                           </span>
                           <div className="bSeller-disc">
@@ -253,7 +253,7 @@ function Homepage() {
                           </button>
                         </div>
                         <div className="like-cart-btn">
-                          <button>
+                          <button onClick={() => dispatch(setLike(elem))}>
                             {elem.like ? <AiFillHeart /> : <AiOutlineHeart />}
                           </button>
                           <button>
@@ -386,7 +386,7 @@ function Homepage() {
                       </button>
                     </div>
                     <div className="like-cart-btn">
-                      <button>
+                      <button onClick={() => dispatch(setLike(elem))}>
                         {elem.like ? <AiFillHeart /> : <AiOutlineHeart />}
                       </button>
                       <button>

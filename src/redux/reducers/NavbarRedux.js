@@ -9,22 +9,27 @@ let NavData = {
     {
       icon: <AiOutlineGift />,
       title: "Все Акции",
+      path: "/promotions",
     },
     {
       icon: <TbUserSquareRounded />,
       title: "Войти",
+      path: "/login",
     },
     {
       icon: <FiBarChart2 />,
       title: "Сравнение",
+      path: "/compare",
     },
     {
       icon: <AiOutlineHeart />,
       title: "Избранное",
+      path: "/favorites",
     },
     {
       icon: <HiOutlineShoppingCart />,
       title: "Корзина",
+      path: "/cart",
     },
   ],
   catalogIsOpen: false,
@@ -170,7 +175,7 @@ let NavData = {
         },
         {
           id: 6,
-          title: "Сварочное оборудование",
+          title: "Электроинструмент",
           toolsType: [
             "Вибротехника и комплектующие",
             "Генераторы и комплектующие",
@@ -338,7 +343,7 @@ let NavData = {
         },
         {
           id: 6,
-          title: "Сварочное оборудование",
+          title: "Электроинструмент",
           toolsType: [
             "Вибротехника и комплектующие",
             "Генераторы и комплектующие",
@@ -506,7 +511,7 @@ let NavData = {
         },
         {
           id: 6,
-          title: "Сварочное оборудование",
+          title: "Электроинструмент",
           toolsType: [
             "Вибротехника и комплектующие",
             "Генераторы и комплектующие",
@@ -674,7 +679,7 @@ let NavData = {
         },
         {
           id: 6,
-          title: "Сварочное оборудование",
+          title: "Электроинструмент",
           toolsType: [
             "Вибротехника и комплектующие",
             "Генераторы и комплектующие",
@@ -842,7 +847,7 @@ let NavData = {
         },
         {
           id: 6,
-          title: "Сварочное оборудование",
+          title: "Электроинструмент",
           toolsType: [
             "Вибротехника и комплектующие",
             "Генераторы и комплектующие",
@@ -1010,7 +1015,7 @@ let NavData = {
         },
         {
           id: 6,
-          title: "Сварочное оборудование",
+          title: "Электроинструмент",
           toolsType: [
             "Вибротехника и комплектующие",
             "Генераторы и комплектующие",
@@ -1178,7 +1183,7 @@ let NavData = {
         },
         {
           id: 6,
-          title: "Сварочное оборудование",
+          title: "Электроинструмент",
           toolsType: [
             "Вибротехника и комплектующие",
             "Генераторы и комплектующие",
@@ -1346,7 +1351,7 @@ let NavData = {
         },
         {
           id: 6,
-          title: "Сварочное оборудование",
+          title: "Электроинструмент",
           toolsType: [
             "Вибротехника и комплектующие",
             "Генераторы и комплектующие",
@@ -1514,7 +1519,7 @@ let NavData = {
         },
         {
           id: 6,
-          title: "Сварочное оборудование",
+          title: "Электроинструмент",
           toolsType: [
             "Вибротехника и комплектующие",
             "Генераторы и комплектующие",
@@ -1682,7 +1687,7 @@ let NavData = {
         },
         {
           id: 6,
-          title: "Сварочное оборудование",
+          title: "Электроинструмент",
           toolsType: [
             "Вибротехника и комплектующие",
             "Генераторы и комплектующие",
@@ -1850,7 +1855,7 @@ let NavData = {
         },
         {
           id: 6,
-          title: "Сварочное оборудование",
+          title: "Электроинструмент",
           toolsType: [
             "Вибротехника и комплектующие",
             "Генераторы и комплектующие",
@@ -1895,11 +1900,11 @@ export default function NavbarRedux(state = NavData, { type, payload }) {
       state = { ...state, mappedTool: payload.toolsType };
       return state;
     case NavbarTypes.reqCall:
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "hidden";
       state = { ...state, orderCall: true };
       return state;
     case NavbarTypes.closeReqCall:
-      document.body.style.overflow = "scroll";
+      document.body.style.overflowY = "scroll";
       state = { ...state, orderCall: false };
       return state;
     default:

@@ -6,5 +6,18 @@ function chooseCategory1(p) {
     payload: p,
   };
 }
+function chooseCategory2(p) {
+  return {
+    type: HomeTypes.category,
+    payload: p,
+  };
+}
 
-export { chooseCategory1 };
+function setLike(p) {
+  return {
+    type: HomeTypes.like,
+    payload: p,
+  };
+}
+
+export { chooseCategory1, setLike, chooseCategory2 };

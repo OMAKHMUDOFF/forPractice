@@ -67,6 +67,7 @@ let HomeData = {
       disc: 15,
       category: "Инструменты",
       img: perforator,
+      catalog: "bestSellers",
     },
     {
       id: 2,
@@ -76,6 +77,7 @@ let HomeData = {
       like: false,
       disc: 0,
       category: "Сантехника",
+      catalog: "bestSellers",
       img: smesitel,
     },
     {
@@ -86,6 +88,7 @@ let HomeData = {
       like: false,
       disc: 10,
       category: "Для дома",
+      catalog: "bestSellers",
       img: leska,
     },
     {
@@ -96,6 +99,7 @@ let HomeData = {
       like: false,
       disc: 12,
       category: "Для дома",
+      catalog: "bestSellers",
       img: unitaz,
     },
     {
@@ -106,6 +110,7 @@ let HomeData = {
       like: false,
       disc: 12,
       category: "Инструменты",
+      catalog: "bestSellers",
       img: kley,
     },
   ],
@@ -154,6 +159,7 @@ let HomeData = {
       category: "Инструменты",
       img: nabor,
       sale: false,
+      catalog: "bestOffers",
       new: false,
     },
     {
@@ -166,6 +172,7 @@ let HomeData = {
       category: "Сантехника",
       img: termostat,
       sale: true,
+      catalog: "bestOffers",
       new: false,
     },
     {
@@ -178,6 +185,7 @@ let HomeData = {
       category: "Для дома",
       img: drell,
       new: false,
+      catalog: "bestOffers",
       sale: false,
     },
     {
@@ -190,6 +198,7 @@ let HomeData = {
       category: "Для дома",
       img: circular,
       sale: false,
+      catalog: "bestOffers",
       new: true,
     },
     {
@@ -202,6 +211,7 @@ let HomeData = {
       category: "Инструменты",
       img: vodno_kley,
       sale: false,
+      catalog: "bestOffers",
       new: false,
     },
   ],
@@ -244,6 +254,14 @@ export default function MainRedux(state = HomeData, { type, payload }) {
   switch (type) {
     case HomeTypes.category:
       state = { ...state, setBSeller: payload };
+      return state;
+    case HomeTypes.like:
+      state = {
+        ...state,
+        [payload.catalog]: state?.[payload.catalog].map((elem) =>
+          elem.id === payload.id ? { ...elem, like: !elem.like } : elem
+        ),
+      };
       return state;
     default:
       return state;

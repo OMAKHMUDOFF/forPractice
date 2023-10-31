@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Homepage from "./Homepage";
 import Footer from "../components/Footer";
 import NotFound from "./NotFound";
+import Favorites from "./Favorites";
 
 function Pages() {
   return (
@@ -10,7 +11,8 @@ function Pages() {
       <Route element={<Navbar />}>
         <Route element={<Footer />}>
           <Route path="/" element={<Homepage />} />
-      <Route path="*" element={<NotFound />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Route>
     </Routes>

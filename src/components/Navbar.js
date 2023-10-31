@@ -15,6 +15,10 @@ function Navbar() {
   let dispatch = useDispatch();
   let { botRN, catalogIsOpen } = state;
 
+  let p = useSelector((state) => state.HomeRedux);
+  let data = [...p.bestSellers, ...p.bestOffers];
+  let favorites = data.filter((elem) => elem.like === true);
+
   return (
     <div className="catalog-navbar">
       <nav>
@@ -63,7 +67,9 @@ function Navbar() {
         </div>
         <div className="bottom-navbar">
           <div className="logo">
-            <img src={logo} alt="logo" />
+            <NavLink to={"/"}>
+              <img src={logo} alt="logo" />
+            </NavLink>
           </div>
           <div className="nav-catalog-btn">
             <button
@@ -89,8 +95,17 @@ function Navbar() {
             {botRN.map((item, i) => {
               return (
                 <div className="bot-nav-iconText" key={i}>
-                  <div className="rIcons">{item.icon}</div>
-                  <span>{item.title}</span>
+                  <NavLink to={item.path}>
+                    <div className="rIcons">{item.icon}</div>
+                    <span>{item.title}</span>
+                    {item.title === "Избранное" && favorites.length > 0 ? (
+                      <div className="lengthView">
+                        {favorites.length > 0 ? favorites.length : ""}
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                  </NavLink>
                 </div>
               );
             })}

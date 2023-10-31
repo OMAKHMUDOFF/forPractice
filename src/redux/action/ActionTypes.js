@@ -12,4 +12,10 @@ let NavbarTypes = {
   closeReqCall: "closeReqCall",
 };
 
-export { HomeTypes, NavbarTypes };
+let FavoriteTypes = {
+  setCategory: "setCategory",
+  clearList: "clearList",
+  setData: "setData",
+};
+
+export { HomeTypes, NavbarTypes, FavoriteTypes };
