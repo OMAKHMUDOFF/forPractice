@@ -4,6 +4,7 @@ import Homepage from "./Homepage";
 import Footer from "../components/Footer";
 import NotFound from "./NotFound";
 import Favorites from "./Favorites";
+import CatalogGoods from "./CatalogGoods";
 
 function Pages() {
   return (
@@ -12,6 +13,7 @@ function Pages() {
         <Route element={<Footer />}>
           <Route path="/" element={<Homepage />} />
           <Route path="/favorites" element={<Favorites />} />
+          <Route path="/catalogGoods" element={<CatalogGoods />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Route>

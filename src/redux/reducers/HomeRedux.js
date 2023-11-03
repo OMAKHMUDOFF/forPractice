@@ -68,6 +68,7 @@ let HomeData = {
       category: "Инструменты",
       img: perforator,
       catalog: "bestSellers",
+      hit: true,
     },
     {
       id: 2,
@@ -79,6 +80,7 @@ let HomeData = {
       category: "Сантехника",
       catalog: "bestSellers",
       img: smesitel,
+      hit: true,
     },
     {
       id: 3,
@@ -90,6 +92,7 @@ let HomeData = {
       category: "Для дома",
       catalog: "bestSellers",
       img: leska,
+      hit: true,
     },
     {
       id: 4,
@@ -101,6 +104,7 @@ let HomeData = {
       category: "Для дома",
       catalog: "bestSellers",
       img: unitaz,
+      hit: true,
     },
     {
       id: 5,
@@ -111,6 +115,7 @@ let HomeData = {
       disc: 12,
       category: "Инструменты",
       catalog: "bestSellers",
+      hit: true,
       img: kley,
     },
   ],

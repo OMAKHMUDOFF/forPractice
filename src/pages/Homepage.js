@@ -213,9 +213,13 @@ function Homepage() {
                 return (
                   <SwiperSlide key={elem.id}>
                     <div className="btitle-img">
-                      <div className="bestTitle">
-                        <span>Хит</span>
-                      </div>
+                      {elem.hit ? (
+                        <div className="bestTitle">
+                          <span>Хит</span>
+                        </div>
+                      ) : (
+                        ""
+                      )}
                       <div className="bSeller-card-img">
                         <img src={elem.img} alt={elem.prodName} />
                       </div>

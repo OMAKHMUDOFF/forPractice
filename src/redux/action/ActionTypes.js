@@ -18,4 +18,15 @@ let FavoriteTypes = {
   setData: "setData",
 };
 
-export { HomeTypes, NavbarTypes, FavoriteTypes };
+let GoodsTypes = {
+  priceOpen: "priceOpen",
+  typeOpen: "typeOpen",
+  brandOpen: "brandOpen",
+  materialOpen: "materialOpen",
+  lengthOpen: "lengthOpen",
+  widthOpen: "widthOpen",
+  heightOpen: "heightOpen",
+  catalogOpen: "catalogOpen",
+};
+
+export { HomeTypes, NavbarTypes, FavoriteTypes, GoodsTypes };

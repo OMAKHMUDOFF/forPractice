@@ -1499,9 +1499,9 @@ footer hr {
 
 .favorite-cards {
   display: grid;
-  width: 100%;
+  width: 90%;
   gap: 17px;
-  grid-template-columns: repeat(4, calc(100% / 4 - 17px));
+  grid-template-columns: repeat(4, calc(100% / 4 - 13px));
 }
 
 .favorite-card {
