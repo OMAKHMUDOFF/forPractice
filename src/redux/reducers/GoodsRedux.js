@@ -1,16 +1,15 @@
 import perforator1 from "../../assets/img/catalogGOODS/perforator.png";
+import { GoodsTypes } from "../action/ActionTypes";
 
 let goodsData = {
-  openCategory: {
-    price: false,
-    goodsType: false,
-    brand: false,
-    material: false,
-    color: false,
-    length: false,
-    width: false,
-    height: false,
-  },
+  isOpenPrice: false,
+  goodsType: false,
+  brand: false,
+  material: false,
+  color: false,
+  length: false,
+  width: false,
+  height: false,
   catalogData: {
     goodsType: [
       {
@@ -106,13 +105,16 @@ let goodsData = {
       price: 15999,
       like: false,
       hit: false,
-      disc: 15
+      disc: 15,
     },
   ],
 };
 
 export default function GoodsRedux(state = goodsData, { type, payload }) {
   switch (type) {
+    case GoodsTypes.catalogOpen:
+      state = { ...state, [payload]: !state?.[payload] };
+      return state;
     default:
       return state;
   }

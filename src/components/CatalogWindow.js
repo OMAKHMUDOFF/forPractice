@@ -2,6 +2,7 @@ import { FiChevronRight } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 // import { NavLink } from "react-router-dom";
 import { mappedCatalog, mappedTools } from "../redux/action/NavbarAction";
+import { NavLink } from "react-router-dom";
 
 function CatalogWindow({ isOpen }) {
   let state = useSelector((state) => state.NavbarRedux);
@@ -28,7 +29,9 @@ function CatalogWindow({ isOpen }) {
               {mappedCatal.map((elem) => {
                 return (
                   <li key={elem.id} onClick={() => dispatch(mappedTools(elem))}>
-                    {elem.title} <FiChevronRight />
+                    <NavLink to={"/catalogGoods"}>
+                      {elem.title} <FiChevronRight />
+                    </NavLink>
                   </li>
                 );
               })}

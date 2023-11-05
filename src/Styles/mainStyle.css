@@ -26,6 +26,10 @@ input {
   outline: none;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
 .container {
   max-width: 1920px;
   margin: 0 auto;
@@ -1201,6 +1205,13 @@ footer hr {
   border-radius: 8px;
 }
 
+.mappedCatalog a {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .mappedTools ul {
   padding: 15px;
   display: flex;
@@ -1515,4 +1526,77 @@ footer hr {
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
+}
+.catalogGoods {
+  padding: 20px 150px;
+}
+
+.opened-price-filter {
+  grid-template-rows: 1fr;
+  transition: 0.5s ease-in-out;
+  display: grid;
+}
+
+:is(.opened-price-filter, .closed-price-filter) > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.closed-price-filter {
+  transition: 0.5s;
+  overflow-y: hidden;
+  display: grid;
+  grid-template-rows: 0fr;
+}
+
+.filter-subtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.filter-subtitle button {
+  background: none;
+}
+
+.sidebar-filter {
+  width: 331px;
+}
+
+.css-eg0mwd-MuiSlider-thumb {
+  background-color: white !important;
+  border: 2px solid;
+}
+
+.css-1gv0vcd-MuiSlider-track,
+.css-14pt78w-MuiSlider-rail {
+  height: 2px !important;
+}
+
+.css-14pt78w-MuiSlider-rail {
+  background: #dfe0e2 !important;
+}
+
+.from-to-inputs :where(.from-to-first, .from-to-second) {
+  border-radius: 6px;
+  border: 1px solid #dfe0e2;
+  display: flex;
+  padding: 13px 15px;
+  align-items: center;
+  gap: 5px;
+  flex: 1 0 0;
+
+  color: #a7aaae;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px; /* 173.333% */
+}
+
+:is(.from-to-first, .from-to-second) input {
+  color: #2c333d;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
 }
