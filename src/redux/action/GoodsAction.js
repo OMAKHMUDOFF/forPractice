@@ -7,4 +7,11 @@ function changeFiltersBool(p) {
   };
 }
 
-export { changeFiltersBool };
+function setCheckBool(p) {
+  return {
+    type: GoodsTypes.checkBool,
+    payload: p,
+  };
+}
+
+export { changeFiltersBool, setCheckBool };

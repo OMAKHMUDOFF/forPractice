@@ -19,14 +19,8 @@ let FavoriteTypes = {
 };
 
 let GoodsTypes = {
-  priceOpen: "priceOpen",
-  typeOpen: "typeOpen",
-  brandOpen: "brandOpen",
-  materialOpen: "materialOpen",
-  lengthOpen: "lengthOpen",
-  widthOpen: "widthOpen",
-  heightOpen: "heightOpen",
   catalogOpen: "catalogOpen",
+  checkBool: "checkBool",
 };
 
 export { HomeTypes, NavbarTypes, FavoriteTypes, GoodsTypes };

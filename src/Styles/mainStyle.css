@@ -1531,23 +1531,26 @@ footer hr {
   padding: 20px 150px;
 }
 
-.opened-price-filter {
+.opened-price-filter,
+.opened-goods-filter {
+  display: grid;
   grid-template-rows: 1fr;
   transition: 0.5s ease-in-out;
-  display: grid;
 }
 
-:is(.opened-price-filter, .closed-price-filter) > div {
+:is(.opened-price-filter, .closed-price-filter, ) > div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 18px;
 }
 
-.closed-price-filter {
-  transition: 0.5s;
-  overflow-y: hidden;
+.closed-price-filter,
+.closed-goods-filter {
   display: grid;
+  overflow: hidden;
   grid-template-rows: 0fr;
+  transition: 0.5s ease-in-out;
 }
 
 .filter-subtitle {
@@ -1557,12 +1560,26 @@ footer hr {
   width: 100%;
 }
 
+.filter-subtitle h4 {
+  color: #414446;
+
+  /* H4 */
+  font-size: 18px;
+  font-weight: 550;
+  line-height: 26px; /* 144.444% */
+}
+
 .filter-subtitle button {
+  padding: 5px;
+  font-size: 15px;
   background: none;
 }
 
 .sidebar-filter {
   width: 331px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s;
 }
 
 .css-eg0mwd-MuiSlider-thumb {
@@ -1579,6 +1596,13 @@ footer hr {
   background: #dfe0e2 !important;
 }
 
+.from-to-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, calc(100% / 2 - 10px));
+  align-items: center;
+  gap: 18px;
+}
+
 .from-to-inputs :where(.from-to-first, .from-to-second) {
   border-radius: 6px;
   border: 1px solid #dfe0e2;
@@ -1586,7 +1610,6 @@ footer hr {
   padding: 13px 15px;
   align-items: center;
   gap: 5px;
-  flex: 1 0 0;
 
   color: #a7aaae;
   font-size: 15px;
@@ -1595,8 +1618,19 @@ footer hr {
 }
 
 :is(.from-to-first, .from-to-second) input {
+  width: 100%;
   color: #2c333d;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px; /* 162.5% */
+}
+
+.checkbox-goods-type {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.checkbox-goods-type p {
+  cursor: pointer;
 }

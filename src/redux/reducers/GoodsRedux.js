@@ -3,99 +3,103 @@ import { GoodsTypes } from "../action/ActionTypes";
 
 let goodsData = {
   isOpenPrice: false,
-  goodsType: false,
+  isOpenGoods: false,
   brand: false,
   material: false,
   color: false,
   length: false,
   width: false,
   height: false,
-  catalogData: {
-    goodsType: [
-      {
-        title: "Набор",
-        bool: false,
-      },
-      {
-        title: "Стойка",
-        bool: false,
-      },
-      {
-        title: "Адаптер",
-        bool: false,
-      },
-      {
-        title: "Держатель",
-        bool: false,
-      },
-      {
-        title: "Фильтр",
-        bool: false,
-      },
-      {
-        title: "Инструмент",
-        bool: false,
-      },
-    ],
-    brand: [
-      {
-        name: "STAYER",
-        bool: false,
-      },
-      {
-        name: "HOMEPROFEE",
-        bool: false,
-      },
-      {
-        name: "PECAHTA",
-        bool: false,
-      },
-      {
-        name: "MAKITA",
-        bool: false,
-      },
-      {
-        name: "HUNTER",
-        bool: false,
-      },
-      {
-        name: "Зубр",
-        bool: false,
-      },
-    ],
-    material: [
-      {
-        type: "Латунь",
-        bool: false,
-      },
-      {
-        type: "Медь",
-        bool: false,
-      },
-      {
-        type: "Металл",
-        bool: false,
-      },
-      {
-        type: "Металл, пластик",
-        bool: false,
-      },
-      {
-        type: "Бумага",
-        bool: false,
-      },
-    ],
-    color: [
-      "",
-      "Синий",
-      "Черный",
-      "Серый",
-      "Белый",
-      "Красный",
-      "Оранжевый",
-      "Желтый",
-    ],
-  },
+  goodsTypeArr: [
+    {
+      title: "Набор",
+      bool: false,
+      catalog: "goodsTypeArr",
+    },
+    {
+      title: "Стойка",
+      bool: false,
+      catalog: "goodsTypeArr",
+    },
+    {
+      title: "Адаптер",
+      bool: false,
+      catalog: "goodsTypeArr",
+    },
+    {
+      title: "Держатель",
+      bool: false,
+      catalog: "goodsTypeArr",
+    },
+    {
+      title: "Фильтр",
+      bool: false,
+      catalog: "goodsTypeArr",
+    },
+    {
+      title: "Инструмент",
+      bool: false,
+      catalog: "goodsTypeArr",
+    },
+  ],
+  brandArr: [
+    {
+      name: "STAYER",
+      bool: false,
+    },
+    {
+      name: "HOMEPROFEE",
+      bool: false,
+    },
+    {
+      name: "PECAHTA",
+      bool: false,
+    },
+    {
+      name: "MAKITA",
+      bool: false,
+    },
+    {
+      name: "HUNTER",
+      bool: false,
+    },
+    {
+      name: "Зубр",
+      bool: false,
+    },
+  ],
+  materialArr: [
+    {
+      type: "Латунь",
+      bool: false,
+    },
+    {
+      type: "Медь",
+      bool: false,
+    },
+    {
+      type: "Металл",
+      bool: false,
+    },
+    {
+      type: "Металл, пластик",
+      bool: false,
+    },
+    {
+      type: "Бумага",
+      bool: false,
+    },
+  ],
+  colorArr: [
+    "",
+    "Синий",
+    "Черный",
+    "Серый",
+    "Белый",
+    "Красный",
+    "Оранжевый",
+    "Желтый",
+  ],
   goods: [
     {
       id: 11,
@@ -114,6 +118,14 @@ export default function GoodsRedux(state = goodsData, { type, payload }) {
   switch (type) {
     case GoodsTypes.catalogOpen:
       state = { ...state, [payload]: !state?.[payload] };
+      return state;
+    case GoodsTypes.checkBool:
+      state = {
+        ...state,
+        [payload.catalog]: state?.[payload.catalog].map((elem) =>
+          elem.title === payload.title ? { ...elem, bool: !elem.bool } : elem
+        ),
+      };
       return state;
     default:
       return state;
