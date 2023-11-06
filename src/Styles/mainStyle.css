@@ -1634,3 +1634,48 @@ footer hr {
 .checkbox-goods-type p {
   cursor: pointer;
 }
+
+.no-favorites {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  gap: 20px;
+  width: 542px;
+  margin: 90px auto 0;
+}
+
+.no-fav-title h3 {
+  color: #2c333d;
+
+  /* H3 */
+  font-size: 20px;
+  font-weight: 550;
+  line-height: 26px; /* 130% */
+}
+
+.no-fav-subtitle p {
+  color: var(--txt, #383838);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+}
+
+.no-fav-subtitle p span {
+  color: var(--txt, #383838);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.no-fav-gtc button {
+  border-radius: 8px;
+  background: #186fd4;
+  padding: 25px 32px;
+
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 17px; /* 130.769% */
+  text-transform: uppercase;
+}
