@@ -1527,26 +1527,30 @@ footer hr {
   justify-content: space-between;
   gap: 10px;
 }
-.catalogGoods {
-  padding: 20px 150px;
-}
 
 .opened-price-filter,
-.opened-goods-filter {
+.opened-goods-filter,
+.opened-brand-filter {
   display: grid;
   grid-template-rows: 1fr;
   transition: 0.5s ease-in-out;
 }
 
-:is(.opened-price-filter, .closed-price-filter, ) > div {
+.opened-price-filter > div {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 18px;
+  transition: 0.3s;
+}
+
+:is(.closed-price-filter, .closed-brand-filter, .closed-goods-filter) > div {
+  transition: 0.3s;
 }
 
 .closed-price-filter,
-.closed-goods-filter {
+.closed-goods-filter,
+.closed-brand-filter {
   display: grid;
   overflow: hidden;
   grid-template-rows: 0fr;
@@ -1625,13 +1629,14 @@ footer hr {
   line-height: 26px; /* 162.5% */
 }
 
-.checkbox-goods-type {
+.checkbox-goods-type,
+.checkbox-brand-type {
   display: flex;
   align-items: center;
   gap: 13px;
 }
 
-.checkbox-goods-type p {
+:is(.checkbox-brand-type, .checkbox-goods-type) p {
   cursor: pointer;
 }
 
@@ -1678,4 +1683,23 @@ footer hr {
   font-weight: 700;
   line-height: 17px; /* 130.769% */
   text-transform: uppercase;
+}
+
+:is(.opened-brand-filter, .opened-goods-filter) > div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 18px;
+}
+
+.goods-cards {
+  display: grid;
+  gap: 17px;
+  grid-template-columns: repeat(4, calc(100% / 4));
+}
+
+.catalogGoods {
+  padding: 20px 150px;
+  display: flex;
+  gap: 20px;
 }

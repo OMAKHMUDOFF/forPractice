@@ -7,8 +7,8 @@ import { changeFiltersBool, setCheckBool } from "../redux/action/GoodsAction";
 function SideBar() {
   let state = useSelector((state) => state.GoodsRedux);
   let dispatch = useDispatch();
-  let { isOpenPrice, isOpenGoods, goodsTypeArr } = state;
-
+  let { isOpenPrice, isOpenGoods, isOpenBrand } = state;
+  let { goodsTypeArr, brandArr } = state;
   const [value, setValue] = useState([0, 52000]);
   const valueSet = (e, i) => {
     setValue(
@@ -30,8 +30,11 @@ function SideBar() {
   // </Box>
 
   return (
-    <div className="sidebar-filter" style={{ gap: isOpenPrice ? "40px" : "0" }}>
-      <div className="price-filter">
+    <div className="sidebar-filter">
+      <div
+        className="price-filter"
+        style={{ marginBottom: isOpenGoods ? "40px" : "20px" }}
+      >
         <div className="filter-subtitle">
           <h4>Цена, ₽</h4>
           <button onClick={() => dispatch(changeFiltersBool("isOpenPrice"))}>
@@ -74,7 +77,10 @@ function SideBar() {
           </div>
         </div>
       </div>
-      <div className="goods-filter">
+      <div
+        className="goods-filter"
+        style={{ marginBottom: isOpenGoods ? "40px" : "20px" }}
+      >
         <div className="filter-subtitle">
           <h4>Тип товара</h4>
           <button onClick={() => dispatch(changeFiltersBool("isOpenGoods"))}>
@@ -90,6 +96,36 @@ function SideBar() {
             {goodsTypeArr.map((elem, i) => {
               return (
                 <div className="checkbox-goods-type" key={i}>
+                  {elem.bool ? (
+                    <input type="checkbox" checked />
+                  ) : (
+                    <input type="checkbox" />
+                  )}
+                  <p onClick={() => dispatch(setCheckBool(elem))}>
+                    {elem.title}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+      <div className="brand-filter">
+        <div className="filter-subtitle">
+          <h4>Бренд</h4>
+          <button onClick={() => dispatch(changeFiltersBool("isOpenBrand"))}>
+            {isOpenBrand ? <BsChevronUp /> : <BsChevronDown />}
+          </button>
+        </div>
+        <div
+          className={
+            isOpenBrand ? "opened-brand-filter" : "closed-brand-filter"
+          }
+        >
+          <div style={{ minHeight: 0 }}>
+            {brandArr.map((elem, i) => {
+              return (
+                <div className="checkbox-brand-type" key={i}>
                   {elem.bool ? (
                     <input type="checkbox" checked />
                   ) : (
