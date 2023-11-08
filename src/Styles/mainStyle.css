@@ -1711,7 +1711,7 @@ footer hr {
   gap: 30px;
 }
 
-:is(.catalogGoods .rightSide) .sort-filtersMap{
+:is(.catalogGoods .rightSide) .sort-filtersMap {
   display: flex;
   flex-direction: column;
   gap: 30px;
