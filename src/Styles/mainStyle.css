@@ -1701,5 +1701,18 @@ footer hr {
 .catalogGoods {
   padding: 20px 150px;
   display: flex;
+  align-items: flex-start;
   gap: 20px;
+}
+
+.catalogGoods .rightSide {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+:is(.catalogGoods .rightSide) .sort-filtersMap{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }

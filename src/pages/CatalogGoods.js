@@ -8,14 +8,20 @@ function CatalogGoods() {
   return (
     <div className="catalogGoods">
       <SideBar />
-      <div className="goods-cards">
-        {goods?.map((elem) => {
-          return (
-            <div className="goods-card" key={elem.id}>
-              <img src={elem.img} alt={elem.prodName} title={elem.prodName} />
-            </div>
-          );
-        })}
+      <div className="rightSide">
+        <div className="sort-filtersMap">
+          <h2>Sort func</h2>
+          <h2>Filters map</h2>
+        </div>
+        <div className="goods-cards">
+          {goods?.map((elem) => {
+            return (
+              <div className="goods-card" key={elem.id}>
+                <img src={elem.img} alt={elem.prodName} title={elem.prodName} />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
