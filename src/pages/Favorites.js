@@ -1,27 +1,25 @@
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { clearList, favoriteCategory } from "../redux/action/FavoriteAction";
-import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-import { FiBarChart2 } from "react-icons/fi";
-import { setLike } from "../redux/action/HomeAction";
-import { HiOutlineShoppingCart } from "react-icons/hi";
+import { favoriteCategory } from "../redux/action/FavoriteAction";
 
 import sadHeart from "../assets/img/sadHeart.png";
+import CardUi from "../components/UI/CardUi";
 
 function Favorites() {
   let state = useSelector((state) => state.FavoritesRedux);
-  let p = useSelector((state) => state.HomeRedux);
-  let data = [...p.bestSellers, ...p.bestOffers];
+  let totalState = useSelector((state) => state.TotalRedux);
+  let { bestSellers, bestOffers, goodsArr } = totalState;
+  let data = [...bestSellers, ...bestOffers, ...goodsArr];
   let favorites = data.filter((elem) => elem.like === true);
 
   let { categoryBtns, setCategor } = state;
   let dispatch = useDispatch();
   return (
     <div className="LikedGoods">
-      <div className="navigation">
-        <NavLink to={"/"}>Стройоптторг</NavLink>/
-        <NavLink to={"/favorites"}>Избраные товары</NavLink>
-      </div>
+        <div className="navigation">
+          <NavLink to={"/"}>Стройоптторг</NavLink>/
+          <NavLink to={"/favorites"}>Избраные товары</NavLink>
+        </div>
       <div className="liked-title">
         <h1>Избранные товары</h1>
       </div>
@@ -49,16 +47,48 @@ function Favorites() {
               <button>Добавить все в корзину</button>
             </div>
             <div className="clear-list">
-              <button onClick={() => dispatch(clearList())}>
-                Очистить список
-              </button>
+              <button>Очистить список</button>
             </div>
           </div>
           <div className="favorite-cards">
             {favorites.map((elem) => {
               return (
                 <div className="favorite-card" key={elem.id}>
-                  <div className="btitle-img">
+                  <CardUi elem={elem} />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ) : (
+        <div className="no-favorites">
+          <div className="sadHeart-img">
+            <img src={sadHeart} alt="" />
+          </div>
+          <div className="no-fav-title">
+            <h3>Ваш список желаний пуст</h3>
+          </div>
+          <div className="no-fav-subtitle">
+            <p>У вас пока нет товаров в списке желаний.</p>
+            <p>
+              На странице "<span>Каталог</span>" вы найдете много интересных
+              товаров.
+            </p>
+          </div>
+          <div className="no-fav-gtc">
+            <NavLink to={"/catalogGoods"}>
+              <button>Перейти в каталог</button>
+            </NavLink>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+export default Favorites;
+
+//comments
+/* <div className="btitle-img">
                     <div className="bestTitle">
                       <span>Хит</span>
                     </div>
@@ -107,35 +137,4 @@ function Favorites() {
                         </button>
                       </div>
                     </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      ) : (
-        <div className="no-favorites">
-          <div className="sadHeart-img">
-            <img src={sadHeart} alt="" />
-          </div>
-          <div className="no-fav-title">
-            <h3>Ваш список желаний пуст</h3>
-          </div>
-          <div className="no-fav-subtitle">
-            <p>У вас пока нет товаров в списке желаний.</p>
-            <p>
-              На странице "<span>Каталог</span>" вы найдете много интересных
-              товаров.
-            </p>
-          </div>
-          <div className="no-fav-gtc">
-            <NavLink to={"/catalogGoods"}>
-              <button>Перейти в каталог</button>
-            </NavLink>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-export default Favorites;
+                  </div> */

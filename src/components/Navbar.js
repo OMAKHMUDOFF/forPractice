@@ -1,22 +1,23 @@
 import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
 import { HiOutlineBars2 } from "react-icons/hi2";
+import { NavLink, Outlet } from "react-router-dom";
 
 import { FiSearch } from "react-icons/fi";
 
-import logo from "../assets/img/homePage_IMG/logo 1.png";
+import { AiOutlineClose } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
+import logo from "../assets/img/homePage_IMG/logo 1.png";
 import { catalogOpen, orderCall } from "../redux/action/NavbarAction";
 import CatalogWindow from "./CatalogWindow";
-import { AiOutlineClose } from "react-icons/ai";
 
 function Navbar() {
   let state = useSelector((state) => state.NavbarRedux);
   let dispatch = useDispatch();
   let { botRN, catalogIsOpen } = state;
-
-  let p = useSelector((state) => state.HomeRedux);
-  let data = [...p.bestSellers, ...p.bestOffers];
+  
+  let totalState = useSelector((state) => state.TotalRedux);
+  let { bestSellers, bestOffers, goodsArr } = totalState;
+  let data = [...bestSellers, ...bestOffers, ...goodsArr];
   let favorites = data.filter((elem) => elem.like === true);
 
   return (

@@ -1,8 +1,4 @@
-let HomeTypes = {
-  like: "like",
-  cart: "cart",
-  category: "category",
-};
+let HomeTypes = {};
 
 let NavbarTypes = {
   catalog: "catalog",
@@ -23,4 +19,10 @@ let GoodsTypes = {
   checkBool: "checkBool",
 };
 
-export { HomeTypes, NavbarTypes, FavoriteTypes, GoodsTypes };
+let TotalTypes = {
+  totalLike: "totalLike",
+  totalCart: "totalCart",
+  category: "category",
+};
+
+export { HomeTypes, NavbarTypes, FavoriteTypes, GoodsTypes, TotalTypes };

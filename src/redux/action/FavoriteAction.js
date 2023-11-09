@@ -7,13 +7,6 @@ function favoriteCategory(p) {
   };
 }
 
-function clearList(p) {
-  return {
-    type: FavoriteTypes.clearList,
-    payload: p,
-  };
-}
-
 function getData(p) {
   return {
     type: FavoriteTypes.setData,
@@ -21,4 +14,5 @@ function getData(p) {
   };
 }
 
-export { favoriteCategory, clearList, getData };
+export { favoriteCategory, getData };
+

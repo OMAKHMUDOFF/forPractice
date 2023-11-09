@@ -1,10 +1,11 @@
 import React from "react";
-import SideBar from "../components/SideBar";
 import { useSelector } from "react-redux";
+import SideBar from "../components/SideBar";
+import CardUi from "../components/UI/CardUi";
 
 function CatalogGoods() {
-  let state = useSelector((state) => state.GoodsRedux);
-  let { goods } = state;
+  let totalState = useSelector((state) => state.TotalRedux);
+  let { goodsArr } = totalState;
   return (
     <div className="catalogGoods">
       <SideBar />
@@ -14,10 +15,10 @@ function CatalogGoods() {
           <h2>Filters map</h2>
         </div>
         <div className="goods-cards">
-          {goods?.map((elem) => {
+          {goodsArr?.map((elem) => {
             return (
               <div className="goods-card" key={elem.id}>
-                <img src={elem.img} alt={elem.prodName} title={elem.prodName} />
+                <CardUi elem={elem} />
               </div>
             );
           })}
@@ -28,3 +29,50 @@ function CatalogGoods() {
 }
 
 export default CatalogGoods;
+
+//comments
+/* <div className="goods-prod-img">
+                  <img src={elem.img} alt={elem.prodName} />
+                </div>
+                {elem.hit && (
+                  <div className="bestTitle">
+                    <span>Хит</span>
+                  </div>
+                )}
+                <div className="goods-articul">
+                  <span>Артикул: {elem.art}</span>
+                </div>
+                <div className="goods-prodName">
+                  <h4>{elem.prodName}</h4>
+                </div>
+                {elem.disc > 0 ? (
+                  <div className="goods-prod-price">
+                    <span>
+                      <del>{elem.price} ₽</del>
+                      {parseInt(elem.price - (elem.price / 100) * elem.disc)}₽
+                    </span>
+                    <div className="goods-prod-disc">
+                      <span>-{elem.disc}%</span>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="goods-prod-price">
+                    <span>{elem.price} ₽</span>
+                  </div>
+                )}
+                <div className="goods-card-btns">
+                  <div className="cart-btn">
+                    <button>
+                      <HiOutlineShoppingCart />
+                      Купить
+                    </button>
+                  </div>
+                  <div className="like-cart-btn">
+                    <button onClick={() => dispatch(setTotalLike(elem))}>
+                      {elem.like ? <AiFillHeart /> : <AiOutlineHeart />}
+                    </button>
+                    <button>
+                      <FiBarChart2 />
+                    </button>
+                  </div>
+                </div> */

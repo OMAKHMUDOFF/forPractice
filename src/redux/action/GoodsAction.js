@@ -14,4 +14,11 @@ function setCheckBool(p) {
   };
 }
 
-export { changeFiltersBool, setCheckBool };
+function setGoodsLike(p) {
+  return {
+    type: GoodsTypes.like,
+    payload: p,
+  };
+}
+
+export { changeFiltersBool, setCheckBool, setGoodsLike };

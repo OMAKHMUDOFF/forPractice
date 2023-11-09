@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import NotFound from "./NotFound";
 import Favorites from "./Favorites";
 import CatalogGoods from "./CatalogGoods";
+import AboutCompany from "./AboutCompany";
 
 function Pages() {
   return (
@@ -14,6 +15,7 @@ function Pages() {
           <Route path="/" element={<Homepage />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/catalogGoods" element={<CatalogGoods />} />
+          <Route path="/about-company" element={<AboutCompany />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Route>

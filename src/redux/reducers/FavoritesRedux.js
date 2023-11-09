@@ -18,9 +18,6 @@ export default function FavoritesRedux(
     case FavoriteTypes.setCategory:
       state = { ...state, setCategor: payload };
       return state;
-    case FavoriteTypes.clearList:
-      payload.map((elem) => ({ ...elem, like: false }));
-      return state;
     default:
       return state;
   }

@@ -1,47 +1,40 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
-import { HiOutlineShoppingCart } from "react-icons/hi";
-import { FiChevronRight, FiBarChart2 } from "react-icons/fi";
-import { TbCreditCard, TbBoxSeam } from "react-icons/tb";
-import { RiListCheck2 } from "react-icons/ri";
 import { CiPercent } from "react-icons/ci";
-import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { FiChevronRight } from "react-icons/fi";
+import { HiOutlineShoppingCart } from "react-icons/hi";
+import { RiListCheck2 } from "react-icons/ri";
+import { TbBoxSeam, TbCreditCard } from "react-icons/tb";
+import { A11y, Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import slider1 from "../assets/img/mainSliderIMG/slider1.png";
-import slider2 from "../assets/img/mainSliderIMG/slider2.png";
 import bath from "../assets/img/homePage_IMG/image 12.png";
-import materials from "../assets/img/homePage_IMG/out (1) 1.png";
-import electrical from "../assets/img/homePage_IMG/vkluchatel.png";
+import sauna_bath from "../assets/img/homePage_IMG/image 13.png";
 import drell from "../assets/img/homePage_IMG/image 3.png";
 import boards from "../assets/img/homePage_IMG/klipartz 1.png";
+import materials from "../assets/img/homePage_IMG/out (1) 1.png";
 import const_materials from "../assets/img/homePage_IMG/pngegg 1.png";
-import sauna_bath from "../assets/img/homePage_IMG/image 13.png";
 import repairSet from "../assets/img/homePage_IMG/repairSetTools.png";
+import electrical from "../assets/img/homePage_IMG/vkluchatel.png";
+import slider1 from "../assets/img/mainSliderIMG/slider1.png";
+import slider2 from "../assets/img/mainSliderIMG/slider2.png";
 
 import { useDispatch, useSelector } from "react-redux";
-import { chooseCategory1, setLike } from "../redux/action/HomeAction";
 import { NavLink } from "react-router-dom";
 import CallOrder from "../components/CallOrder";
+import CardUi from "../components/UI/CardUi";
+import { chooseCategory1 } from "../redux/action/TotalAction";
 
 function Homepage() {
-  let state = useSelector((state) => state.HomeRedux);
+  let homeState = useSelector((state) => state.HomeRedux);
   let dispatch = useDispatch();
-  let {
-    discInfo,
-    categories,
-    setBSeller,
-    bestSellers,
-    popularBrands,
-    setBOffer,
-    bestOffers,
-    news,
-  } = state;
+  let { discInfo, popularBrands, news } = homeState;
 
+  let totalState = useSelector((state) => state.TotalRedux);
+  let { categories, setBSeller, bestSellers, setBOffer, bestOffers } =
+    totalState;
   return (
     <div className="homePage">
       <CallOrder />
@@ -212,60 +205,7 @@ function Homepage() {
               .map((elem) => {
                 return (
                   <SwiperSlide key={elem.id}>
-                    <div className="btitle-img">
-                      {elem.hit ? (
-                        <div className="bestTitle">
-                          <span>Хит</span>
-                        </div>
-                      ) : (
-                        ""
-                      )}
-                      <div className="bSeller-card-img">
-                        <img src={elem.img} alt={elem.prodName} />
-                      </div>
-                    </div>
-                    <div className="bSeller-card-bottom">
-                      <div className="bSeller-articul">
-                        <span>{elem.art}</span>
-                      </div>
-                      <div className="bSeller-prod-name">
-                        <h4>{elem.prodName}</h4>
-                      </div>
-                      {elem.disc > 0 ? (
-                        <div className="bSeller-price">
-                          <span>
-                            <del>{elem.price} ₽</del>
-                            {parseInt(
-                              elem.price - (elem.price / 100) * elem.disc
-                            )}
-                            ₽
-                          </span>
-                          <div className="bSeller-disc">
-                            <span>-{elem.disc}%</span>
-                          </div>
-                        </div>
-                      ) : (
-                        <div className="bSeller-price">
-                          <span>{elem.price} ₽</span>
-                        </div>
-                      )}
-                      <div className="bSeller-card-btns">
-                        <div className="cart-btn">
-                          <button>
-                            <HiOutlineShoppingCart />
-                            Купить
-                          </button>
-                        </div>
-                        <div className="like-cart-btn">
-                          <button onClick={() => dispatch(setLike(elem))}>
-                            {elem.like ? <AiFillHeart /> : <AiOutlineHeart />}
-                          </button>
-                          <button>
-                            <FiBarChart2 />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
+                    <CardUi elem={elem} />
                   </SwiperSlide>
                 );
               })}
@@ -286,7 +226,7 @@ function Homepage() {
                   {parseInt(
                     bestSellers[4].price -
                       (bestSellers[4].price / 100) * bestSellers[4].disc
-                  )}{" "}
+                  )}
                   ₽
                 </span>
               </div>
@@ -346,59 +286,7 @@ function Homepage() {
           {bestOffers.map((elem) => {
             return (
               <div className="bestOffer-card" key={elem.id}>
-                <div className="sale-or-new">
-                  {elem.sale ? (
-                    <div className="sale-info">Распродажа</div>
-                  ) : elem.new ? (
-                    <div className="new-info">Новинка</div>
-                  ) : (
-                    ""
-                  )}
-                </div>
-                <div className="btitle-img">
-                  <div className="bOffer-card-img">
-                    <img src={elem.img} alt={elem.prodName} />
-                  </div>
-                </div>
-                <div className="bSeller-card-bottom">
-                  <div className="bSeller-articul">
-                    <span>{elem.art}</span>
-                  </div>
-                  <div className="bSeller-prod-name">
-                    <h4>{elem.prodName}</h4>
-                  </div>
-                  {elem.disc > 0 ? (
-                    <div className="bSeller-price">
-                      <span>
-                        <del>{elem.price} ₽</del>
-                        {parseInt(elem.price - (elem.price / 100) * elem.disc)}₽
-                      </span>
-                      <div className="bSeller-disc">
-                        <span>-{elem.disc}%</span>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="bSeller-price">
-                      <span>{elem.price} ₽</span>
-                    </div>
-                  )}
-                  <div className="bSeller-card-btns">
-                    <div className="cart-btn">
-                      <button>
-                        <HiOutlineShoppingCart />
-                        Купить
-                      </button>
-                    </div>
-                    <div className="like-cart-btn">
-                      <button onClick={() => dispatch(setLike(elem))}>
-                        {elem.like ? <AiFillHeart /> : <AiOutlineHeart />}
-                      </button>
-                      <button>
-                        <FiBarChart2 />
-                      </button>
-                    </div>
-                  </div>
-                </div>
+                <CardUi elem={elem} />
               </div>
             );
           })}
@@ -494,3 +382,121 @@ function Homepage() {
   );
 }
 export default Homepage;
+
+//comments
+/*
+best offers card comment
+ {elem.sale | elem.new ? (
+                  <div className="sale-or-new">
+                    {elem.sale ? (
+                      <div className="sale-info">Распродажа</div>
+                    ) : elem.new ? (
+                      <div className="new-info">Новинка</div>
+                    ) : (
+                      ""
+                    )}
+                  </div>
+                ) : (
+                  ""
+                )}
+                <div className="btitle-img">
+                  <div className="bOffer-card-img">
+                    <img src={elem.img} alt={elem.prodName} />
+                  </div>
+                </div>
+                <div className="bSeller-card-bottom">
+                  <div className="bSeller-articul">
+                    <span>Артикул: {elem.art}</span>
+                  </div>
+                  <div className="bSeller-prod-name">
+                    <h4>{elem.prodName}</h4>
+                  </div>
+                  {elem.disc > 0 ? (
+                    <div className="bSeller-price">
+                      <span>
+                        <del>{elem.price} ₽</del>
+                        {parseInt(elem.price - (elem.price / 100) * elem.disc)}₽
+                      </span>
+                      <div className="bSeller-disc">
+                        <span>-{elem.disc}%</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="bSeller-price">
+                      <span>{elem.price} ₽</span>
+                    </div>
+                  )}
+                  <div className="bSeller-card-btns">
+                    <div className="cart-btn">
+                      <button>
+                        <HiOutlineShoppingCart />
+                        Купить
+                      </button>
+                    </div>
+                    <div className="like-cart-btn">
+                      <button onClick={() => dispatch(setTotalLike(elem))}>
+                        {elem.like ? <AiFillHeart /> : <AiOutlineHeart />}
+                      </button>
+                      <button>
+                        <FiBarChart2 />
+                      </button>
+                    </div>
+                  </div>
+                </div> 
+
+best sellers card comment
+<div className="bsellecomment">
+  <div className="btitle-img">
+        {elem.hit && (
+          <div className="bestTitle">
+            <span>Хит</span>
+          </div>
+        )}
+        <div className="bSeller-card-img">
+          <img src={elem.img} alt={elem.prodName} />
+        </div>
+      </div>
+      <div className="bSeller-card-bottom">
+        <div className="bSeller-articul">
+          <span>Артикул: {elem.art}</span>
+        </div>
+        <div className="bSeller-prod-name">
+          <h4>{elem.prodName}</h4>
+        </div>
+        {elem.disc > 0 ? (
+          <div className="bSeller-price">
+            <span>
+              <del>{elem.price} ₽</del>
+              {parseInt(
+                elem.price - (elem.price / 100) * elem.disc
+              )}
+              ₽
+            </span>
+            <div className="bSeller-disc">
+              <span>-{elem.disc}%</span>
+            </div>
+          </div>
+        ) : (
+          <div className="bSeller-price">
+            <span>{elem.price} ₽</span>
+          </div>
+        )}
+        <div className="bSeller-card-btns">
+          <div className="cart-btn">
+            <button>
+              <HiOutlineShoppingCart />
+              Купить
+            </button>
+          </div>
+          <div className="like-cart-btn">
+            <button onClick={() => dispatch(setTotalLike(elem))}>
+              {elem.like ? <AiFillHeart /> : <AiOutlineHeart />}
+            </button>
+            <button>
+              <FiBarChart2 />
+            </button>
+          </div>
+        </div>
+      </div> 
+</div>
+*/
