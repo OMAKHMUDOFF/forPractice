@@ -1283,20 +1283,20 @@ footer hr {
   text-transform: uppercase;
 }
 
-:is(.notFound, .LikedGoods, .about-company-page) .navigation {
+.total-nav-title .navigation {
   padding: 18px 0;
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-:is(.notFound, .LikedGoods, .about-company-page) .navigation a:first-child {
+.total-nav-title .navigation a:first-child {
   color: #2c333d;
   font-size: 15px;
   font-weight: 400;
   line-height: 20px; /* 133.333% */
 }
-:is(.notFound, .LikedGoods, .about-company-page) .navigation a:last-child {
+.total-nav-title .navigation a:last-child {
   color: #91969d;
   font-size: 15px;
   font-weight: 400;
@@ -1701,6 +1701,12 @@ footer hr {
 .catalogGoods {
   padding: 20px 150px;
   display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.sidebar-rightSide {
+  display: flex;
   gap: 20px;
 }
 
@@ -1957,4 +1963,161 @@ footer hr {
 
 .about-page-news {
   padding: 40px 0;
+}
+
+.contacts-page {
+  padding-inline: 150px;
+}
+
+.main-contacts {
+  position: relative;
+}
+
+.how-you-contact-us {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.address-card {
+  top: 51px;
+  right: 0;
+  position: absolute;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 4px 19px 0px rgba(23, 27, 32, 0.07);
+  display: flex;
+  width: 351px;
+  padding: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 23px;
+}
+
+.address-total-title {
+  display: flex;
+  gap: 10px;
+}
+
+.address-total-title svg {
+  color: #186fd4;
+  font-size: 22px;
+}
+
+.address-total-title p {
+  color: #2f3134;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 21px; /* 123.529% */
+}
+
+:is(.address-location .address, .working-time .daily-time) p {
+  margin-left: 27px;
+  color: #494d52;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21px; /* 140% */
+}
+
+.address-phone a {
+  margin-left: 27px;
+  color: #3b3c3f;
+  font-size: 17px;
+  font-weight: 550;
+  line-height: 21px; /* 123.529% */
+}
+
+.address-email a {
+  margin-left: 27px;
+  color: #186fd4;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21px; /* 140% */
+  text-decoration-line: underline;
+}
+
+.address-order-call {
+  width: 100%;
+}
+
+.address-order-call button {
+  width: 100%;
+  padding: 24px 27px;
+  border-radius: 8px;
+  background: #186fd4;
+
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 17px; /* 130.769% */
+  text-transform: uppercase;
+}
+
+.address-card > div:not(.address-order-call) {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.phone-number-cards {
+  width: 80%;
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  grid-template-columns: repeat(4, calc(80% / 4 - 20px));
+}
+
+.phone-number-card {
+  border-radius: 8px;
+  border: 1px solid #f2f4f6;
+  display: flex;
+  padding: 30px 25px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.requisites {
+  width: 25%;
+  background: #f7f9fc;
+  display: flex;
+  padding: 30px 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.contacts-phone-numbers {
+  display: flex;
+  align-items: center;
+}
+
+.phone-number-card .depName p {
+  color: #494d52;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21px; /* 140% */
+}
+
+.phone-number-card .depNum a {
+  color: #2f3134;
+  font-size: 18px;
+  font-weight: 550;
+  line-height: 21px; /* 116.667% */
+}
+
+.reqTitle span {
+  color: #2b2e31;
+  font-size: 16px;
+  font-weight: 550;
+  line-height: 21px; /* 131.25% */
+}
+
+.requisites p {
+  color: #2C2F33;
+font-size: 12px;
+font-weight: 400;
+line-height: 21px; /* 175% */
 }

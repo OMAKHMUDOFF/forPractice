@@ -4,10 +4,11 @@ import { RiListCheck2 } from "react-icons/ri";
 import { TbBoxSeam, TbCreditCard } from "react-icons/tb";
 import { NavLink } from "react-router-dom";
 
-import const_tools from "../assets/img/homePage_IMG/repairSetTools.png";
-import today_bg from "../assets/img/aboutCompany/company-history-bg.png";
-import NewsUi from "../components/UI/NewsUi";
 import { useSelector } from "react-redux";
+import today_bg from "../assets/img/aboutCompany/company-history-bg.png";
+import const_tools from "../assets/img/homePage_IMG/repairSetTools.png";
+import NewsUi from "../components/UI/NewsUi";
+import TitleNavigation from "../components/UI/TitleNavigationUI";
 
 export default function AboutCompany() {
   let totalState = useSelector((state) => state.TotalRedux);
@@ -15,13 +16,11 @@ export default function AboutCompany() {
   return (
     <div className="about-company-page">
       <div className="about-nav-title">
-        <div className="navigation">
-          <NavLink to={"/"}>Стройоптторг</NavLink>/
-          <NavLink to={"/favorites"}>Избраные товары</NavLink>
-        </div>
-        <div className="about-page-title">
-          <h1>О компании</h1>
-        </div>
+        <TitleNavigation
+          path={"/about-company"}
+          pathName={"О компании"}
+          title={"О компании"}
+        />
       </div>
       <div className="about-company-text">
         <div className="bot-about-text">

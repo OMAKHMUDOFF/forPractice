@@ -2,26 +2,34 @@ import React from "react";
 import { useSelector } from "react-redux";
 import SideBar from "../components/SideBar";
 import CardUi from "../components/UI/CardUi";
+import TitleNavigation from "../components/UI/TitleNavigationUI";
 
 function CatalogGoods() {
   let totalState = useSelector((state) => state.TotalRedux);
   let { goodsArr } = totalState;
   return (
     <div className="catalogGoods">
-      <SideBar />
-      <div className="rightSide">
-        <div className="sort-filtersMap">
-          <h2>Sort func</h2>
-          <h2>Filters map</h2>
-        </div>
-        <div className="goods-cards">
-          {goodsArr?.map((elem) => {
-            return (
-              <div className="goods-card" key={elem.id}>
-                <CardUi elem={elem} />
-              </div>
-            );
-          })}
+      <TitleNavigation
+        path={"/catalogGoods"}
+        pathName={"Электроинструмент"}
+        title={"Электроинструмент"}
+      />
+      <div className="sidebar-rightSide">
+        <SideBar />
+        <div className="rightSide">
+          <div className="sort-filtersMap">
+            <h2>Sort func</h2>
+            <h2>Filters map</h2>
+          </div>
+          <div className="goods-cards">
+            {goodsArr?.map((elem) => {
+              return (
+                <div className="goods-card" key={elem.id}>
+                  <CardUi elem={elem} />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
