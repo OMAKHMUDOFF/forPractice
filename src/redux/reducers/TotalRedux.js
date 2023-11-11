@@ -24,6 +24,11 @@ import smesitel from "../../assets/img/homePage_IMG/smesitel.png";
 import termostat from "../../assets/img/homePage_IMG/termostat.png";
 import unitaz from "../../assets/img/homePage_IMG/unitaz.png";
 import vodno_kley from "../../assets/img/homePage_IMG/vodno_kley.png";
+//news img
+import news1 from "../../assets/img/homePage_IMG/news1.png";
+import news2 from "../../assets/img/homePage_IMG/news2.png";
+import news3 from "../../assets/img/homePage_IMG/news3.png";
+import news4 from "../../assets/img/homePage_IMG/news4.png";
 
 let totalData = {
   bestSellers: [
@@ -325,7 +330,36 @@ let totalData = {
       disc: 10,
     },
   ],
-
+  news: [
+    {
+      img: news1,
+      title: "Масштабное обновление каталога инструментов",
+      description:
+        "С радостью сообщаем вам о крупном пополнении нашего каталога инструментов.",
+      date: "5 августа 2023",
+    },
+    {
+      img: news2,
+      title: "Масштабное обновление каталога инструментов",
+      description:
+        "С радостью сообщаем вам о крупном пополнении нашего каталога инструментов.",
+      date: "5 августа 2023",
+    },
+    {
+      img: news3,
+      title: "Масштабное обновление каталога инструментов",
+      description:
+        "С радостью сообщаем вам о крупном пополнении нашего каталога инструментов.",
+      date: "5 августа 2023",
+    },
+    {
+      img: news4,
+      title: "Масштабное обновление каталога инструментов",
+      description:
+        "С радостью сообщаем вам о крупном пополнении нашего каталога инструментов.",
+      date: "5 августа 2023",
+    },
+  ],
   categories: ["", "Инструменты", "Сантехника", "Для дома", "Для сада"],
   setBSeller: "",
   setBOffer: "",

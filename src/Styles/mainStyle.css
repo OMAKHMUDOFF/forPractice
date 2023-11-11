@@ -1727,7 +1727,8 @@ footer hr {
   padding: 0 150px;
 }
 
-.about-company-text {
+.about-company-text,
+.about-nav-title {
   box-shadow: 0 0 0 100vmax #f9fafb;
   clip-path: inset(0 -100vmax);
   background: #f9fafb;
@@ -1762,8 +1763,194 @@ footer hr {
   grid-template-columns: repeat(2, calc(100% / 2 + 50px));
   align-items: center;
   position: relative;
+  padding-bottom: 52px;
 }
 
 .right-about-text figure {
-  transform: translate(-150px);
+  transform: translate(-100px);
+}
+
+.right-about-text figure img {
+  width: 100%;
+}
+
+.about-why-us {
+  padding: 80px 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+:is(.why-us-title, .company-history-title) h2 {
+  color: #2c333d;
+
+  font-size: 33px;
+  font-weight: 700;
+  line-height: 31px; /* 93.939% */
+}
+
+.why-us-cards {
+  display: grid;
+  grid-template-columns: repeat(4, calc(100% / 4 - 70px));
+  gap: 97.33px;
+}
+
+.why-us-card {
+  display: flex;
+  gap: 15px;
+}
+
+.why-us-card .left-why-icon svg {
+  font-size: 52px;
+  stroke-width: 1px;
+  color: #117fe3;
+}
+
+.why-us-card:nth-child(2n) .left-why-icon svg {
+  stroke-width: 0.1px;
+}
+
+.why-us-card .right-why-text {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding-top: 15px;
+}
+
+.why-us-card .right-why-text .right-why-title h4 {
+  width: 80%;
+  color: #3b3c3f;
+  font-size: 20px;
+  font-weight: 550;
+  line-height: 24px; /* 120% */
+}
+
+.why-us-card .right-why-text .right-why-descr p {
+  color: #6b6c72;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px; /* 160% */
+}
+
+.about-company-history {
+  padding-block: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 66px;
+}
+
+.company-history-cards {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(2, calc(100% / 2 - 20px));
+}
+
+.company-history-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 35px 25px;
+
+  border-radius: 8px;
+  border: 3px solid #e6eef6;
+  background: #fff;
+}
+
+.company-history-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.history-card-subtitle h3 {
+  color: #2c333d;
+
+  /* H3 */
+  font-size: 20px;
+  font-weight: 550;
+  line-height: 26px; /* 130% */
+}
+
+.history-pos-label {
+  position: absolute;
+  padding-inline: 15px;
+  background: #fff;
+  top: -12px;
+  left: 13px;
+
+  color: #186fd4;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 26px; /* 96.296% */
+}
+
+.company-history-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #2c333d;
+
+  /* Regular Text 15 */
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 27px; /* 180% */
+}
+
+.company-history-list li .marker {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #ee0906;
+  border-radius: 5px;
+}
+
+.history-today-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.company-history-today {
+  padding: 25px 112px;
+  border: 3px solid #186fd4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.history-card-title {
+  z-index: 1;
+  color: #186fd4;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 550;
+  line-height: 26px; /* 92.857% */
+  text-transform: capitalize;
+}
+
+.history-today-cards {
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 25px;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, calc(100% / 2 - 25px));
+}
+
+.history-today-card .top-history span {
+  color: #186fd4;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 27px; /* 112.5% */
+}
+
+.history-today-card .bot-history p {
+  color: #2c333d;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 27px; /* 180% */
 }

@@ -26,14 +26,15 @@ import { NavLink } from "react-router-dom";
 import CallOrder from "../components/CallOrder";
 import CardUi from "../components/UI/CardUi";
 import { chooseCategory1 } from "../redux/action/TotalAction";
+import NewsUi from "../components/UI/NewsUi";
 
 function Homepage() {
   let homeState = useSelector((state) => state.HomeRedux);
   let dispatch = useDispatch();
-  let { discInfo, popularBrands, news } = homeState;
+  let { discInfo, popularBrands } = homeState;
 
   let totalState = useSelector((state) => state.TotalRedux);
-  let { categories, setBSeller, bestSellers, setBOffer, bestOffers } =
+  let { categories, setBSeller, bestSellers, setBOffer, bestOffers, news } =
     totalState;
   return (
     <div className="homePage">
@@ -357,24 +358,7 @@ function Homepage() {
         </div>
         <div className="news-cards">
           {news.map((elem, i) => {
-            return (
-              <div className="news-card" key={i}>
-                <div className="news-img">
-                  <img src={elem.img} alt="news_img" />
-                </div>
-                <div className="news-text">
-                  <div className="news-title">
-                    <h3>{elem.title}</h3>
-                  </div>
-                  <div className="news-description">
-                    <p>{elem.description}</p>
-                  </div>
-                  <div className="news-date">
-                    <span>{elem.date}</span>
-                  </div>
-                </div>
-              </div>
-            );
+            return <NewsUi elem={elem} i={i} />;
           })}
         </div>
       </div>

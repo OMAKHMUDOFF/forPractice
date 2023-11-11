@@ -11,10 +11,7 @@ import ceresit from "../../assets/img/homePage_IMG/image 21.png";
 import keramin from "../../assets/img/homePage_IMG/image 22.png";
 import bauproffe from "../../assets/img/homePage_IMG/image 23.png";
 
-import news1 from "../../assets/img/homePage_IMG/news1.png";
-import news2 from "../../assets/img/homePage_IMG/news2.png";
-import news3 from "../../assets/img/homePage_IMG/news3.png";
-import news4 from "../../assets/img/homePage_IMG/news4.png";
+
 
 let HomeData = {
   discInfo: [
@@ -75,36 +72,6 @@ let HomeData = {
     {
       id: 8,
       img: kinplast,
-    },
-  ],
-  news: [
-    {
-      img: news1,
-      title: "Масштабное обновление каталога инструментов",
-      description:
-        "С радостью сообщаем вам о крупном пополнении нашего каталога инструментов.",
-      date: "5 августа 2023",
-    },
-    {
-      img: news2,
-      title: "Масштабное обновление каталога инструментов",
-      description:
-        "С радостью сообщаем вам о крупном пополнении нашего каталога инструментов.",
-      date: "5 августа 2023",
-    },
-    {
-      img: news3,
-      title: "Масштабное обновление каталога инструментов",
-      description:
-        "С радостью сообщаем вам о крупном пополнении нашего каталога инструментов.",
-      date: "5 августа 2023",
-    },
-    {
-      img: news4,
-      title: "Масштабное обновление каталога инструментов",
-      description:
-        "С радостью сообщаем вам о крупном пополнении нашего каталога инструментов.",
-      date: "5 августа 2023",
     },
   ],
 };
