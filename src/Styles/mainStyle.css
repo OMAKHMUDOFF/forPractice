@@ -1954,3 +1954,7 @@ footer hr {
   font-weight: 400;
   line-height: 27px; /* 180% */
 }
+
+.about-page-news {
+  padding: 40px 0;
+}

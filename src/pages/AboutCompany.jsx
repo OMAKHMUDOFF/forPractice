@@ -275,7 +275,7 @@ export default function AboutCompany() {
             </div>
           </div>
         </div>
-        <div className="last-news">
+        <div className="last-news about-page-news">
           <div className="news-title-btn">
             <h2>Последние новости</h2>
             <NavLink to={"/news"}>
