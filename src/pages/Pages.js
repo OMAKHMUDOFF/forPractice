@@ -7,6 +7,8 @@ import Favorites from "./Favorites";
 import CatalogGoods from "./CatalogGoods";
 import AboutCompany from "./AboutCompany";
 import Contacts from "./Contacts";
+import News from "./News";
+import QA from "./QA";
 
 function Pages() {
   return (
@@ -18,6 +20,8 @@ function Pages() {
           <Route path="/catalogGoods" element={<CatalogGoods />} />
           <Route path="/about-company" element={<AboutCompany />} />
           <Route path="/contacts" element={<Contacts />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/quest-answer" element={<QA />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>

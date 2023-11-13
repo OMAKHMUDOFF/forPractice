@@ -1,17 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import error_num from "../assets/img/notFound/error-404.png";
+import TitleNavigation from "../components/UI/TitleNavigationUI";
 
 function NotFound() {
   return (
     <div className="notFound">
-      <div className="navigation">
-        <NavLink to={"/"}>Стройоптторг</NavLink>/
-        <NavLink to={"*"}>Страница не найдена</NavLink>
-      </div>
-      <div className="error-title">
-        <h1>Страница не найдена</h1>
-      </div>
+      <TitleNavigation path={"*"} title={"Страница не найдена"} pathName={"Страница не найдена"}/>
       <div className="error-main">
         <div className="error-num">
           <figure>

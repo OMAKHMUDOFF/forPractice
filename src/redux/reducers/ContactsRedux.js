@@ -41,6 +41,44 @@ let ContactData = {
       number: "8 (8782) 28-42-73",
     },
   ],
+  regions: [
+    {
+      reg: "Москва",
+      numLink: "+78004440065",
+      number: "+7 (800) 444-00-65",
+      mail: "info@stroiopttorg.ru",
+    },
+    {
+      reg: "Ставрополь",
+      numLink: "+78004440065",
+      number: "+7 (800) 444-00-65",
+      mail: "info@stroiopttorg.ru",
+    },
+    {
+      reg: "Краснодар",
+      numLink: "+78004440065",
+      number: "+7 (800) 444-00-65",
+      mail: "info@stroiopttorg.ru",
+    },
+    {
+      reg: "Грозный",
+      numLink: "+78004440065",
+      number: "+7 (800) 444-00-65",
+      mail: "info@stroiopttorg.ru",
+    },
+    {
+      reg: "Ростов-на-Дону",
+      numLink: "+78004440065",
+      number: "+7 (800) 444-00-65",
+      mail: "info@stroiopttorg.ru",
+    },
+    {
+      reg: "Самара",
+      numLink: "+78004440065",
+      number: "+7 (800) 444-00-65",
+      mail: "info@stroiopttorg.ru",
+    },
+  ],
 };
 
 export default function ContactsRedux(state = ContactData, { type, payload }) {

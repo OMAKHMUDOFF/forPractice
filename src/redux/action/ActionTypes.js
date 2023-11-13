@@ -25,4 +25,14 @@ let TotalTypes = {
   category: "category",
 };
 
-export { HomeTypes, NavbarTypes, FavoriteTypes, GoodsTypes, TotalTypes };
+let QATypes = {
+  openAns: "openAns",
+};
+export {
+  HomeTypes,
+  NavbarTypes,
+  FavoriteTypes,
+  GoodsTypes,
+  TotalTypes,
+  QATypes,
+};

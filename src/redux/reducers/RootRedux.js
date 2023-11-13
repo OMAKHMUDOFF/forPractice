@@ -5,6 +5,9 @@ import HomeRedux from "./HomeRedux";
 import NavbarRedux from "./NavbarRedux";
 import TotalRedux from "./TotalRedux";
 import ContactsRedux from "./ContactsRedux";
+import NewsRedux from "./NewsRedux";
+import QARedux from "./QARedux";
+
 const RootRedux = combineReducers({
   HomeRedux,
   NavbarRedux,
@@ -12,6 +15,8 @@ const RootRedux = combineReducers({
   GoodsRedux,
   TotalRedux,
   ContactsRedux,
+  NewsRedux,
+  QARedux,
 });
 
 export default RootRedux;
