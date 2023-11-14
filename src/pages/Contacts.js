@@ -29,7 +29,7 @@ function Contacts() {
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3A2ab111755e8672761c15bb9e11e26421a6dfcc425bda8e14149e35c20ba944ff&amp;source=constructor"
                 width="1393"
                 height="611"
-                frameborder="0"
+                frameBorder="0"
               ></iframe>
             </div>
             <div className="address-card">
@@ -81,7 +81,7 @@ function Contacts() {
             <div className="phone-number-cards">
               {departmentNum.map((elem, i) => {
                 return (
-                  <div className="phone-number-card">
+                  <div className="phone-number-card" key={i}>
                     <div className="depName">
                       <p>{elem.dep}</p>
                     </div>
@@ -111,7 +111,7 @@ function Contacts() {
             <div className="work-reg-cards">
               {regions.map((reg, i) => {
                 return (
-                  <div className="work-reg-card">
+                  <div className="work-reg-card" key={i}>
                     <div className="reg-name">{reg.reg}</div>
                     <div className="reg-phone-num">
                       <a href={`tel: ${reg.numLink}`}>{reg.number}</a>

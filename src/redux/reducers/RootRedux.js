@@ -1,12 +1,11 @@
 import { combineReducers } from "redux";
+import ContactsRedux from "./ContactsRedux";
 import FavoritesRedux from "./FavoritesRedux";
 import GoodsRedux from "./GoodsRedux";
 import HomeRedux from "./HomeRedux";
 import NavbarRedux from "./NavbarRedux";
-import TotalRedux from "./TotalRedux";
-import ContactsRedux from "./ContactsRedux";
 import NewsRedux from "./NewsRedux";
-import QARedux from "./QARedux";
+import TotalRedux from "./TotalRedux";
 
 const RootRedux = combineReducers({
   HomeRedux,
@@ -16,7 +15,6 @@ const RootRedux = combineReducers({
   TotalRedux,
   ContactsRedux,
   NewsRedux,
-  QARedux,
 });
 
 export default RootRedux;

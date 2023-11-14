@@ -9,6 +9,7 @@ import AboutCompany from "./AboutCompany";
 import Contacts from "./Contacts";
 import News from "./News";
 import QA from "./QA";
+import Refund from "./Refund";
 
 function Pages() {
   return (
@@ -22,6 +23,7 @@ function Pages() {
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/news" element={<News />} />
           <Route path="/quest-answer" element={<QA />} />
+          <Route path="/refund" element={<Refund />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>

@@ -2,7 +2,7 @@ import React from "react";
 
 function NewsUi({ elem, i }) {
   return (
-    <div className="news-card" key={i}>
+    <div className="news-card">
       <div className="news-img">
         <img src={elem.img} alt="news_img" />
       </div>

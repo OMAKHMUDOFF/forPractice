@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import SideBar from "../components/SideBar";
 import CardUi from "../components/UI/CardUi";
 import TitleNavigation from "../components/UI/TitleNavigationUI";
+import { Pagination, Stack } from "@mui/material";
 
 function CatalogGoods() {
   let totalState = useSelector((state) => state.TotalRedux);
@@ -30,6 +31,9 @@ function CatalogGoods() {
               );
             })}
           </div>
+          <Stack spacing={2}>
+            <Pagination count={10} variant="outlined" shape="rounded" />
+          </Stack>
         </div>
       </div>
     </div>

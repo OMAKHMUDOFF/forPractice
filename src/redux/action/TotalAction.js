@@ -20,4 +20,12 @@ function chooseCategory2(p) {
   };
 }
 
-export { chooseCategory1, chooseCategory2, setTotalLike };
+function answerOpen(p) {
+  return {
+    type: TotalTypes.openAns,
+    payload: p,
+  };
+}
+
+export { answerOpen, chooseCategory1, chooseCategory2, setTotalLike };
+

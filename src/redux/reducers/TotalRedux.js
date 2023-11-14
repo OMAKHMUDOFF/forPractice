@@ -1,20 +1,6 @@
 import { TotalTypes } from "../action/ActionTypes";
 
 //IMG IMPORTS
-import betonomeshalka from "../../assets/img/catalogGOODS/betonomeshalka.png";
-import bolgarka1 from "../../assets/img/catalogGOODS/bolgarka1.png";
-import bolgarka2 from "../../assets/img/catalogGOODS/bolgarka2.png";
-import bolgarka_makita from "../../assets/img/catalogGOODS/bolgarka_makita.png";
-import circular_bosch from "../../assets/img/catalogGOODS/circular_pila_bosch.png";
-import circular_zubr from "../../assets/img/catalogGOODS/circular_pila_zubr.png";
-import mixer from "../../assets/img/catalogGOODS/constr_mixer.png";
-import drell_makita_bez from "../../assets/img/catalogGOODS/drell_makita_bez_ruchki.png";
-import drell_makita_ruchka from "../../assets/img/catalogGOODS/drell_makita_s_ruchkoy.png";
-import nabor from "../../assets/img/catalogGOODS/nabor.png";
-import perforator1 from "../../assets/img/catalogGOODS/perforator.png";
-import perforator_bosch from "../../assets/img/catalogGOODS/perforator_bosch.png";
-import shlifovka_bosch from "../../assets/img/catalogGOODS/shlifovka.png";
-import shlifovka_zubr from "../../assets/img/catalogGOODS/shlifovka_zubr.png";
 import perforator from "../../assets/img/homePage_IMG/Rectangle 22.png";
 import circular from "../../assets/img/homePage_IMG/circular.png";
 import drell from "../../assets/img/homePage_IMG/drell_gladiator.png";
@@ -24,11 +10,46 @@ import smesitel from "../../assets/img/homePage_IMG/smesitel.png";
 import termostat from "../../assets/img/homePage_IMG/termostat.png";
 import unitaz from "../../assets/img/homePage_IMG/unitaz.png";
 import vodno_kley from "../../assets/img/homePage_IMG/vodno_kley.png";
+
+//catalogGoods img
+import pilesos_zubr from "../../assets/img/catalogGOODS/pilesos_zubr.png";
+import betonomeshalka from "../../assets/img/catalogGOODS/betonomeshalka.png";
+import bolgarka1 from "../../assets/img/catalogGOODS/bolgarka1.png";
+import bolgarka2 from "../../assets/img/catalogGOODS/bolgarka2.png";
+import bolgarka_makita from "../../assets/img/catalogGOODS/bolgarka_makita.png";
+import circular_bosch from "../../assets/img/catalogGOODS/circular_pila_bosch.png";
+import circular_zubr from "../../assets/img/catalogGOODS/circular_pila_zubr.png";
+import mixer from "../../assets/img/catalogGOODS/constr_mixer.png";
+import drell_makita_bez from "../../assets/img/catalogGOODS/drell_makita_bez_ruchki.png";
+import drell_makita_bez2 from "../../assets/img/catalogGOODS/drell_makita_bez_ruchki_2.png";
+import drell_makita_ruchka from "../../assets/img/catalogGOODS/drell_makita_s_ruchkoy.png";
+import graver_zubr from "../../assets/img/catalogGOODS/graver_zubr.png";
+import lobzik_makita from "../../assets/img/catalogGOODS/lobzik_makita.png";
+import nabor from "../../assets/img/catalogGOODS/nabor.png";
+import perforator1 from "../../assets/img/catalogGOODS/perforator.png";
+import perforator_bosch from "../../assets/img/catalogGOODS/perforator_bosch.png";
+import perforator_bosch_s from "../../assets/img/catalogGOODS/perforator_bosch_siniy.png";
+import shlifovka_bosch from "../../assets/img/catalogGOODS/shlifovka.png";
+import shlifovka_makita from "../../assets/img/catalogGOODS/shlifovka_makita.png";
+import shlifovka_zubr from "../../assets/img/catalogGOODS/shlifovka_zubr.png";
+import stroy_fen_zubr from "../../assets/img/catalogGOODS/stroy_fen_zubr.png";
+import drell_PIT from "../../assets/img/catalogGOODS/drell_PIT.png";
+import perforator_zubr from "../../assets/img/catalogGOODS/perforator_zubr.png";
+import stanok_vixr from "../../assets/img/catalogGOODS/stanok_vixr.png";
+import rubanok_vixr from "../../assets/img/catalogGOODS/rubanok_vixr.png";
+import perforator_PIT from "../../assets/img/catalogGOODS/perforator_PIT.png";
+import kley_pistolet_stayer from "../../assets/img/catalogGOODS/kley_pistolet_stayer.png";
+import rubanok_makita from "../../assets/img/catalogGOODS/rubanok_makita.png";
+
 //news img
 import news1 from "../../assets/img/homePage_IMG/news1.png";
 import news2 from "../../assets/img/homePage_IMG/news2.png";
 import news3 from "../../assets/img/homePage_IMG/news3.png";
 import news4 from "../../assets/img/homePage_IMG/news4.png";
+
+//discInfo Img
+import discInfo1 from "../../assets/img/QAImg/discInfo1.png";
+import discInfo2 from "../../assets/img/QAImg/discInfo2.png";
 
 let totalData = {
   bestSellers: [
@@ -329,6 +350,222 @@ let totalData = {
       hit: false,
       disc: 10,
     },
+    {
+      catalog: "goodsArr",
+      id: 25,
+      img: lobzik_makita,
+      art: "XJ89YHGO",
+      prodName: "Унитаз подвесной Aragio с двойным сливом",
+      price: 15999,
+      like: false,
+      color: "синий",
+      hit: true,
+      disc: 12,
+    },
+    {
+      catalog: "goodsArr",
+      id: 26,
+      img: shlifovka_makita,
+      art: "XJ89YHGO",
+      prodName: "Перфоратор универсальный Wander X645-46 GF 1450W",
+      price: 15999,
+      like: false,
+      color: "синий",
+      hit: false,
+      disc: 15,
+    },
+    {
+      catalog: "goodsArr",
+      id: 27,
+      img: stroy_fen_zubr,
+      art: "XJ89YHGO",
+      prodName: "Триммерная леска «Спираль-100»",
+      price: 312,
+      like: false,
+      color: "белый",
+      hit: false,
+      disc: 10,
+    },
+    {
+      catalog: "goodsArr",
+      id: 28,
+      img: graver_zubr,
+      art: "XJ89YHGO",
+      prodName: "Набор гравировальных насадок Nozzle-Tok",
+      price: 15999,
+      like: false,
+      color: "красный",
+      hit: false,
+      disc: 15,
+    },
+    {
+      catalog: "goodsArr",
+      id: 29,
+      img: drell_makita_bez2,
+      art: "XJ89YHGO",
+      prodName: "Унитаз подвесной Aragio с двойным сливом",
+      price: 15999,
+      like: false,
+      color: "синий",
+      hit: true,
+      disc: 12,
+    },
+    {
+      catalog: "goodsArr",
+      id: 30,
+      img: perforator_bosch_s,
+      art: "XJ89YHGO",
+      prodName: "Смеситель Faris G-120 для раковины",
+      price: 1789,
+      like: false,
+      color: "синий",
+      hit: true,
+      disc: 0,
+    },
+    {
+      catalog: "goodsArr",
+      id: 31,
+      img: drell_PIT,
+      art: "XJ89YHGO",
+      prodName: "Перфоратор универсальный Wander X645-46 GF 1450W",
+      price: 15999,
+      like: false,
+      color: "черный",
+      hit: false,
+      disc: 15,
+    },
+    {
+      catalog: "goodsArr",
+      id: 32,
+      img: perforator_zubr,
+      art: "XJ89YHGO",
+      prodName: "Унитаз подвесной Aragio с двойным сливом",
+      price: 15999,
+      like: false,
+      color: "белый",
+      hit: true,
+      disc: 12,
+    },
+    {
+      catalog: "goodsArr",
+      id: 33,
+      img: stanok_vixr,
+      art: "XJ89YHGO",
+      prodName: "Перфоратор универсальный Wander X645-46 GF 1450W",
+      price: 15999,
+      like: false,
+      color: "оранжевый",
+      hit: false,
+      disc: 15,
+    },
+    {
+      catalog: "goodsArr",
+      id: 34,
+      img: rubanok_vixr,
+      art: "XJ89YHGO",
+      prodName: "Триммерная леска «Спираль-100»",
+      price: 312,
+      like: false,
+      color: "оранжевый",
+      hit: false,
+      disc: 10,
+    },
+    {
+      catalog: "goodsArr",
+      id: 35,
+      img: perforator_PIT,
+      art: "XJ89YHGO",
+      prodName: "Триммерная леска «Спираль-100»",
+      price: 312,
+      like: false,
+      color: "черный",
+      hit: false,
+      disc: 10,
+    },
+    {
+      catalog: "goodsArr",
+      id: 36,
+      img: kley_pistolet_stayer,
+      art: "XJ89YHGO",
+      prodName: "Набор гравировальных насадок Nozzle-Tok",
+      price: 15999,
+      like: false,
+      color: "черный",
+      hit: false,
+      disc: 15,
+    },
+    {
+      catalog: "goodsArr",
+      id: 37,
+      img: nabor,
+      art: "XJ89YHGO",
+      prodName: "Набор гравировальных насадок Nozzle-Tok",
+      price: 15999,
+      like: false,
+      color: "желтый",
+      hit: false,
+      disc: 15,
+    },
+    {
+      catalog: "goodsArr",
+      id: 38,
+      img: rubanok_makita,
+      art: "XJ89YHGO",
+      prodName: "Смеситель Faris G-120 для раковины",
+      price: 1789,
+      like: false,
+      color: "синий",
+      hit: true,
+      disc: 0,
+    },
+    {
+      catalog: "goodsArr",
+      id: 39,
+      img: pilesos_zubr,
+      art: "XJ89YHGO",
+      prodName: "Смеситель Faris G-120 для раковины",
+      price: 1789,
+      like: false,
+      color: "красный",
+      hit: true,
+      disc: 0,
+    },
+    {
+      catalog: "goodsArr",
+      id: 40,
+      img: drell_makita_bez2,
+      art: "XJ89YHGO",
+      prodName: "Унитаз подвесной Aragio с двойным сливом",
+      price: 15999,
+      like: false,
+      color: "синий",
+      hit: true,
+      disc: 12,
+    },
+    {
+      catalog: "goodsArr",
+      id: 41,
+      img: bolgarka2,
+      art: "XJ89YHGO",
+      prodName: "Унитаз подвесной Aragio с двойным сливом",
+      price: 15999,
+      like: false,
+      color: "синий",
+      hit: true,
+      disc: 12,
+    },
+    {
+      catalog: "goodsArr",
+      id: 42,
+      img: nabor,
+      art: "XJ89YHGO",
+      prodName: "Набор гравировальных насадок Nozzle-Tok",
+      price: 15999,
+      like: false,
+      color: "желтый",
+      hit: false,
+      disc: 15,
+    },
   ],
   news: [
     {
@@ -363,6 +600,127 @@ let totalData = {
   categories: ["", "Инструменты", "Сантехника", "Для дома", "Для сада"],
   setBSeller: "",
   setBOffer: "",
+  discInfo: [
+    {
+      id: 1,
+      img: discInfo1,
+      title: "Все для отоплления",
+      disc: 30,
+    },
+    {
+      id: 2,
+      img: discInfo2,
+      title: "Лакокрасочные материалы",
+      disc: 30,
+    },
+  ],
+  qapage: [
+    {
+      catalog: "qapage",
+      id: 1,
+      quest:
+        "Могу ли я сделать возврат материалов, не использованных в процессе строительства?",
+      bool: false,
+      answer:
+        "Система кредитования и рассрочки действует в организации при обращении к кредитным специалистам, которые оформят вам договор по предложенным кредитным продуктам от банка, в который будет подана заявка.",
+    },
+    {
+      catalog: "qapage",
+      id: 2,
+      quest: "Входит ли в стоимость доставки разгрузка машины?",
+      bool: false,
+      answer:
+        "Система кредитования и рассрочки действует в организации при обращении к кредитным специалистам, которые оформят вам договор по предложенным кредитным продуктам от банка, в который будет подана заявка.",
+    },
+    {
+      catalog: "qapage",
+      id: 3,
+      quest:
+        "Продаются ли у вас в магазине товары под заказ, которые можно купить только по предоплате?",
+      bool: false,
+      answer:
+        "Система кредитования и рассрочки действует в организации при обращении к кредитным специалистам, которые оформят вам договор по предложенным кредитным продуктам от банка, в который будет подана заявка.",
+    },
+    {
+      catalog: "qapage",
+      id: 4,
+      quest: "Какая минимальная сумма заказа?",
+      bool: false,
+      answer:
+        "Система кредитования и рассрочки действует в организации при обращении к кредитным специалистам, которые оформят вам договор по предложенным кредитным продуктам от банка, в который будет подана заявка.",
+    },
+    {
+      catalog: "qapage",
+      id: 5,
+      quest: "Есть ли у вас бесплатная доставка?",
+      bool: false,
+      answer:
+        "Система кредитования и рассрочки действует в организации при обращении к кредитным специалистам, которые оформят вам договор по предложенным кредитным продуктам от банка, в который будет подана заявка.",
+    },
+    {
+      catalog: "qapage",
+      id: 6,
+      quest:
+        "Есть ли возможность оформить рассрочку или кредит при покупке? Если есть, то какие условия?",
+      bool: false,
+      answer:
+        "Система кредитования и рассрочки действует в организации при обращении к кредитным специалистам, которые оформят вам договор по предложенным кредитным продуктам от банка, в который будет подана заявка.",
+    },
+    {
+      catalog: "qapage",
+      id: 7,
+      quest: "Возможно ли проверить инструмент или технику перед покупкой?",
+      bool: false,
+      answer:
+        "Система кредитования и рассрочки действует в организации при обращении к кредитным специалистам, которые оформят вам договор по предложенным кредитным продуктам от банка, в который будет подана заявка.",
+    },
+    {
+      catalog: "qapage",
+      id: 8,
+      quest: "Какие дополнительные услуги есть у вас?",
+      bool: false,
+      answer:
+        "Система кредитования и рассрочки действует в организации при обращении к кредитным специалистам, которые оформят вам договор по предложенным кредитным продуктам от банка, в который будет подана заявка.",
+    },
+    {
+      catalog: "qapage",
+      id: 9,
+      quest: "Как часто у вас проходят акции?",
+      bool: false,
+      answer:
+        "Система кредитования и рассрочки действует в организации при обращении к кредитным специалистам, которые оформят вам договор по предложенным кредитным продуктам от банка, в который будет подана заявка.",
+    },
+  ],
+  refundPage: [
+    {
+      catalog: "refundPage",
+      id: 1,
+      quest: "Куда обращаться в случае поломки в течении гарантийного срока?",
+      bool: false,
+      answer: "Проводится платная диагностика и ремонт товара",
+    },
+    {
+      catalog: "refundPage",
+      id: 2,
+      quest: "Куда обращаться в случае поломки в течении гарантийного срока?",
+      bool: false,
+      answer: "Проводится платная диагностика и ремонт товара",
+    },
+    {
+      catalog: "refundPage",
+      id: 3,
+      quest: "Есть ли гарантийный ремонт?",
+      bool: false,
+      answer: "Проводится платная диагностика и ремонт товара",
+    },
+    {
+      catalog: "refundPage",
+      id: 4,
+      quest: "Какой срок действия гарантии?",
+      bool: false,
+      answer: "Проводится платная диагностика и ремонт товара",
+    },
+  ],
 };
 export default function TotalRedux(state = totalData, { type, payload }) {
   switch (type) {
@@ -376,6 +734,16 @@ export default function TotalRedux(state = totalData, { type, payload }) {
       return state;
     case TotalTypes.category:
       state = { ...state, setBSeller: payload };
+      return state;
+    case TotalTypes.openAns:
+      state = {
+        ...state,
+        [payload.catalog]: state?.[payload.catalog]?.map((elem) =>
+          elem.id === payload.id
+            ? { ...elem, bool: !elem.bool }
+            : { ...elem, bool: false }
+        ),
+      };
       return state;
     default:
       return state;

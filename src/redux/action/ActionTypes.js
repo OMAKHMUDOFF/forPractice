@@ -23,16 +23,8 @@ let TotalTypes = {
   totalLike: "totalLike",
   totalCart: "totalCart",
   category: "category",
-};
-
-let QATypes = {
   openAns: "openAns",
 };
-export {
-  HomeTypes,
-  NavbarTypes,
-  FavoriteTypes,
-  GoodsTypes,
-  TotalTypes,
-  QATypes,
-};
+
+export { FavoriteTypes, GoodsTypes, HomeTypes, NavbarTypes, TotalTypes };
+
