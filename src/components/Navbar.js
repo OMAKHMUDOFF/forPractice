@@ -11,12 +11,12 @@ import { catalogOpen, orderCall } from "../redux/action/NavbarAction";
 import CatalogWindow from "./CatalogWindow";
 
 function Navbar() {
-  let state = useSelector((state) => state.NavbarRedux);
+  let { botRN, catalogIsOpen } = useSelector((state) => state.NavbarRedux);
   let dispatch = useDispatch();
-  let { botRN, catalogIsOpen } = state;
-  
-  let totalState = useSelector((state) => state.TotalRedux);
-  let { bestSellers, bestOffers, goodsArr } = totalState;
+
+  let { bestSellers, bestOffers, goodsArr, cart } = useSelector(
+    (state) => state.TotalRedux
+  );
   let data = [...bestSellers, ...bestOffers, ...goodsArr];
   let favorites = data.filter((elem) => elem.like === true);
 
@@ -102,6 +102,10 @@ function Navbar() {
                     {item.title === "Избранное" && favorites.length > 0 ? (
                       <div className="lengthView">
                         {favorites.length > 0 ? favorites.length : ""}
+                      </div>
+                    ) : item.title === "Корзина" && cart.length > 0 ? (
+                      <div className="lengthView" style={{ right: "10px" }}>
+                        {cart.length > 0 ? cart.length : ""}
                       </div>
                     ) : (
                       ""

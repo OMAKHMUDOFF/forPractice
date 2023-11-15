@@ -88,9 +88,11 @@ export default function Refund() {
             <div className="warranty-claim-title">
               <h3>Обращение по гарантии</h3>
             </div>
-            {refundPage?.map((elem) => {
-              return <QAui key={elem.id} elem={elem} />;
-            })}
+            <div className="warraty-quests">
+              {refundPage?.map((elem) => {
+                return <QAui key={elem.id} elem={elem} />;
+              })}
+            </div>
           </div>
         </div>
         <div className="news-subs-mailing">

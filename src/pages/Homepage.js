@@ -358,7 +358,7 @@ function Homepage() {
         </div>
         <div className="news-cards">
           {news.map((elem, i) => {
-            return <NewsUi elem={elem} i={i} />;
+            return <NewsUi elem={elem} key={i} />;
           })}
         </div>
       </div>

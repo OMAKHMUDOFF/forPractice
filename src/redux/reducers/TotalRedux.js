@@ -50,6 +50,7 @@ import news4 from "../../assets/img/homePage_IMG/news4.png";
 //discInfo Img
 import discInfo1 from "../../assets/img/QAImg/discInfo1.png";
 import discInfo2 from "../../assets/img/QAImg/discInfo2.png";
+import { toast } from "react-toastify";
 
 let totalData = {
   bestSellers: [
@@ -721,6 +722,7 @@ let totalData = {
       answer: "Проводится платная диагностика и ремонт товара",
     },
   ],
+  cart: [],
 };
 export default function TotalRedux(state = totalData, { type, payload }) {
   switch (type) {
@@ -744,6 +746,14 @@ export default function TotalRedux(state = totalData, { type, payload }) {
             : { ...elem, bool: false }
         ),
       };
+      return state;
+    case TotalTypes.setCart:
+      if (state.cart.filter((elem) => elem.id === payload.id).length === 0) {
+        state = { ...state, cart: [...state.cart, payload] };
+        toast.success("Вы успещно добавили продукт в корзину");
+      } else {
+        toast.error("Этот продукт уже есть в корзине!");
+      }
       return state;
     default:
       return state;

@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { setTotalLike } from "../../redux/action/TotalAction";
+import { setTotalCart, setTotalLike } from "../../redux/action/TotalAction";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { FiBarChart2 } from "react-icons/fi";
 import { HiOutlineShoppingCart } from "react-icons/hi";
@@ -55,7 +55,7 @@ function CardUi({ elem }) {
         )}
         <div className="total-card-btns">
           <div className="cart-btn">
-            <button>
+            <button onClick={() => dispatch(setTotalCart(elem))}>
               <HiOutlineShoppingCart />
               Купить
             </button>

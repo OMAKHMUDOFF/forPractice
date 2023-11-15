@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import SideBar from "../components/SideBar";
 import CardUi from "../components/UI/CardUi";
+import DiscInfoUi from "../components/UI/DiscInfoUi"; 
 import TitleNavigation from "../components/UI/TitleNavigationUI";
 import { Pagination, Stack } from "@mui/material";
 
@@ -16,7 +17,10 @@ function CatalogGoods() {
         title={"Электроинструмент"}
       />
       <div className="sidebar-rightSide">
-        <SideBar />
+        <div className="sidebar-discInfo">
+          <SideBar />
+          <DiscInfoUi />
+        </div>
         <div className="rightSide">
           <div className="sort-filtersMap">
             <h2>Sort func</h2>

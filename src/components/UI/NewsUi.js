@@ -1,6 +1,6 @@
 import React from "react";
 
-function NewsUi({ elem, i }) {
+function NewsUi({ elem }) {
   return (
     <div className="news-card">
       <div className="news-img">

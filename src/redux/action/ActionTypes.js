@@ -24,7 +24,7 @@ let TotalTypes = {
   totalCart: "totalCart",
   category: "category",
   openAns: "openAns",
+  setCart: "setCart",
 };
 
 export { FavoriteTypes, GoodsTypes, HomeTypes, NavbarTypes, TotalTypes };
-

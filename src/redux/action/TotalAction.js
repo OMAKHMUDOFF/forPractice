@@ -27,5 +27,17 @@ function answerOpen(p) {
   };
 }
 
-export { answerOpen, chooseCategory1, chooseCategory2, setTotalLike };
+function setTotalCart(p) {
+  return {
+    type: TotalTypes.setCart,
+    payload: p,
+  };
+}
 
+export {
+  answerOpen,
+  chooseCategory1,
+  chooseCategory2,
+  setTotalLike,
+  setTotalCart,
+};

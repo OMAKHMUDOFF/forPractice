@@ -1508,8 +1508,9 @@ footer hr {
   line-height: 11px; /* 73.333% */
 }
 
-.LikedGoods {
-  padding: 0 150px 200px;
+.LikedGoods,
+.goods-cart-page {
+  padding: 0 150px 110px;
 }
 
 .main-liked {
@@ -1719,6 +1720,12 @@ footer hr {
   display: flex;
   gap: 20px;
   margin-bottom: 110px;
+}
+
+.sidebar-rightSide .sidebar-discInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .catalogGoods .rightSide {
@@ -2650,4 +2657,33 @@ footer hr {
   display: flex;
   gap: 20px;
   margin-bottom: 110px;
+}
+
+.left-refund-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.warranty-claim {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fill-bg-box {
+  position: relative;
+  border-radius: 8px;
+  background: #f3f4f5;
+  height: 7px;
+}
+
+.fill-box {
+  height: 7px;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5%;
+  background: #3481d9 20%;
 }
