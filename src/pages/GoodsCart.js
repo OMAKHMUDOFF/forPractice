@@ -1,9 +1,8 @@
 import React from "react";
-import TitleNavigation from "../components/UI/TitleNavigationUI";
 import { useSelector } from "react-redux";
-import EmptyUi from "../components/UI/EmptyUi";
 import sadCart from "../assets/img/sadCart.png";
-import { Box, LinearProgress, Typography } from "@mui/material";
+import EmptyUi from "../components/UI/EmptyUi";
+import TitleNavigation from "../components/UI/TitleNavigationUI";
 
 function GoodsCart(props) {
   let { cart } = useSelector((state) => state.TotalRedux);
@@ -25,8 +24,53 @@ function GoodsCart(props) {
             </div>
             <div className="fill-discount">
               <div className="fill-bg-box">
-                <div className="fill-box">
-                  
+                <div className="fill-box"></div>
+              </div>
+              <div className="from-to-disc">
+                <div className="from-money">
+                  <p>3567 ₽</p>
+                </div>
+                <div className="to-money">
+                  <p>7000 ₽</p>
+                </div>
+              </div>
+            </div>
+            <div className="your-disc-info">
+              <div className="hmuch-for-disc">
+                <p>
+                  Добавьте в корзину товаров на <span>3 433 ₽</span> и получите
+                  скидку 7%
+                </p>
+              </div>
+              <div className="hover-disc-info">
+                <div className="hover-box">
+                  <p>Информация о скидках от суммы корзины</p>
+                </div>
+                <div className="hover-discounts">
+                  <div className="hover-disc-title">
+                    <p>Сейчас у нас действуют следующие пороги:</p>
+                  </div>
+                  <div className="discounts">
+                    <div className="first-discount">
+                      <p>
+                        от <span>3 000₽</span> -
+                      </p>
+                      <span style={{ background: "#1b9665" }}>-5%</span>
+                    </div>
+                    <div className="sec-discount">
+                      <p>
+                        от <span>7 000₽</span> -
+                      </p>
+                      <span style={{ background: "#FF9900" }}>-10%</span>
+                    </div>
+                    <div className="third-discount">
+                      <p>
+                        от <span>20 000₽</span> -
+                      </p>
+                      <span style={{ background: "#EE063E" }}>-15%</span>
+                    </div>
+                  </div>
+                  <div className="bottom-arrow"></div>
                 </div>
               </div>
             </div>

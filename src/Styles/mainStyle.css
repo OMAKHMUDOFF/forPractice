@@ -2671,6 +2671,48 @@ footer hr {
   gap: 20px;
 }
 
+.goods-cart-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.from-to-disc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.your-disc {
+  display: flex;
+  padding: 15px 25px;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 8px;
+  border: 1px solid #edf0f2;
+  background: #fff;
+}
+
+.your-disc-title p {
+  color: #000;
+  font-size: 15px;
+  font-weight: 550;
+  line-height: 28px; /* 186.667% */
+}
+
+.your-disc-title p span {
+  color: #003b73;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.fill-discount {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .fill-bg-box {
   position: relative;
   border-radius: 8px;
@@ -2686,4 +2728,132 @@ footer hr {
   left: 0;
   width: 5%;
   background: #3481d9 20%;
+}
+
+.from-to-disc .from-money p {
+  color: #3d3d3d;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px; /* 186.667% */
+
+  padding-left: 15px;
+}
+
+.from-to-disc .to-money p {
+  color: #898989;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px; /* 186.667% */
+}
+
+.your-disc-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hmuch-for-disc p {
+  color: #343a43;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px; /* 186.667% */
+}
+
+.hmuch-for-disc p span {
+  color: #003b73;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.hover-disc-info {
+  width: 500px;
+  position: relative;
+}
+
+.hover-disc-info .hover-box {
+  width: 360px;
+  padding: 15px 17px;
+  border-radius: 4px;
+  background: #f6f8fb;
+  color: #117fe3;
+  font-size: 15px;
+  font-weight: 550;
+  line-height: 11px; /* 73.333% */
+}
+
+.hover-discounts {
+  transition: 0.3s;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+  position: absolute;
+  top: -100px;
+  left: -9%;
+  padding: 25px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.09);
+}
+
+.hover-disc-title p {
+  color: #186fd4;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px; /* 144.444% */
+}
+
+.discounts {
+  display: flex;
+  gap: 28px;
+}
+
+.discounts > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.discounts > div p {
+  color: #2c333d;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+
+.discounts > div p span {
+  color: #2c333d;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.discounts > div > span {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 11px; /* 100% */
+
+  border-radius: 4px;
+  display: flex;
+  padding: 8px 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hover-discounts .bottom-arrow {
+  position: absolute;
+  bottom: -10px;
+  left: 45%;
+  background: #fff;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.09);
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+}
+
+.hover-box:hover ~ .hover-discounts {
+  opacity: 1;
+  top: -135px;
+  transition: 0.5s;
 }
