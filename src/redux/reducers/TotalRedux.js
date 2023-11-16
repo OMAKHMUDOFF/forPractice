@@ -756,18 +756,22 @@ export default function TotalRedux(state = totalData, { type, payload }) {
       }
       return state;
     case TotalTypes.decrement:
-      state = {
-        ...state,
-        cart: state?.cart?.map((elem) =>
-          elem.id === payload.id ? { ...(elem.count - 1) } : elem
-        ),
-      };
+      if (payload.count > 1) {
+        state = {
+          ...state,
+          cart: state?.cart?.map((elem) =>
+            elem?.id === payload?.id ? { ...elem, count: elem.count - 1 } : elem
+          ),
+        };
+      } else {
+        toast.warn("Нельзя купить товар меньше одного");
+      }
       return state;
     case TotalTypes.increment:
       state = {
         ...state,
         cart: state?.cart?.map((elem) =>
-          elem.id === payload.id ? { ...(elem.count + 1) } : elem
+          elem?.id === payload?.id ? { ...elem, count: elem.count + 1 } : elem
         ),
       };
       return state;

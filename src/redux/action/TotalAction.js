@@ -34,10 +34,25 @@ function setTotalCart(p) {
   };
 }
 
+function countDec(p) {
+  return {
+    type: TotalTypes.decrement,
+    payload: p,
+  };
+}
+function countIn(p) {
+  return {
+    type: TotalTypes.increment,
+    payload: p,
+  };
+}
+
 export {
   answerOpen,
   chooseCategory1,
   chooseCategory2,
-  setTotalLike,
+  countDec,
+  countIn,
   setTotalCart,
+  setTotalLike,
 };

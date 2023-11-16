@@ -1,12 +1,14 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import sadCart from "../assets/img/sadCart.png";
+import ButtonUi from "../components/UI/ButtonUi";
 import EmptyUi from "../components/UI/EmptyUi";
 import TitleNavigation from "../components/UI/TitleNavigationUI";
-import ButtonUi from "../components/UI/ButtonUi";
+import { countDec, countIn } from "../redux/action/TotalAction";
 
-function GoodsCart(props) {
+function GoodsCart() {
   let { cart } = useSelector((state) => state.TotalRedux);
+  let dispatch = useDispatch();
 
   return (
     <div className="goods-cart-page">
@@ -15,7 +17,7 @@ function GoodsCart(props) {
         pathName={"Корзина товаров"}
         title={"Корзина товаров"}
       />
-      {cart.length >= 0 ? (
+      {cart.length > 0 ? (
         <div className="main-cart-page">
           <div className="left-cart-goods">
             <div className="your-disc">
@@ -119,13 +121,17 @@ function GoodsCart(props) {
                       <td className="table-count-actions">
                         <div>
                           <div className="decrement-button">
-                            <button>-</button>
+                            <button onClick={() => dispatch(countDec(elem))}>
+                              -
+                            </button>
                           </div>
                           <div className="goods-count">
                             <p>{elem.count}</p>
                           </div>
                           <div className="increment-button">
-                            <button>+</button>
+                            <button onClick={() => dispatch(countIn(elem))}>
+                              +
+                            </button>
                           </div>
                         </div>
                       </td>
