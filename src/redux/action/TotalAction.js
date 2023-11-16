@@ -47,6 +47,13 @@ function countIn(p) {
   };
 }
 
+function delGoods(p) {
+  return {
+    type: TotalTypes.delete,
+    payload: p,
+  };
+}
+
 export {
   answerOpen,
   chooseCategory1,
@@ -55,4 +62,5 @@ export {
   countIn,
   setTotalCart,
   setTotalLike,
+  delGoods,
 };

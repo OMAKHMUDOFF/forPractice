@@ -4,7 +4,8 @@ import sadCart from "../assets/img/sadCart.png";
 import ButtonUi from "../components/UI/ButtonUi";
 import EmptyUi from "../components/UI/EmptyUi";
 import TitleNavigation from "../components/UI/TitleNavigationUI";
-import { countDec, countIn } from "../redux/action/TotalAction";
+import { countDec, countIn, delGoods } from "../redux/action/TotalAction";
+import { TbTrashX } from "react-icons/tb";
 
 function GoodsCart() {
   let { cart } = useSelector((state) => state.TotalRedux);
@@ -86,7 +87,7 @@ function GoodsCart() {
                     <th>Товар</th>
                     <th>Цена</th>
                     <th>Количество</th>
-                    <th>Сумма</th>
+                    <th colSpan={2}>Сумма</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -102,21 +103,23 @@ function GoodsCart() {
                         </div>
                       </td>
                       <td>
-                        {elem.disc > 0 ? (
-                          <div className="table-goods-price">
-                            <p>
-                              {parseInt(
-                                elem.price - (elem.price / 100) * elem.disc
-                              )}{" "}
-                              ₽
-                            </p>
-                            <del>{elem.price} ₽</del>
-                          </div>
-                        ) : (
-                          <div className="table-goods-price">
-                            <p>{elem.price} ₽</p>
-                          </div>
-                        )}
+                        <div className="table-goods-price">
+                          {elem.disc > 0 ? (
+                            <>
+                              <p>
+                                {parseInt(
+                                  elem.price - (elem.price / 100) * elem.disc
+                                )}{" "}
+                                ₽
+                              </p>
+                              <del>{elem.price} ₽</del>
+                            </>
+                          ) : (
+                            <>
+                              <p>{elem.price} ₽</p>
+                            </>
+                          )}
+                        </div>
                       </td>
                       <td className="table-count-actions">
                         <div>
@@ -146,6 +149,14 @@ function GoodsCart() {
                             ₽
                           </p>
                         </div>
+                      </td>
+                      <td>
+                        <button
+                          onClick={() => dispatch(delGoods(elem.id))}
+                          style={{ background: "none" }}
+                        >
+                          <TbTrashX color="#ADADAD" size={"20px"}/>
+                        </button>
                       </td>
                     </tr>
                   ))}

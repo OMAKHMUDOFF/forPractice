@@ -749,7 +749,13 @@ export default function TotalRedux(state = totalData, { type, payload }) {
       return state;
     case TotalTypes.setCart:
       if (state.cart.filter((elem) => elem.id === payload.id).length === 0) {
-        state = { ...state, cart: [...state.cart, { ...payload, count: 1 }] };
+        state = {
+          ...state,
+          cart: [
+            ...state.cart,
+            { ...payload, count: 1, stock: parseInt(Math.random() * 30) },
+          ],
+        };
         toast.success("Вы успещно добавили продукт в корзину");
       } else {
         toast.error("Этот продукт уже есть в корзине!");
@@ -768,12 +774,28 @@ export default function TotalRedux(state = totalData, { type, payload }) {
       }
       return state;
     case TotalTypes.increment:
-      state = {
-        ...state,
-        cart: state?.cart?.map((elem) =>
-          elem?.id === payload?.id ? { ...elem, count: elem.count + 1 } : elem
-        ),
-      };
+      if (payload.count < payload.stock) {
+        state = {
+          ...state,
+          cart: state?.cart?.map((elem) =>
+            elem?.id === payload?.id ? { ...elem, count: elem.count + 1 } : elem
+          ),
+        };
+      } else {
+        toast.warn("На складе нету столько товаров");
+      }
+      return state;
+    case TotalTypes.delete:
+      if (window.confirm("Вы точно хотите убрать товар из корзины?")) {
+        state = {
+          ...state,
+          cart: state?.cart?.filter((elem) => elem.id !== payload),
+        };
+        toast.success("Вы успешно удалили товар с корзины");
+      } else {
+        toast.warn("Вы отменили");
+      }
+
       return state;
     default:
       return state;

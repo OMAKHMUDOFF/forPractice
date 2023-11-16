@@ -27,6 +27,7 @@ let TotalTypes = {
   setCart: "setCart",
   decrement: "decrement",
   increment: "increment",
+  delete: "delete",
 };
 
 export { FavoriteTypes, GoodsTypes, HomeTypes, NavbarTypes, TotalTypes };

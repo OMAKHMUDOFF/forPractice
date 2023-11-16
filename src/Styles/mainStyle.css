@@ -3020,3 +3020,7 @@ footer hr {
   font-weight: 400;
   line-height: 13px; /* 100% */
 }
+
+.table-goods-del-price {
+  display: flex;
+}
