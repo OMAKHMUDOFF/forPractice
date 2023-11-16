@@ -25,6 +25,8 @@ let TotalTypes = {
   category: "category",
   openAns: "openAns",
   setCart: "setCart",
+  decrement: "decrement",
+  increment: "increment",
 };
 
 export { FavoriteTypes, GoodsTypes, HomeTypes, NavbarTypes, TotalTypes };

@@ -2857,3 +2857,166 @@ footer hr {
   top: -135px;
   transition: 0.5s;
 }
+
+.main-cart-page {
+  display: flex;
+  gap: 20px;
+}
+
+.left-cart-goods {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.goods-total-price {
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 4px 19px 0px rgba(23, 27, 32, 0.07);
+  display: flex;
+  width: 28%;
+  padding: 25px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.goods-total-price :where(.promo-disc, .total-price-disc, .total-price-sum) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 15px;
+}
+
+.goods-total-price :where(.promo-disc, .total-price-disc, .total-price-sum) p {
+  color: #000;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px; /* 186.667% */
+}
+
+.goods-total-price
+  :where(.promo-disc, .total-price-disc, .total-price-sum)
+  span {
+  color: #4d6159;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.total-sum-title {
+  width: 100%;
+}
+
+.promo-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.promo-input input {
+  width: 100%;
+  padding: 25px 20px;
+  border-radius: 7px;
+  border: 1px solid #ebeef0;
+  background: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.07) inset;
+
+  font-size: 15px;
+}
+
+.promo-input input::placeholder {
+  color: #adb1b7;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 11px; /* 73.333% */
+}
+
+.go-to-checkout {
+  width: 100%;
+}
+
+.go-to-checkout button {
+  width: 100%;
+}
+.goods-table table {
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
+  border: 1px solid #edf0f2;
+}
+
+.goods-table table thead th {
+  color: #45484a;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px; /* 171.429% */
+  text-transform: uppercase;
+}
+
+.goods-table table thead th:first-child {
+  width: 450px;
+}
+
+.goods-table table :where(th, td) {
+  text-align: left;
+  padding: 15px 20px;
+}
+
+.goods-table table tbody img {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+}
+
+.table-goods-price p {
+  color: #003b73;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px; /* 110% */
+}
+
+.table-goods-price del {
+  color: #8f9296;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+}
+
+.goods-table table tbody td:first-child {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.goods-table .table-count-actions > div {
+  display: inline-flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.goods-table .table-count-actions button {
+  width: 61px;
+  height: 43px;
+  padding: 10px;
+  border-radius: 900px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.table-prodName-art p {
+  width: 300px;
+  color: #2c333d;
+  font-size: 16px;
+  font-weight: 550;
+  line-height: 26px; /* 162.5% */
+}
+
+.table-prodName-art span {
+  color: #a8adb2;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 13px; /* 100% */
+}
