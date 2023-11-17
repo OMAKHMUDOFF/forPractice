@@ -60,7 +60,7 @@ export {
   chooseCategory2,
   countDec,
   countIn,
+  delGoods,
   setTotalCart,
   setTotalLike,
-  delGoods,
 };

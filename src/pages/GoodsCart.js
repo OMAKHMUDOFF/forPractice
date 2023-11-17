@@ -1,15 +1,21 @@
 import React from "react";
+import { TbTrashX } from "react-icons/tb";
 import { useDispatch, useSelector } from "react-redux";
 import sadCart from "../assets/img/sadCart.png";
 import ButtonUi from "../components/UI/ButtonUi";
 import EmptyUi from "../components/UI/EmptyUi";
 import TitleNavigation from "../components/UI/TitleNavigationUI";
 import { countDec, countIn, delGoods } from "../redux/action/TotalAction";
-import { TbTrashX } from "react-icons/tb";
 
 function GoodsCart() {
   let { cart } = useSelector((state) => state.TotalRedux);
   let dispatch = useDispatch();
+  let sum = cart.reduce(
+    (a, b) => parseInt(a + b.count * (b.price - (b.price / 100) * b.disc)),
+    0
+  );
+
+  let dis = sum > 3433 ? parseInt((sum / 100) * 7) : 0;
 
   return (
     <div className="goods-cart-page">
@@ -24,16 +30,24 @@ function GoodsCart() {
             <div className="your-disc">
               <div className="your-disc-title">
                 <p>
-                  Ваша скидка от суммы заказа: <span>0 ₽</span>
+                  Ваша скидка от суммы заказа: <span>{dis} ₽</span>
                 </p>
               </div>
               <div className="fill-discount">
                 <div className="fill-bg-box">
-                  <div className="fill-box"></div>
+                  <div
+                    className="fill-box"
+                    style={{
+                      width: `${
+                        sum > 20000 ? 100 : parseInt((sum * 100) / 20000)
+                      }%`,
+                      transition: ".5s",
+                    }}
+                  ></div>
                 </div>
                 <div className="from-to-disc">
                   <div className="from-money">
-                    <p>3567 ₽</p>
+                    <p>{sum} ₽</p>
                   </div>
                   <div className="to-money">
                     <p>7000 ₽</p>
@@ -43,8 +57,8 @@ function GoodsCart() {
               <div className="your-disc-info">
                 <div className="hmuch-for-disc">
                   <p>
-                    Добавьте в корзину товаров на <span>3 433 ₽</span> и
-                    получите скидку 7%
+                    Добавьте в корзину товаров на <span>3433 ₽</span> и получите
+                    скидку 7%
                   </p>
                 </div>
                 <div className="hover-disc-info">
@@ -155,7 +169,7 @@ function GoodsCart() {
                           onClick={() => dispatch(delGoods(elem.id))}
                           style={{ background: "none" }}
                         >
-                          <TbTrashX color="#ADADAD" size={"20px"}/>
+                          <TbTrashX color="#ADADAD" size={"20px"} />
                         </button>
                       </td>
                     </tr>
@@ -174,11 +188,15 @@ function GoodsCart() {
             </div>
             <div className="total-price-disc">
               <p>Скидка от суммы заказа</p>
-              <span>0 ₽</span>
+              <span style={{ color: dis > 0 ? "#1B9665" : "#4D6159" }}>
+                {dis} ₽
+              </span>
             </div>
             <div className="total-price-sum">
               <p>Сумма</p>
-              <span>0 ₽</span>
+              <span style={{ color: sum > 0 ? "#003B73" : "#4d6159" }}>
+                {sum} ₽
+              </span>
             </div>
             <div className="promo-input">
               <input type="text" placeholder="Промокод" />
