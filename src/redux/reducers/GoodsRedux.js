@@ -101,14 +101,37 @@ let goodsData = {
     },
   ],
   colorArr: [
-    "",
-    "Синий",
-    "Черный",
-    "Серый",
-    "Белый",
-    "Красный",
-    "Оранжевый",
-    "Желтый",
+    {
+      color: "Синий",
+
+      translation: "blue",
+    },
+    {
+      color: "Черный",
+
+      translation: "black",
+    },
+    {
+      color: "Серый",
+
+      translation: "silver",
+    },
+    {
+      color: "Белый",
+      translation: "white",
+    },
+    {
+      color: "Красный",
+      translation: "red",
+    },
+    {
+      color: "Оранжевый",
+      translation: "orange",
+    },
+    {
+      color: "Желтый",
+      translation: "yellow",
+    },
   ],
 };
 

@@ -1,0 +1,149 @@
+.filter-subtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: #fff;
+}
+
+.filter-subtitle h4 {
+  color: #414446;
+
+  /* H4 */
+  font-size: 18px;
+  font-weight: 550;
+  line-height: 26px; /* 144.444% */
+}
+
+.filter-subtitle button {
+  padding: 5px;
+  font-size: 15px;
+  background: none;
+}
+
+.sidebar-filter {
+  width: 331px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s;
+}
+
+.css-1v5z18m {
+  padding: 0 10px;
+}
+
+.css-eg0mwd-MuiSlider-thumb {
+  background-color: white !important;
+  border: 2px solid;
+}
+
+.css-1gv0vcd-MuiSlider-track,
+.css-14pt78w-MuiSlider-rail {
+  height: 2px !important;
+}
+
+.css-14pt78w-MuiSlider-rail {
+  background: #dfe0e2 !important;
+}
+
+.from-to-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, calc(100% / 2 - 10px));
+  align-items: center;
+  gap: 18px;
+}
+
+.from-to-inputs :where(.from-to-first, .from-to-second) {
+  border-radius: 6px;
+  border: 1px solid #dfe0e2;
+  display: flex;
+  padding: 13px 15px;
+  align-items: center;
+  gap: 5px;
+
+  color: #a7aaae;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px; /* 173.333% */
+}
+
+:is(.from-to-first, .from-to-second) input {
+  width: 100%;
+  color: #2c333d;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+
+.checkbox-goods-type,
+.checkbox-brand-type {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+:is(.checkbox-brand-type, .checkbox-goods-type) p {
+  cursor: pointer;
+}
+
+.sidebar-filter
+  :where(
+    .closed-brand-filter,
+    .closed-goods-filter,
+    .closed-price-filter,
+    .closed-material-filter,
+    .closed-color-filter
+  ) {
+  display: none;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 2s ease-in-out;
+}
+.sidebar-filter
+  :where(
+    .opened-brand-filter,
+    .opened-goods-filter,
+    .opened-price-filter,
+    .opened-material-filter,
+    .opened-color-filter
+  ) {
+  display: grid;
+  flex-direction: column;
+  transition: grid-template-rows 2s ease-in-out;
+  grid-template-rows: 1fr;
+}
+
+:is(
+    .opened-brand-filter,
+    .opened-goods-filter,
+    .opened-price-filter,
+    .opened-material-filter,
+    .opened-color-filter
+  )
+  > div {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: 0.4s;
+  width: 100%;
+}
+:is(
+    .closed-brand-filter,
+    .closed-goods-filter,
+    .closed-price-filter,
+    .closed-material-filter,
+    .closed-color-filter
+  )
+  > div {
+  display: flex;
+  gap: 15px;
+  transition: 0.4s;
+  width: 100%;
+}
+
+.color-view {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid;
+}

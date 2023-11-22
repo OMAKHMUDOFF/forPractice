@@ -1539,118 +1539,6 @@ footer hr {
   gap: 10px;
 }
 
-.opened-price-filter,
-.opened-goods-filter,
-.opened-brand-filter {
-  display: grid;
-  grid-template-rows: 1fr;
-  transition: 0.5s ease-in-out;
-}
-
-.opened-price-filter > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 18px;
-  transition: 0.3s;
-}
-
-:is(.closed-price-filter, .closed-brand-filter, .closed-goods-filter) > div {
-  transition: 0.3s;
-}
-
-.closed-price-filter,
-.closed-goods-filter,
-.closed-brand-filter {
-  display: grid;
-  overflow: hidden;
-  grid-template-rows: 0fr;
-  transition: 0.5s ease-in-out;
-}
-
-.filter-subtitle {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.filter-subtitle h4 {
-  color: #414446;
-
-  /* H4 */
-  font-size: 18px;
-  font-weight: 550;
-  line-height: 26px; /* 144.444% */
-}
-
-.filter-subtitle button {
-  padding: 5px;
-  font-size: 15px;
-  background: none;
-}
-
-.sidebar-filter {
-  width: 331px;
-  display: flex;
-  flex-direction: column;
-  transition: 0.5s;
-}
-
-.css-eg0mwd-MuiSlider-thumb {
-  background-color: white !important;
-  border: 2px solid;
-}
-
-.css-1gv0vcd-MuiSlider-track,
-.css-14pt78w-MuiSlider-rail {
-  height: 2px !important;
-}
-
-.css-14pt78w-MuiSlider-rail {
-  background: #dfe0e2 !important;
-}
-
-.from-to-inputs {
-  display: grid;
-  grid-template-columns: repeat(2, calc(100% / 2 - 10px));
-  align-items: center;
-  gap: 18px;
-}
-
-.from-to-inputs :where(.from-to-first, .from-to-second) {
-  border-radius: 6px;
-  border: 1px solid #dfe0e2;
-  display: flex;
-  padding: 13px 15px;
-  align-items: center;
-  gap: 5px;
-
-  color: #a7aaae;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 26px; /* 173.333% */
-}
-
-:is(.from-to-first, .from-to-second) input {
-  width: 100%;
-  color: #2c333d;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px; /* 162.5% */
-}
-
-.checkbox-goods-type,
-.checkbox-brand-type {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-}
-
-:is(.checkbox-brand-type, .checkbox-goods-type) p {
-  cursor: pointer;
-}
-
 .no-favorites {
   display: flex;
   flex-direction: column;
@@ -1694,13 +1582,6 @@ footer hr {
   font-weight: 700;
   line-height: 17px; /* 130.769% */
   text-transform: uppercase;
-}
-
-:is(.opened-brand-filter, .opened-goods-filter) > div {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 18px;
 }
 
 .goods-cards {

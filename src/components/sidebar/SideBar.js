@@ -1,14 +1,18 @@
 import { Box, Slider } from "@mui/material";
 import { useState } from "react";
+import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
-import { BsChevronUp, BsChevronDown } from "react-icons/bs";
-import { changeFiltersBool, setCheckBool } from "../redux/action/GoodsAction";
+import {
+  changeFiltersBool,
+  setCheckBool,
+} from "../../redux/action/GoodsAction";
 
 function SideBar() {
   let state = useSelector((state) => state.GoodsRedux);
   let dispatch = useDispatch();
-  let { isOpenPrice, isOpenGoods, isOpenBrand } = state;
-  let { goodsTypeArr, brandArr } = state;
+  let { isOpenPrice, isOpenGoods, isOpenBrand, isOpenMaterial, isOpenColor } =
+    state;
+  let { goodsTypeArr, brandArr, materialArr, colorArr } = state;
   const [value, setValue] = useState([0, 52000]);
   const valueSet = (e, i) => {
     setValue(
@@ -30,10 +34,13 @@ function SideBar() {
   // </Box>
 
   return (
-    <div className="sidebar-filter">
+    <aside className="sidebar-filter">
       <div
         className="price-filter"
-        style={{ marginBottom: isOpenGoods ? "40px" : "20px" }}
+        style={{
+          marginBottom: isOpenPrice ? "40px" : "20px",
+          transition: ".3s ",
+        }}
       >
         <div className="filter-subtitle">
           <h4>Цена, ₽</h4>
@@ -79,7 +86,10 @@ function SideBar() {
       </div>
       <div
         className="goods-filter"
-        style={{ marginBottom: isOpenGoods ? "40px" : "20px" }}
+        style={{
+          marginBottom: isOpenGoods ? "40px" : "20px",
+          transition: ".3s ",
+        }}
       >
         <div className="filter-subtitle">
           <h4>Тип товара</h4>
@@ -96,11 +106,11 @@ function SideBar() {
             {goodsTypeArr.map((elem, i) => {
               return (
                 <div className="checkbox-goods-type" key={i}>
-                  {elem.bool ? (
-                    <input type="checkbox" checked />
-                  ) : (
-                    <input type="checkbox" />
-                  )}
+                  <input
+                    type="checkbox"
+                    checked={elem.bool}
+                    onChange={() => {}}
+                  />
                   <p onClick={() => dispatch(setCheckBool(elem))}>
                     {elem.title}
                   </p>
@@ -110,7 +120,13 @@ function SideBar() {
           </div>
         </div>
       </div>
-      <div className="brand-filter">
+      <div
+        className="brand-filter"
+        style={{
+          marginBottom: isOpenBrand ? "40px" : "20px",
+          transition: ".3s ",
+        }}
+      >
         <div className="filter-subtitle">
           <h4>Бренд</h4>
           <button onClick={() => dispatch(changeFiltersBool("isOpenBrand"))}>
@@ -126,11 +142,11 @@ function SideBar() {
             {brandArr.map((elem, i) => {
               return (
                 <div className="checkbox-brand-type" key={i}>
-                  {elem.bool ? (
-                    <input type="checkbox" checked />
-                  ) : (
-                    <input type="checkbox" />
-                  )}
+                  <input
+                    type="checkbox"
+                    checked={elem.bool}
+                    onChange={() => {}}
+                  />
                   <p onClick={() => dispatch(setCheckBool(elem))}>
                     {elem.title}
                   </p>
@@ -140,7 +156,76 @@ function SideBar() {
           </div>
         </div>
       </div>
-    </div>
+      <div
+        className="material-filter"
+        style={{
+          marginBottom: isOpenMaterial ? "40px" : "20px",
+          transition: ".3s ",
+        }}
+      >
+        <div className="filter-subtitle">
+          <h4>Материал</h4>
+          <button onClick={() => dispatch(changeFiltersBool("isOpenMaterial"))}>
+            {isOpenMaterial ? <BsChevronUp /> : <BsChevronDown />}
+          </button>
+        </div>
+        <div
+          className={
+            isOpenMaterial ? "opened-material-filter" : "closed-material-filter"
+          }
+        >
+          <div style={{ minHeight: 0 }}>
+            {materialArr.map((elem, i) => {
+              return (
+                <div className="checkbox-brand-type" key={i}>
+                  <input
+                    type="checkbox"
+                    checked={elem.bool}
+                    onChange={() => {}}
+                  />
+                  <p onClick={() => dispatch(setCheckBool(elem))}>
+                    {elem.title}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+      <div
+        className="color-filter"
+        style={{
+          marginBottom: isOpenColor ? "40px" : "20px",
+          transition: ".3s ",
+        }}
+      >
+        <div className="filter-subtitle">
+          <h4>Цвет</h4>
+          <button onClick={() => dispatch(changeFiltersBool("isOpenColor"))}>
+            {isOpenColor ? <BsChevronUp /> : <BsChevronDown />}
+          </button>
+        </div>
+        <div
+          className={
+            isOpenColor ? "opened-color-filter" : "closed-color-filter"
+          }
+        >
+          <div style={{ minHeight: 0 }}>
+            {colorArr.map((elem, i) => {
+              return (
+                <div className="checkbox-brand-type" key={i}>
+                  <div
+                    className="color-view"
+                    style={{ background: elem.translation }}
+                  ></div>
+                  <p>{elem.color}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </aside>
   );
 }
 

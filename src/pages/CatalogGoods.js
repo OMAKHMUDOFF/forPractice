@@ -1,10 +1,11 @@
+import { Pagination, Stack } from "@mui/material";
 import React from "react";
 import { useSelector } from "react-redux";
-import SideBar from "../components/SideBar";
 import CardUi from "../components/UI/CardUi";
-import DiscInfoUi from "../components/UI/DiscInfoUi"; 
+import DiscInfoUi from "../components/UI/DiscInfoUi";
 import TitleNavigation from "../components/UI/TitleNavigationUI";
-import { Pagination, Stack } from "@mui/material";
+import SideBar from "../components/sidebar/SideBar";
+import "../components/sidebar/sidebar.css";
 
 function CatalogGoods() {
   let totalState = useSelector((state) => state.TotalRedux);

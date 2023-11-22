@@ -1,12 +1,11 @@
 import React from "react";
+import { BsClockHistory } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import { HiOutlineMail } from "react-icons/hi";
 import { LuPhone } from "react-icons/lu";
-import TitleNavigation from "../components/UI/TitleNavigationUI";
-import { BsClockHistory } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
+import TitleNavigation from "../components/UI/TitleNavigationUI";
 import { orderCall } from "../redux/action/NavbarAction";
-import CallOrder from "../components/CallOrder";
 
 function Contacts() {
   let state = useSelector((state) => state.ContactsRedux);
@@ -19,7 +18,6 @@ function Contacts() {
         pathName={"Контакты"}
         title={"Контакты"}
       />
-      <CallOrder />
       <div className="main-contacts">
         <div className="how-you-contact-us">
           <div className="address-map-card">

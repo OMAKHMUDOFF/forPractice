@@ -9,7 +9,6 @@ function QAui({ elem }) {
     <div className="qa-card">
       <div className="qa-quest-btn">
         <div className="qa-card-quest">{elem.quest}</div>
-
         <button onClick={() => dispatch(answerOpen(elem))}>
           {elem.bool ? <AiOutlineMinus /> : <AiOutlinePlus />}
         </button>

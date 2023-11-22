@@ -1,17 +1,20 @@
 import React from "react";
-import logo from "../assets/img/homePage_IMG/logo 1.png";
-import { NavLink, Outlet } from "react-router-dom";
 import { BiSolidSend } from "react-icons/bi";
+import { NavLink, Outlet } from "react-router-dom";
+import logo from "../assets/img/homePage_IMG/logo 1.png";
 
+import { useDispatch } from "react-redux";
+import developer from "../assets/img/payment_style/readycode_logo_3 1.png";
 import visa from "../assets/img/payment_style/виза.png";
 import mastercard from "../assets/img/payment_style/мастеркард.png";
-import sber from "../assets/img/payment_style/сбер.png";
 import mir from "../assets/img/payment_style/мир.png";
-import xalva from "../assets/img/payment_style/халва.png";
+import sber from "../assets/img/payment_style/сбер.png";
 import tinkoff from "../assets/img/payment_style/тинькоф.png";
-import developer from "../assets/img/payment_style/readycode_logo_3 1.png";
+import xalva from "../assets/img/payment_style/халва.png";
+import { orderCall } from "../redux/action/NavbarAction";
 
 function Footer() {
+  let dispatch = useDispatch();
   return (
     <>
       <Outlet />
@@ -44,7 +47,9 @@ function Footer() {
                 <span className="time">Ежедневно, с 8:00 до 18:00</span>
               </div>
               <div className="request-btn">
-                <button>Заказать звонок</button>
+                <button onClick={() => dispatch(orderCall())}>
+                  Заказать звонок
+                </button>
               </div>
             </div>
           </div>

@@ -23,10 +23,9 @@ import slider2 from "../assets/img/mainSliderIMG/slider2.png";
 
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import CallOrder from "../components/CallOrder";
 import CardUi from "../components/UI/CardUi";
-import { chooseCategory1 } from "../redux/action/TotalAction";
 import NewsUi from "../components/UI/NewsUi";
+import { chooseCategory1 } from "../redux/action/TotalAction";
 
 function Homepage() {
   let homeState = useSelector((state) => state.HomeRedux);
@@ -38,7 +37,6 @@ function Homepage() {
     totalState;
   return (
     <div className="homePage">
-      <CallOrder />
       <div className="mainSliders-Swiper">
         <Swiper
           modules={[Navigation, Pagination, A11y, Autoplay]}
