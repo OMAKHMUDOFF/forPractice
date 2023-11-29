@@ -1,15 +1,17 @@
 import { Pagination, Stack } from "@mui/material";
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import CardUi from "../components/UI/CardUi";
 import DiscInfoUi from "../components/UI/DiscInfoUi";
 import TitleNavigation from "../components/UI/TitleNavigationUI";
 import SideBar from "../components/sidebar/SideBar";
 import "../components/sidebar/sidebar.css";
+import { setSliceCount } from "../redux/action/GoodsAction";
 
 function CatalogGoods() {
-  let totalState = useSelector((state) => state.TotalRedux);
-  let { goodsArr } = totalState;
+  let dispatch = useDispatch();
+  let { goodsArr } = useSelector((state) => state.TotalRedux);
+  let { sliceCounts, sliceCount } = useSelector((state) => state.GoodsRedux);
   return (
     <div className="catalogGoods">
       <TitleNavigation
@@ -24,21 +26,125 @@ function CatalogGoods() {
         </div>
         <div className="rightSide">
           <div className="sort-filtersMap">
-            <h2>Sort func</h2>
-            <h2>Filters map</h2>
+            <div className="sort-slice-func">
+              <div className="sort-func">
+                <p>Сортировать:</p>
+                <select>
+                  <option value="">По умолчанию</option>
+                  <option value="ascending">Цена по возрастанию</option>
+                  <option value="discending">Цена по убыванию</option>
+                </select>
+              </div>
+              <div className="slice-func">
+                <p>Показывать по:</p>
+                {sliceCounts?.map((elem) => (
+                  <button
+                    key={elem}
+                    onClick={() => dispatch(setSliceCount(elem))}
+                    style={{
+                      color: elem === sliceCount ? "#186FD4" : "#414141",
+                      background: elem === sliceCount ? "#F6F8FB" : "#fff",
+                    }}
+                  >
+                    {elem}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="filtersMap">
+              <h2>Filters map</h2>
+            </div>
           </div>
           <div className="goods-cards">
-            {goodsArr?.map((elem) => {
-              return (
-                <div className="goods-card" key={elem.id}>
-                  <CardUi elem={elem} />
-                </div>
-              );
-            })}
+            {(sliceCount ? goodsArr.slice(0, sliceCount) : goodsArr).map(
+              (elem) => {
+                return (
+                  <div className="goods-card" key={elem.id}>
+                    <CardUi elem={elem} />
+                  </div>
+                );
+              }
+            )}
           </div>
           <Stack spacing={2}>
             <Pagination count={10} variant="outlined" shape="rounded" />
           </Stack>
+          <div className="buy-elektro-tools">
+            <div className="buy-elektro-title">
+              <h2>Купить электроинструмент</h2>
+            </div>
+            <div className="buy-elektro-subtitle">
+              <p>
+                Здесь вы найдете самый широкий выбор высококачественных
+                электроинструментов для любых задач. Независимо от того,
+                являетесь ли вы профессиональным мастером или занимаетесь
+                ремонтами и строительством в домашних условиях, у нас есть все
+                необходимое, чтобы сделать вашу работу эффективной и комфортной.
+              </p>
+              <p>
+                У нас представлены электроинструменты от ведущих мировых
+                производителей, гарантирующие надежность, долгий срок службы и
+                безупречное качество. В категории "Электроинструмент" вы найдете
+                широкий ассортимент:
+              </p>
+            </div>
+            <ul className="goods-info">
+              <li>
+                <span className="marker" />
+                <p>
+                  <strong>Дрели и Шуруповерты: </strong>
+                  От мощных перфораторов для бурения бетона до удобных
+                  шуруповертов для быстрой и точной забивки и вывинчивания
+                  винтов. Все инструменты обладают разными скоростями,
+                  настройками и функциями для наилучшего результата.
+                </p>
+              </li>
+              <li>
+                <span className="marker" />
+                <p>
+                  <strong>Пилы и Фрезеры: </strong>
+                  Выбор пил и фрезеров позволит вам точно резать и обрабатывать
+                  различные материалы, будь то древесина, пластик или металл.
+                  Продуманные дизайны и системы пылеудаления обеспечивают
+                  чистоту рабочей зоны.
+                </p>
+              </li>
+              <li>
+                <span className="marker" />
+                <p>
+                  <strong>Лобзики и Торцовочные Пилы: </strong>
+                  Для максимально точной резки по контурам и наклонам, а также
+                  для продольной резки длинных материалов, таких как доски или
+                  трубы.
+                </p>
+              </li>
+              <li>
+                <span className="marker" />
+                <p>
+                  <strong>Шлифовальные машины: </strong>
+                  От шлифования поверхности перед покраской до полировки, наши
+                  инструменты позволят вам добиться гладкой и равномерной
+                  отделки.
+                </p>
+              </li>
+              <li>
+                <span className="marker" />
+                <p>
+                  <strong>Сварочные аппараты: </strong>
+                  Для профессиональных сварщиков и тех, кто нуждается в точной и
+                  надежной сварке различных материалов.
+                </p>
+              </li>
+              <li>
+                <span className="marker" />
+                <p>
+                  <strong>Измерительные Приборы: </strong>
+                  Широкий выбор лазерных дальномеров, электронных угломеров и
+                  других инструментов для точных измерений и маркировки.
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -46,50 +152,3 @@ function CatalogGoods() {
 }
 
 export default CatalogGoods;
-
-//comments
-/* <div className="goods-prod-img">
-                  <img src={elem.img} alt={elem.prodName} />
-                </div>
-                {elem.hit && (
-                  <div className="bestTitle">
-                    <span>Хит</span>
-                  </div>
-                )}
-                <div className="goods-articul">
-                  <span>Артикул: {elem.art}</span>
-                </div>
-                <div className="goods-prodName">
-                  <h4>{elem.prodName}</h4>
-                </div>
-                {elem.disc > 0 ? (
-                  <div className="goods-prod-price">
-                    <span>
-                      <del>{elem.price} ₽</del>
-                      {parseInt(elem.price - (elem.price / 100) * elem.disc)}₽
-                    </span>
-                    <div className="goods-prod-disc">
-                      <span>-{elem.disc}%</span>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="goods-prod-price">
-                    <span>{elem.price} ₽</span>
-                  </div>
-                )}
-                <div className="goods-card-btns">
-                  <div className="cart-btn">
-                    <button>
-                      <HiOutlineShoppingCart />
-                      Купить
-                    </button>
-                  </div>
-                  <div className="like-cart-btn">
-                    <button onClick={() => dispatch(setTotalLike(elem))}>
-                      {elem.like ? <AiFillHeart /> : <AiOutlineHeart />}
-                    </button>
-                    <button>
-                      <FiBarChart2 />
-                    </button>
-                  </div>
-                </div> */

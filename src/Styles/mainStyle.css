@@ -15,7 +15,8 @@ a {
   text-decoration: none;
   color: black;
 }
-button {
+button,
+select {
   border: none;
   cursor: pointer;
   outline: none;
@@ -1621,6 +1622,30 @@ footer hr {
   gap: 30px;
 }
 
+.sort-filtersMap .sort-slice-func {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sort-filtersMap .sort-slice-func .sort-func {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-slice-func .sort-func select {
+  border-radius: 6px;
+  border: 1px solid #dfe0e2;
+  width: 242px;
+  padding: 18px 20px;
+
+  color: #363839;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 10px; /* 66.667% */
+}
+
 .goods-card {
   position: relative;
   padding: 15px;
@@ -1803,7 +1828,7 @@ footer hr {
   line-height: 27px; /* 180% */
 }
 
-:is(.company-history-list, .refund-info) li .marker {
+:is(.company-history-list, .refund-info, .goods-info) li .marker {
   display: inline-block;
   width: 5px;
   height: 5px;
@@ -2904,4 +2929,85 @@ footer hr {
 
 .table-goods-del-price {
   display: flex;
+}
+
+.slice-func {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slice-func button {
+  width: 50px;
+  height: 45px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 10px; /* 66.667% */
+}
+
+:is(.slice-func, .sort-func) p {
+  color: #414446;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 10px; /* 66.667% */
+}
+
+.goods-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.goods-info li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.goods-info li p {
+  width: 100%;
+
+  color: #2c333d;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.buy-elektro-tools {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.buy-elektro-title {
+  color: #2c333d;
+
+  /* H2 */
+  font-size: 33px;
+  font-weight: 700;
+  line-height: 31px; /* 93.939% */
+}
+
+.buy-elektro-subtitle {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  color: #2c333d;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px; /* 173.333% */
+}
+
+.goods-info li p strong {
+  color: #2c333d;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 26px; /* 173.333% */
 }

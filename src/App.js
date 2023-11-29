@@ -3,10 +3,10 @@ import Pages from "./pages/Pages";
 
 function App() {
   return (
-    <div className="App container">
+    <main className="App container">
       <CallOrder />
       <Pages />
-    </div>
+    </main>
   );
 }
 

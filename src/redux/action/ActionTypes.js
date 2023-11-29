@@ -17,6 +17,7 @@ let FavoriteTypes = {
 let GoodsTypes = {
   catalogOpen: "catalogOpen",
   checkBool: "checkBool",
+  setSliceCount: "setSliceCount",
 };
 
 let TotalTypes = {

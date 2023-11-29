@@ -21,4 +21,11 @@ function setGoodsLike(p) {
   };
 }
 
-export { changeFiltersBool, setCheckBool, setGoodsLike };
+function setSliceCount(p) {
+  return {
+    type: GoodsTypes.setSliceCount,
+    payload: p,
+  };
+}
+
+export { changeFiltersBool, setCheckBool, setGoodsLike, setSliceCount };

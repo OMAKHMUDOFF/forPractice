@@ -133,6 +133,8 @@ let goodsData = {
       translation: "yellow",
     },
   ],
+  sliceCounts: [9, 12, 18, 24],
+  sliceCount: null,
 };
 
 export default function GoodsRedux(state = goodsData, { type, payload }) {
@@ -148,6 +150,8 @@ export default function GoodsRedux(state = goodsData, { type, payload }) {
         ),
       };
       return state;
+    case GoodsTypes.setSliceCount:
+      return { ...state, sliceCount: payload };
     default:
       return state;
   }
