@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   changeFiltersBool,
   setCheckBool,
+  setCategory,
 } from "../../redux/action/GoodsAction";
 
 function SideBar() {
@@ -111,7 +112,12 @@ function SideBar() {
                     checked={elem.bool}
                     onChange={() => {}}
                   />
-                  <p onClick={() => dispatch(setCheckBool(elem))}>
+                  <p
+                    onClick={() => {
+                      dispatch(setCheckBool(elem));
+                      dispatch(setCategory(elem));
+                    }}
+                  >
                     {elem.title}
                   </p>
                 </div>

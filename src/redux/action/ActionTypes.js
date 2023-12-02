@@ -18,6 +18,7 @@ let GoodsTypes = {
   catalogOpen: "catalogOpen",
   checkBool: "checkBool",
   setSliceCount: "setSliceCount",
+  setCategoryArr: "setCategoryArr",
 };
 
 let TotalTypes = {

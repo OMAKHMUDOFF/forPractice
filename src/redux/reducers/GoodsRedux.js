@@ -135,6 +135,7 @@ let goodsData = {
   ],
   sliceCounts: [9, 12, 18, 24],
   sliceCount: null,
+  categoryArr: [],
 };
 
 export default function GoodsRedux(state = goodsData, { type, payload }) {
@@ -152,6 +153,13 @@ export default function GoodsRedux(state = goodsData, { type, payload }) {
       return state;
     case GoodsTypes.setSliceCount:
       return { ...state, sliceCount: payload };
+    case GoodsTypes.setCategoryArr:
+      state = {
+        ...state,
+        categoryArr: [],
+      };
+      console.log(state.categoryArr);
+      return state;
     default:
       return state;
   }

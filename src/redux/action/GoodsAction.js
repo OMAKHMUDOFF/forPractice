@@ -28,4 +28,17 @@ function setSliceCount(p) {
   };
 }
 
-export { changeFiltersBool, setCheckBool, setGoodsLike, setSliceCount };
+function setCategory(p) {
+  return {
+    type: GoodsTypes.setCategoryArr,
+    payload: p,
+  };
+}
+
+export {
+  changeFiltersBool,
+  setCheckBool,
+  setGoodsLike,
+  setSliceCount,
+  setCategory,
+};

@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
-import TitleNavigation from "../components/UI/TitleNavigationUI";
+import DiscInfoUi from "../components/UI/DiscInfoUi";
 import QAui from "../components/UI/QAui";
 import SubsMainlingUi from "../components/UI/SubsMainlingUi";
-import DiscInfoUi from "../components/UI/DiscInfoUi";
+import TitleNavigation from "../components/UI/TitleNavigationUI";
 
 export default function Refund() {
   let { refundPage } = useSelector((state) => state.TotalRedux);
