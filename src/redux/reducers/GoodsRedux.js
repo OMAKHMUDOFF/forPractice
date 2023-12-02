@@ -156,13 +156,21 @@ export default function GoodsRedux(state = goodsData, { type, payload }) {
     case GoodsTypes.setSliceCount:
       return { ...state, sliceCount: payload };
     case GoodsTypes.setCategoryArr:
-      if (payload.bool !== true) {
+      if (
+        state.categoryArr.filter((elem) => elem === payload.title).length === 0
+      ) {
         state = {
           ...state,
           categoryArr: [...state.categoryArr, payload.title],
         };
+      } else {
+        state = {
+          ...state,
+          categoryArr: state.categoryArr.filter(
+            (elem) => elem !== payload.title
+          ),
+        };
       }
-      console.log(payload.bool);
       console.log(state.categoryArr);
       return state;
     default:

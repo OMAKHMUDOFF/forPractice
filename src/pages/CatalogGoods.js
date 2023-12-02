@@ -11,7 +11,10 @@ import { setSliceCount } from "../redux/action/GoodsAction";
 function CatalogGoods() {
   let dispatch = useDispatch();
   let { goodsArr } = useSelector((state) => state.TotalRedux);
-  let { sliceCounts, sliceCount } = useSelector((state) => state.GoodsRedux);
+  let { sliceCounts, sliceCount, categoryArr } = useSelector(
+    (state) => state.GoodsRedux
+  );
+
   return (
     <div className="catalogGoods">
       <TitleNavigation
@@ -56,15 +59,21 @@ function CatalogGoods() {
             </div>
           </div>
           <div className="goods-cards">
-            {(sliceCount ? goodsArr.slice(0, sliceCount) : goodsArr).map(
-              (elem) => {
+            {goodsArr
+              ?.filter((elem) => {
+                return categoryArr.map((item) => {
+                  if (elem?.category?.includes(item)) {
+                    return elem;
+                  }
+                });
+              })
+              ?.map((elem) => {
                 return (
                   <div className="goods-card" key={elem.id}>
                     <CardUi elem={elem} />
                   </div>
                 );
-              }
-            )}
+              })}
           </div>
           <Stack spacing={2}>
             <Pagination count={10} variant="outlined" shape="rounded" />
