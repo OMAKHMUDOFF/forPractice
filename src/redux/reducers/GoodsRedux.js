@@ -11,11 +11,13 @@ let goodsData = {
   isOpenHeight: false,
   goodsTypeArr: [
     {
+      id: 1,
       title: "Набор",
       bool: false,
       catalog: "goodsTypeArr",
     },
     {
+      id: 2,
       title: "Стойка",
       bool: false,
       catalog: "goodsTypeArr",
@@ -154,10 +156,13 @@ export default function GoodsRedux(state = goodsData, { type, payload }) {
     case GoodsTypes.setSliceCount:
       return { ...state, sliceCount: payload };
     case GoodsTypes.setCategoryArr:
-      state = {
-        ...state,
-        categoryArr: [],
-      };
+      if (payload.bool !== true) {
+        state = {
+          ...state,
+          categoryArr: [...state.categoryArr, payload.title],
+        };
+      }
+      console.log(payload.bool);
       console.log(state.categoryArr);
       return state;
     default:
