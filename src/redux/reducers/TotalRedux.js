@@ -194,6 +194,8 @@ let totalData = {
       hit: false,
       disc: 15,
       color: "синий",
+      category: "Сантехника",
+      brand: "MAKITA",
     },
     {
       catalog: "goodsArr",
@@ -206,6 +208,7 @@ let totalData = {
       hit: true,
       disc: 0,
       color: "серый",
+      category: "Сантехника",
     },
     {
       catalog: "goodsArr",
@@ -218,6 +221,7 @@ let totalData = {
       hit: false,
       color: "серый",
       disc: 10,
+      category: "Инстурмент",
     },
     {
       catalog: "goodsArr",
@@ -230,6 +234,7 @@ let totalData = {
       color: "синий",
       hit: true,
       disc: 12,
+      category: "Инструмент",
     },
     {
       catalog: "goodsArr",
@@ -242,6 +247,7 @@ let totalData = {
       hit: false,
       color: "желтый",
       disc: 15,
+      category: "Набор",
     },
     {
       catalog: "goodsArr",
@@ -254,6 +260,7 @@ let totalData = {
       hit: false,
       color: "красный",
       disc: 15,
+      category: "Инструмент",
     },
     {
       catalog: "goodsArr",
@@ -266,6 +273,7 @@ let totalData = {
       color: "серый",
       hit: true,
       disc: 0,
+      category: "Инструмент",
     },
     {
       catalog: "goodsArr",
@@ -278,6 +286,7 @@ let totalData = {
       color: "синий",
       hit: false,
       disc: 10,
+      category: "Сантехника",
     },
     {
       catalog: "goodsArr",
@@ -290,6 +299,7 @@ let totalData = {
       color: "оранжевый",
       hit: false,
       disc: 15,
+      category: "Инструмент",
     },
     {
       catalog: "goodsArr",
@@ -302,6 +312,7 @@ let totalData = {
       color: "черный",
       hit: true,
       disc: 12,
+      category: "Инструмент",
     },
     {
       catalog: "goodsArr",
@@ -314,6 +325,7 @@ let totalData = {
       color: "серый",
       hit: false,
       disc: 15,
+      category: "Инструмент",
     },
     {
       catalog: "goodsArr",
@@ -326,6 +338,7 @@ let totalData = {
       color: "синий",
       hit: false,
       disc: 15,
+      category: "Сантехника",
     },
     {
       catalog: "goodsArr",
@@ -338,6 +351,7 @@ let totalData = {
       color: "синий",
       hit: true,
       disc: 0,
+      category: "Инструмент",
     },
     {
       catalog: "goodsArr",
@@ -350,6 +364,7 @@ let totalData = {
       color: "белый",
       hit: false,
       disc: 10,
+      category: "Инструмент",
     },
     {
       catalog: "goodsArr",
@@ -362,6 +377,7 @@ let totalData = {
       color: "синий",
       hit: true,
       disc: 12,
+      category: "Инструмент",
     },
     {
       catalog: "goodsArr",
@@ -374,6 +390,7 @@ let totalData = {
       color: "синий",
       hit: false,
       disc: 15,
+      category: "Сантехника",
     },
     {
       catalog: "goodsArr",
@@ -386,6 +403,7 @@ let totalData = {
       color: "белый",
       hit: false,
       disc: 10,
+      category: "Сантехника",
     },
     {
       catalog: "goodsArr",
@@ -398,6 +416,7 @@ let totalData = {
       color: "красный",
       hit: false,
       disc: 15,
+      category: "Набор",
     },
     {
       catalog: "goodsArr",
@@ -410,6 +429,7 @@ let totalData = {
       color: "синий",
       hit: true,
       disc: 12,
+      category: "Инструмент",
     },
     {
       catalog: "goodsArr",
@@ -422,6 +442,7 @@ let totalData = {
       color: "синий",
       hit: true,
       disc: 0,
+      category: "Инструмент",
     },
     {
       catalog: "goodsArr",
@@ -434,6 +455,7 @@ let totalData = {
       color: "черный",
       hit: false,
       disc: 15,
+      category: "Сантехника",
     },
     {
       catalog: "goodsArr",
@@ -446,6 +468,7 @@ let totalData = {
       color: "белый",
       hit: true,
       disc: 12,
+      category: "Стойка",
     },
     {
       catalog: "goodsArr",
@@ -458,6 +481,7 @@ let totalData = {
       color: "оранжевый",
       hit: false,
       disc: 15,
+      category: "Стойка",
     },
     {
       catalog: "goodsArr",
@@ -470,6 +494,7 @@ let totalData = {
       color: "оранжевый",
       hit: false,
       disc: 10,
+      category: "Набор",
     },
     {
       catalog: "goodsArr",
@@ -482,6 +507,7 @@ let totalData = {
       color: "черный",
       hit: false,
       disc: 10,
+      category: "Сантехника",
     },
     {
       catalog: "goodsArr",
@@ -494,6 +520,7 @@ let totalData = {
       color: "черный",
       hit: false,
       disc: 15,
+      category: "Сантехника",
     },
     {
       catalog: "goodsArr",
@@ -506,6 +533,7 @@ let totalData = {
       color: "желтый",
       hit: false,
       disc: 15,
+      category: "Набор",
     },
     {
       catalog: "goodsArr",
@@ -518,6 +546,7 @@ let totalData = {
       color: "синий",
       hit: true,
       disc: 0,
+      category: "Стойка",
     },
     {
       catalog: "goodsArr",
@@ -530,6 +559,7 @@ let totalData = {
       color: "красный",
       hit: true,
       disc: 0,
+      category: "Держатель",
     },
     {
       catalog: "goodsArr",
@@ -542,6 +572,7 @@ let totalData = {
       color: "синий",
       hit: true,
       disc: 12,
+      category: "Адаптер",
     },
     {
       catalog: "goodsArr",
@@ -554,6 +585,7 @@ let totalData = {
       color: "синий",
       hit: true,
       disc: 12,
+      category: "Держатель",
     },
     {
       catalog: "goodsArr",
@@ -566,6 +598,7 @@ let totalData = {
       color: "желтый",
       hit: false,
       disc: 15,
+      category: "Фильтр",
     },
   ],
   news: [

@@ -19,6 +19,7 @@ let GoodsTypes = {
   checkBool: "checkBool",
   setSliceCount: "setSliceCount",
   setCategoryArr: "setCategoryArr",
+  delCategoryArr: "delCategoryArr",
 };
 
 let TotalTypes = {

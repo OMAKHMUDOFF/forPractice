@@ -1,12 +1,13 @@
 import { Pagination, Stack } from "@mui/material";
 import React from "react";
+import { AiOutlineClose } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import CardUi from "../components/UI/CardUi";
 import DiscInfoUi from "../components/UI/DiscInfoUi";
 import TitleNavigation from "../components/UI/TitleNavigationUI";
 import SideBar from "../components/sidebar/SideBar";
 import "../components/sidebar/sidebar.css";
-import { setSliceCount } from "../redux/action/GoodsAction";
+import { delCategory, setSliceCount } from "../redux/action/GoodsAction";
 
 function CatalogGoods() {
   let dispatch = useDispatch();
@@ -55,17 +56,37 @@ function CatalogGoods() {
               </div>
             </div>
             <div className="filtersMap">
-              <h2>Filters map</h2>
+              {categoryArr.length > 0
+                ? categoryArr.map((elem) => {
+                    return (
+                      <div key={elem} className="filtersMap-button">
+                        <button>
+                          {elem}{" "}
+                          <AiOutlineClose
+                            onClick={() => dispatch(delCategory(elem))}
+                          />
+                        </button>
+                      </div>
+                    );
+                  })
+                : ""}
             </div>
           </div>
           <div className="goods-cards">
             {goodsArr
               ?.filter((elem) => {
-                return categoryArr.map((item) => {
-                  if (elem?.category?.includes(item)) {
-                    return elem;
+                if (categoryArr.length > 0) {
+                  for (let item of categoryArr) {
+                    if (
+                      elem?.category?.includes(item) ||
+                      elem?.brand?.includes(item)
+                    ) {
+                      return elem;
+                    }
                   }
-                });
+                } else {
+                  return elem;
+                }
               })
               ?.map((elem) => {
                 return (

@@ -171,7 +171,12 @@ export default function GoodsRedux(state = goodsData, { type, payload }) {
           ),
         };
       }
-      console.log(state.categoryArr);
+      return state;
+    case GoodsTypes.delCategoryArr:
+      state = {
+        ...state,
+        categoryArr: state?.categoryArr?.filter((elem) => elem !== payload),
+      };
       return state;
     default:
       return state;

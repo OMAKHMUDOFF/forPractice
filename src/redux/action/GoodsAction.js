@@ -35,10 +35,18 @@ function setCategory(p) {
   };
 }
 
+function delCategory(p) {
+  return {
+    type: GoodsTypes.delCategoryArr,
+    payload: p,
+  };
+}
+
 export {
   changeFiltersBool,
   setCheckBool,
   setGoodsLike,
   setSliceCount,
   setCategory,
+  delCategory,
 };

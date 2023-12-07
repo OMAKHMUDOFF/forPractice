@@ -21,6 +21,11 @@ function SideBar() {
     );
   };
 
+  function categoryBool(elem) {
+    dispatch(setCheckBool(elem));
+    dispatch(setCategory(elem));
+  }
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -106,20 +111,17 @@ function SideBar() {
           <div style={{ minHeight: 0 }}>
             {goodsTypeArr.map((elem, i) => {
               return (
-                <div className="checkbox-goods-type" key={i}>
+                <div
+                  className="checkbox-goods-type"
+                  key={i}
+                  onClick={() => categoryBool(elem)}
+                >
                   <input
                     type="checkbox"
                     checked={elem.bool}
                     onChange={() => {}}
                   />
-                  <p
-                    onClick={() => {
-                      dispatch(setCheckBool(elem));
-                      dispatch(setCategory(elem));
-                    }}
-                  >
-                    {elem.title}
-                  </p>
+                  <p>{elem.title}</p>
                 </div>
               );
             })}
@@ -147,15 +149,17 @@ function SideBar() {
           <div style={{ minHeight: 0 }}>
             {brandArr.map((elem, i) => {
               return (
-                <div className="checkbox-brand-type" key={i}>
+                <div
+                  className="checkbox-brand-type"
+                  key={i}
+                  onClick={() => categoryBool(elem)}
+                >
                   <input
                     type="checkbox"
                     checked={elem.bool}
                     onChange={() => {}}
                   />
-                  <p onClick={() => dispatch(setCheckBool(elem))}>
-                    {elem.title}
-                  </p>
+                  <p>{elem.title}</p>
                 </div>
               );
             })}
@@ -183,15 +187,17 @@ function SideBar() {
           <div style={{ minHeight: 0 }}>
             {materialArr.map((elem, i) => {
               return (
-                <div className="checkbox-brand-type" key={i}>
+                <div
+                  className="checkbox-brand-type"
+                  key={i}
+                  onClick={() => categoryBool(elem)}
+                >
                   <input
                     type="checkbox"
                     checked={elem.bool}
                     onChange={() => {}}
                   />
-                  <p onClick={() => dispatch(setCheckBool(elem))}>
-                    {elem.title}
-                  </p>
+                  <p>{elem.title}</p>
                 </div>
               );
             })}
