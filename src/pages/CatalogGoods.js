@@ -12,7 +12,7 @@ import { delCategory, setSliceCount } from "../redux/action/GoodsAction";
 function CatalogGoods() {
   let dispatch = useDispatch();
   let { goodsArr } = useSelector((state) => state.TotalRedux);
-  let { sliceCounts, sliceCount, categoryArr } = useSelector(
+  let { sliceCounts, sliceCount, categoryArr, colorType } = useSelector(
     (state) => state.GoodsRedux
   );
 
@@ -75,17 +75,21 @@ function CatalogGoods() {
           <div className="goods-cards">
             {goodsArr
               ?.filter((elem) => {
-                if (categoryArr.length > 0) {
-                  for (let item of categoryArr) {
-                    if (
-                      elem?.category?.includes(item) ||
-                      elem?.brand?.includes(item)
-                    ) {
-                      return elem;
+                if (
+                  elem.color.toLowerCase().includes(colorType.toLowerCase())
+                ) {
+                  if (categoryArr.length > 0) {
+                    for (let item of categoryArr) {
+                      if (
+                        elem?.category?.includes(item) ||
+                        elem?.brand?.includes(item)
+                      ) {
+                        return elem;
+                      }
                     }
+                  } else {
+                    return elem;
                   }
-                } else {
-                  return elem;
                 }
               })
               ?.map((elem) => {

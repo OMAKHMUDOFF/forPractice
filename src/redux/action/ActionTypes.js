@@ -20,6 +20,7 @@ let GoodsTypes = {
   setSliceCount: "setSliceCount",
   setCategoryArr: "setCategoryArr",
   delCategoryArr: "delCategoryArr",
+  setColorType: "setColorType",
 };
 
 let TotalTypes = {

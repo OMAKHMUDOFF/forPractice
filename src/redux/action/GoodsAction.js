@@ -42,6 +42,13 @@ function delCategory(p) {
   };
 }
 
+function getColorType(p) {
+  return {
+    type: GoodsTypes.setColorType,
+    payload: p,
+  };
+}
+
 export {
   changeFiltersBool,
   setCheckBool,
@@ -49,4 +56,5 @@ export {
   setSliceCount,
   setCategory,
   delCategory,
+  getColorType,
 };

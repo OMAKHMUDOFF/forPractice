@@ -6,6 +6,7 @@ import {
   changeFiltersBool,
   setCheckBool,
   setCategory,
+  getColorType,
 } from "../../redux/action/GoodsAction";
 
 function SideBar() {
@@ -225,7 +226,11 @@ function SideBar() {
           <div style={{ minHeight: 0 }}>
             {colorArr.map((elem, i) => {
               return (
-                <div className="checkbox-brand-type" key={i}>
+                <div
+                  className="checkbox-brand-type"
+                  key={i}
+                  onClick={() => dispatch(getColorType(elem.color))}
+                >
                   <div
                     className="color-view"
                     style={{ background: elem.translation }}
