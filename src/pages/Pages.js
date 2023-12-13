@@ -11,6 +11,7 @@ import News from "./News";
 import NotFound from "./NotFound";
 import QA from "./QA";
 import Refund from "./Refund";
+import SingleProduct from "./SingleProduct";
 
 function Pages() {
   return (
@@ -26,7 +27,7 @@ function Pages() {
           <Route path="/quest-answer" element={<QA />} />
           <Route path="/refund" element={<Refund />} />
           <Route path="/cart" element={<GoodsCart />} />
-
+          <Route path="/catalogGoods/:id/:art" element={<SingleProduct />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Route>

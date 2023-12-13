@@ -11,13 +11,11 @@ let goodsData = {
   isOpenHeight: false,
   goodsTypeArr: [
     {
-      id: 1,
       title: "Набор",
       bool: false,
       catalog: "goodsTypeArr",
     },
     {
-      id: 2,
       title: "Стойка",
       bool: false,
       catalog: "goodsTypeArr",
@@ -39,6 +37,11 @@ let goodsData = {
     },
     {
       title: "Инструмент",
+      bool: false,
+      catalog: "goodsTypeArr",
+    },
+    {
+      title: "Сантехника",
       bool: false,
       catalog: "goodsTypeArr",
     },
@@ -158,20 +161,22 @@ export default function GoodsRedux(state = goodsData, { type, payload }) {
       return { ...state, sliceCount: payload };
     case GoodsTypes.setCategoryArr:
       if (
-        state.categoryArr.filter((elem) => elem === payload.title).length === 0
+        state.categoryArr.filter((elem) => elem.title === payload.title)
+          .length === 0
       ) {
         state = {
           ...state,
-          categoryArr: [...state.categoryArr, payload.title],
+          categoryArr: [...state.categoryArr, payload],
         };
       } else {
         state = {
           ...state,
           categoryArr: state.categoryArr.filter(
-            (elem) => elem !== payload.title
+            (elem) => elem.title !== payload.title
           ),
         };
       }
+      console.log(state.categoryArr);
       return state;
     case GoodsTypes.delCategoryArr:
       state = {

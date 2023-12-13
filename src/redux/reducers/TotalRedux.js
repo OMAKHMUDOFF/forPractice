@@ -221,7 +221,7 @@ let totalData = {
       hit: false,
       color: "серый",
       disc: 10,
-      category: "Инстурмент",
+      category: "Инструмент",
     },
     {
       catalog: "goodsArr",

@@ -74,24 +74,24 @@ function CatalogGoods() {
           </div>
           <div className="goods-cards">
             {goodsArr
-              ?.filter((elem) => {
-                if (
-                  elem.color.toLowerCase().includes(colorType.toLowerCase())
-                ) {
-                  if (categoryArr.length > 0) {
-                    for (let item of categoryArr) {
-                      if (
-                        elem?.category?.includes(item) ||
-                        elem?.brand?.includes(item)
-                      ) {
-                        return elem;
-                      }
-                    }
-                  } else {
-                    return elem;
-                  }
-                }
-              })
+              // ?.filter((elem) => {
+              //   if (
+              //     elem.color.toLowerCase().includes(colorType.toLowerCase())
+              //   ) {
+              //     if (categoryArr.length > 0) {
+              //       for (let item of categoryArr) {
+              //         if (
+              //           elem?.category?.includes(item) ||
+              //           elem?.brand?.includes(item)
+              //         ) {
+              //           return elem;
+              //         }
+              //       }
+              //     } else {
+              //       return elem;
+              //     }
+              //   }
+              // })
               ?.map((elem) => {
                 return (
                   <div className="goods-card" key={elem.id}>

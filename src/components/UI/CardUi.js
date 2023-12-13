@@ -3,9 +3,14 @@ import { setTotalCart, setTotalLike } from "../../redux/action/TotalAction";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { FiBarChart2 } from "react-icons/fi";
 import { HiOutlineShoppingCart } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
 
 function CardUi({ elem }) {
   let dispatch = useDispatch();
+  let path = useNavigate();
+  function toSingleProd(obj) {
+    path(`/catalogGoods/${obj.id}/${obj.art}`);
+  }
 
   return (
     <>
@@ -27,7 +32,7 @@ function CardUi({ elem }) {
         ) : (
           ""
         )}
-        <div className="total-card-img">
+        <div className="total-card-img" onClick={() => toSingleProd(elem)}>
           <img src={elem.img} alt={elem.prodName} />
         </div>
       </div>
