@@ -12,10 +12,9 @@ import { delCategory, setSliceCount } from "../redux/action/GoodsAction";
 function CatalogGoods() {
   let dispatch = useDispatch();
   let { goodsArr } = useSelector((state) => state.TotalRedux);
-  let { sliceCounts, sliceCount, categoryArr, colorType } = useSelector(
-    (state) => state.GoodsRedux
-  );
-
+  let { sliceCounts, sliceCount, typeCategory, brandCategory, colorType } =
+    useSelector((state) => state.GoodsRedux);
+  const categoriesArr = [...brandCategory, ...typeCategory];
   return (
     <div className="catalogGoods">
       <TitleNavigation
@@ -56,12 +55,12 @@ function CatalogGoods() {
               </div>
             </div>
             <div className="filtersMap">
-              {categoryArr.length > 0
-                ? categoryArr.map((elem) => {
+              {categoriesArr.length > 0
+                ? categoriesArr.map((elem) => {
                     return (
-                      <div key={elem} className="filtersMap-button">
+                      <div key={elem.title} className="filtersMap-button">
                         <button>
-                          {elem}{" "}
+                          {elem.title}
                           <AiOutlineClose
                             onClick={() => dispatch(delCategory(elem))}
                           />
@@ -74,24 +73,35 @@ function CatalogGoods() {
           </div>
           <div className="goods-cards">
             {goodsArr
-              // ?.filter((elem) => {
-              //   if (
-              //     elem.color.toLowerCase().includes(colorType.toLowerCase())
-              //   ) {
-              //     if (categoryArr.length > 0) {
-              //       for (let item of categoryArr) {
-              //         if (
-              //           elem?.category?.includes(item) ||
-              //           elem?.brand?.includes(item)
-              //         ) {
-              //           return elem;
-              //         }
-              //       }
-              //     } else {
-              //       return elem;
-              //     }
-              //   }
-              // })
+              ?.filter((elem) => {
+                if (
+                  elem.color.toLowerCase().includes(colorType.toLowerCase())
+                ) {
+                  return elem;
+                }
+              })
+              ?.filter((elem) => {
+                if (typeCategory.length > 0) {
+                  for (let item of typeCategory) {
+                    if (elem?.category?.includes(item.title)) {
+                      return elem;
+                    }
+                  }
+                } else {
+                  return elem;
+                }
+              })
+              ?.filter((elem) => {
+                if (brandCategory.length > 0) {
+                  for (let item of brandCategory) {
+                    if (elem?.brand?.includes(item.title)) {
+                      return elem;
+                    }
+                  }
+                } else {
+                  return elem;
+                }
+              })
               ?.map((elem) => {
                 return (
                   <div className="goods-card" key={elem.id}>

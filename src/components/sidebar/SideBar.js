@@ -1,12 +1,14 @@
 import { Box, Slider } from "@mui/material";
-import { useState } from "react";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import {
   changeFiltersBool,
-  setCheckBool,
-  setCategory,
+  changePriceValue,
   getColorType,
+  handleRangeValue,
+  setBrandCategory,
+  setCategory,
+  setCheckBool,
 } from "../../redux/action/GoodsAction";
 
 function SideBar() {
@@ -14,31 +16,24 @@ function SideBar() {
   let dispatch = useDispatch();
   let { isOpenPrice, isOpenGoods, isOpenBrand, isOpenMaterial, isOpenColor } =
     state;
-  let { goodsTypeArr, brandArr, materialArr, colorArr } = state;
-  const [value, setValue] = useState([0, 52000]);
-  const valueSet = (e, i) => {
-    setValue(
-      value.map((elem, idex) => (idex === i ? (elem = +e.target.value) : elem))
-    );
-  };
+  let { goodsTypeArr, brandArr, materialArr, colorArr, priceValue } = state;
 
-  function categoryBool(elem) {
-    dispatch(setCheckBool(elem));
-    dispatch(setCategory(elem));
+  function categoryBool(elem, way) {
+    switch (way) {
+      case "Type":
+        dispatch(setCheckBool(elem));
+        dispatch(setCategory(elem));
+        break;
+      case "Brand":
+        dispatch(setCheckBool(elem));
+        dispatch(setBrandCategory(elem));
+        break;
+      default:
+        dispatch(setCheckBool(elem));
+
+        break;
+    }
   }
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-  //   <Box sx={{ width: 300 }}>
-  //   <Slider
-  //     value={value}
-  //     onChange={handleChange}
-  //     valueLabelDisplay="auto"
-  //     min={3000}
-  //     max={100000}
-  //   />
-  // </Box>
 
   return (
     <aside className="sidebar-filter">
@@ -66,23 +61,31 @@ function SideBar() {
                 <p>от</p>
                 <input
                   type="number"
-                  onChange={(e) => valueSet(e, 0)}
-                  value={value[0]}
+                  onChange={(e) =>
+                    dispatch(changePriceValue({ ev: e, index: 0 }))
+                  }
+                  value={priceValue[0]}
                 />
               </div>
               <div className="from-to-second">
                 <p>до</p>
                 <input
                   type="number"
-                  onChange={(e) => valueSet(e, 1)}
-                  value={value[1]}
+                  onChange={(e) =>
+                    dispatch(changePriceValue({ ev: e, index: 1 }))
+                  }
+                  value={priceValue[1]}
                 />
               </div>
             </div>
             <Box sx={{ width: 300 }}>
               <Slider
-                value={value}
-                onChange={handleChange}
+                value={priceValue}
+                onChange={(e) =>
+                  dispatch(
+                    handleRangeValue({ event: e, newValue: e.target.value })
+                  )
+                }
                 valueLabelDisplay="auto"
                 min={0}
                 max={500000}
@@ -115,7 +118,7 @@ function SideBar() {
                 <div
                   className="checkbox-goods-type"
                   key={i}
-                  onClick={() => categoryBool(elem)}
+                  onClick={() => categoryBool(elem, "Type")}
                 >
                   <input
                     type="checkbox"
@@ -153,7 +156,7 @@ function SideBar() {
                 <div
                   className="checkbox-brand-type"
                   key={i}
-                  onClick={() => categoryBool(elem)}
+                  onClick={() => categoryBool(elem, "Brand")}
                 >
                   <input
                     type="checkbox"

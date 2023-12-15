@@ -21,6 +21,9 @@ let GoodsTypes = {
   setCategoryArr: "setCategoryArr",
   delCategoryArr: "delCategoryArr",
   setColorType: "setColorType",
+  setBrandCategory: "setBrandCategory",
+  changePriceValue: "changePriceValue",
+  handleRangeValue: "handleRangeValue",
 };
 
 let TotalTypes = {

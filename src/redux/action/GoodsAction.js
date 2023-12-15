@@ -49,6 +49,27 @@ function getColorType(p) {
   };
 }
 
+function setBrandCategory(p) {
+  return {
+    type: GoodsTypes.setBrandCategory,
+    payload: p,
+  };
+}
+
+function changePriceValue(p) {
+  return {
+    type: GoodsTypes.changePriceValue,
+    payload: p,
+  };
+}
+
+function handleRangeValue(p) {
+  return {
+    type: GoodsTypes.handleRangeValue,
+    payload: p,
+  };
+}
+
 export {
   changeFiltersBool,
   setCheckBool,
@@ -57,4 +78,7 @@ export {
   setCategory,
   delCategory,
   getColorType,
+  setBrandCategory,
+  changePriceValue,
+  handleRangeValue,
 };
