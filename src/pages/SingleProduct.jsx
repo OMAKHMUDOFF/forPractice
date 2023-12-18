@@ -22,7 +22,7 @@ function SingleProduct() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <>
+    <section className="SingleProduct">
       <Swiper
         style={{
           "--swiper-navigation-color": "#fff",
@@ -30,7 +30,9 @@ function SingleProduct() {
         }}
         spaceBetween={10}
         navigation={true}
-        thumbs={{ swiper: thumbsSwiper }}
+        thumbs={{
+          swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+        }}
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper2"
       >
@@ -105,7 +107,7 @@ function SingleProduct() {
           <img src="https://swiperjs.com/demos/images/nature-10.jpg" alt="" />
         </SwiperSlide>
       </Swiper>
-    </>
+    </section>
   );
 }
 

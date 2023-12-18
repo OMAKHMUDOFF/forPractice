@@ -3035,3 +3035,13 @@ footer hr {
   font-weight: 550;
   line-height: 11px; /* 78.571% */
 }
+
+.SingleProduct {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.SingleProduct .swiper:last-child {
+  display: flex;
+  flex-direction: column;
+}
