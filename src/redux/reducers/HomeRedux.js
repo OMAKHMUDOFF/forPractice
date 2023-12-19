@@ -11,8 +11,6 @@ import ceresit from "../../assets/img/homePage_IMG/image 21.png";
 import keramin from "../../assets/img/homePage_IMG/image 22.png";
 import bauproffe from "../../assets/img/homePage_IMG/image 23.png";
 
-
-
 let HomeData = {
   discInfo: [
     {
