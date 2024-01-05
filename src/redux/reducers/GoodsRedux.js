@@ -126,7 +126,6 @@ let goodsData = {
   colorArr: [
     {
       color: "Синий",
-
       translation: "blue",
     },
     {

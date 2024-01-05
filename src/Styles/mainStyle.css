@@ -3041,7 +3041,17 @@ footer hr {
   flex-direction: row-reverse;
 }
 
-.SingleProduct .swiper:last-child {
+/* .SingleProduct .swiper:last-child  .swiper-wrapper {
   display: flex;
   flex-direction: column;
+} */
+
+.SingleProduct .swiper:last-child .swiper-button-next:after {
+  right: 800px;
+  top: 300px;
+  transform: rotate(91deg);
+}
+
+.SingleProduct .mySwiper:last-child {
+  height: 600px;
 }

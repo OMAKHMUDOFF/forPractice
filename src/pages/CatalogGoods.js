@@ -12,8 +12,14 @@ import { delCategory, setSliceCount } from "../redux/action/GoodsAction";
 function CatalogGoods() {
   let dispatch = useDispatch();
   let { goodsArr } = useSelector((state) => state.TotalRedux);
-  let { sliceCounts, sliceCount, typeCategory, brandCategory, colorType } =
-    useSelector((state) => state.GoodsRedux);
+  let {
+    sliceCounts,
+    sliceCount,
+    typeCategory,
+    brandCategory,
+    colorType,
+    priceValue,
+  } = useSelector((state) => state.GoodsRedux);
   const categoriesArr = [...brandCategory, ...typeCategory];
   return (
     <div className="catalogGoods">
@@ -99,6 +105,15 @@ function CatalogGoods() {
                     }
                   }
                 } else {
+                  return elem;
+                }
+              })
+              .filter((elem) => {
+                if (
+                  priceValue[0] <=
+                    elem.price - (elem.price / 100) * elem.disc &&
+                  priceValue[1] >= elem.price - (elem.price / 100) * elem.disc
+                ) {
                   return elem;
                 }
               })

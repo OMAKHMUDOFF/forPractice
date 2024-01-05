@@ -65,6 +65,15 @@ let totalData = {
       img: perforator,
       catalog: "bestSellers",
       hit: true,
+      images: [
+        perforator,
+        perforator,
+        perforator,
+        perforator,
+        perforator,
+        perforator,
+      ],
+      count: 1,
     },
     {
       id: 2,
@@ -77,6 +86,8 @@ let totalData = {
       catalog: "bestSellers",
       img: smesitel,
       hit: true,
+      images: [smesitel, smesitel, smesitel, smesitel, smesitel, smesitel],
+      count: 1,
     },
     {
       id: 3,
@@ -89,6 +100,8 @@ let totalData = {
       catalog: "bestSellers",
       img: leska,
       hit: true,
+      images: [leska, leska, leska, leska, leska, leska, leska],
+      count: 1,
     },
     {
       id: 4,
@@ -101,6 +114,8 @@ let totalData = {
       catalog: "bestSellers",
       img: unitaz,
       hit: true,
+      images: [unitaz, unitaz, unitaz, unitaz, unitaz, unitaz],
+      count: 1,
     },
     {
       id: 5,
@@ -113,6 +128,8 @@ let totalData = {
       catalog: "bestSellers",
       hit: true,
       img: kley,
+      images: [kley, kley, kley, kley, kley, kley],
+      count: 1,
     },
   ],
   bestOffers: [
@@ -128,6 +145,8 @@ let totalData = {
       sale: false,
       catalog: "bestOffers",
       new: false,
+      images: [nabor, nabor, nabor, nabor, nabor, nabor],
+      count: 1,
     },
     {
       id: 7,
@@ -140,6 +159,15 @@ let totalData = {
       img: termostat,
       sale: true,
       catalog: "bestOffers",
+      images: [
+        termostat,
+        termostat,
+        termostat,
+        termostat,
+        termostat,
+        termostat,
+      ],
+      count: 1,
       new: false,
     },
     {
@@ -153,6 +181,8 @@ let totalData = {
       img: drell,
       new: false,
       catalog: "bestOffers",
+      images: [drell, drell, drell, drell, drell, drell],
+      count: 1,
       sale: false,
     },
     {
@@ -167,6 +197,8 @@ let totalData = {
       sale: false,
       catalog: "bestOffers",
       new: true,
+      images: [circular, circular, circular, circular, circular, circular],
+      count: 1,
     },
     {
       id: 10,
@@ -179,6 +211,15 @@ let totalData = {
       img: vodno_kley,
       sale: false,
       catalog: "bestOffers",
+      images: [
+        vodno_kley,
+        vodno_kley,
+        vodno_kley,
+        vodno_kley,
+        vodno_kley,
+        vodno_kley,
+      ],
+      count: 1,
       new: false,
     },
   ],
@@ -196,6 +237,15 @@ let totalData = {
       color: "синий",
       category: "Сантехника",
       brand: "MAKITA",
+      images: [
+        perforator1,
+        perforator1,
+        perforator1,
+        perforator1,
+        perforator1,
+        perforator1,
+      ],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -208,6 +258,15 @@ let totalData = {
       hit: true,
       disc: 0,
       color: "серый",
+      images: [
+        bolgarka1,
+        bolgarka1,
+        bolgarka1,
+        bolgarka1,
+        bolgarka1,
+        bolgarka1,
+      ],
+      count: 1,
       category: "Сантехника",
     },
     {
@@ -220,6 +279,15 @@ let totalData = {
       like: false,
       hit: false,
       color: "серый",
+      images: [
+        circular_bosch,
+        circular_bosch,
+        circular_bosch,
+        circular_bosch,
+        circular_bosch,
+        circular_bosch,
+      ],
+      count: 1,
       disc: 10,
       category: "Инструмент",
     },
@@ -233,6 +301,15 @@ let totalData = {
       like: false,
       color: "синий",
       hit: true,
+      images: [
+        shlifovka_bosch,
+        shlifovka_bosch,
+        shlifovka_bosch,
+        shlifovka_bosch,
+        shlifovka_bosch,
+        shlifovka_bosch,
+      ],
+      count: 1,
       disc: 12,
       category: "Инструмент",
     },
@@ -248,6 +325,8 @@ let totalData = {
       color: "желтый",
       disc: 15,
       category: "Набор",
+      images: [nabor, nabor, nabor, nabor, nabor, nabor],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -261,6 +340,15 @@ let totalData = {
       color: "красный",
       disc: 15,
       category: "Инструмент",
+      images: [
+        circular_zubr,
+        circular_zubr,
+        circular_zubr,
+        circular_zubr,
+        circular_zubr,
+        circular_zubr,
+      ],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -272,6 +360,15 @@ let totalData = {
       like: false,
       color: "серый",
       hit: true,
+      images: [
+        bolgarka2,
+        bolgarka2,
+        bolgarka2,
+        bolgarka2,
+        bolgarka2,
+        bolgarka2,
+      ],
+      count: 1,
       disc: 0,
       category: "Инструмент",
     },
@@ -286,6 +383,14 @@ let totalData = {
       color: "синий",
       hit: false,
       disc: 10,
+      images: [
+        drell_makita_ruchka,
+        drell_makita_ruchka,
+        drell_makita_ruchka,
+        drell_makita_ruchka,
+        drell_makita_ruchka,
+      ],
+      count: 1,
       category: "Сантехника",
     },
     {
@@ -299,6 +404,14 @@ let totalData = {
       color: "оранжевый",
       hit: false,
       disc: 15,
+      images: [
+        betonomeshalka,
+        betonomeshalka,
+        betonomeshalka,
+        betonomeshalka,
+        betonomeshalka,
+      ],
+      count: 1,
       category: "Инструмент",
     },
     {
@@ -313,6 +426,14 @@ let totalData = {
       hit: true,
       disc: 12,
       category: "Инструмент",
+      images: [
+        perforator_bosch,
+        perforator_bosch,
+        perforator_bosch,
+        perforator_bosch,
+        perforator_bosch,
+      ],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -325,6 +446,8 @@ let totalData = {
       color: "серый",
       hit: false,
       disc: 15,
+      images: [mixer, mixer, mixer, mixer, mixer],
+      count: 1,
       category: "Инструмент",
     },
     {
@@ -339,6 +462,14 @@ let totalData = {
       hit: false,
       disc: 15,
       category: "Сантехника",
+      images: [
+        drell_makita_bez,
+        drell_makita_bez,
+        drell_makita_bez,
+        drell_makita_bez,
+        drell_makita_bez,
+      ],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -352,6 +483,14 @@ let totalData = {
       hit: true,
       disc: 0,
       category: "Инструмент",
+      images: [
+        bolgarka_makita,
+        bolgarka_makita,
+        bolgarka_makita,
+        bolgarka_makita,
+        bolgarka_makita,
+      ],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -365,6 +504,14 @@ let totalData = {
       hit: false,
       disc: 10,
       category: "Инструмент",
+      images: [
+        shlifovka_zubr,
+        shlifovka_zubr,
+        shlifovka_zubr,
+        shlifovka_zubr,
+        shlifovka_zubr,
+      ],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -378,6 +525,14 @@ let totalData = {
       hit: true,
       disc: 12,
       category: "Инструмент",
+      images: [
+        lobzik_makita,
+        lobzik_makita,
+        lobzik_makita,
+        lobzik_makita,
+        lobzik_makita,
+      ],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -391,6 +546,14 @@ let totalData = {
       hit: false,
       disc: 15,
       category: "Сантехника",
+      images: [
+        shlifovka_makita,
+        shlifovka_makita,
+        shlifovka_makita,
+        shlifovka_makita,
+        shlifovka_makita,
+      ],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -404,6 +567,14 @@ let totalData = {
       hit: false,
       disc: 10,
       category: "Сантехника",
+      images: [
+        stroy_fen_zubr,
+        stroy_fen_zubr,
+        stroy_fen_zubr,
+        stroy_fen_zubr,
+        stroy_fen_zubr,
+      ],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -417,6 +588,8 @@ let totalData = {
       hit: false,
       disc: 15,
       category: "Набор",
+      images: [graver_zubr, graver_zubr, graver_zubr, graver_zubr, graver_zubr],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -430,6 +603,14 @@ let totalData = {
       hit: true,
       disc: 12,
       category: "Инструмент",
+      images: [
+        drell_makita_bez2,
+        drell_makita_bez2,
+        drell_makita_bez2,
+        drell_makita_bez2,
+        drell_makita_bez2,
+      ],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -443,6 +624,14 @@ let totalData = {
       hit: true,
       disc: 0,
       category: "Инструмент",
+      images: [
+        perforator_bosch_s,
+        perforator_bosch_s,
+        perforator_bosch_s,
+        perforator_bosch_s,
+        perforator_bosch_s,
+      ],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -456,6 +645,8 @@ let totalData = {
       hit: false,
       disc: 15,
       category: "Сантехника",
+      images: [drell_PIT, drell_PIT, drell_PIT, drell_PIT, drell_PIT],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -469,6 +660,14 @@ let totalData = {
       hit: true,
       disc: 12,
       category: "Стойка",
+      images: [
+        perforator_zubr,
+        perforator_zubr,
+        perforator_zubr,
+        perforator_zubr,
+        perforator_zubr,
+      ],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -482,6 +681,8 @@ let totalData = {
       hit: false,
       disc: 15,
       category: "Стойка",
+      images: [stanok_vixr, stanok_vixr, stanok_vixr, stanok_vixr, stanok_vixr],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -495,6 +696,14 @@ let totalData = {
       hit: false,
       disc: 10,
       category: "Набор",
+      images: [
+        rubanok_vixr,
+        rubanok_vixr,
+        rubanok_vixr,
+        rubanok_vixr,
+        rubanok_vixr,
+      ],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -508,6 +717,14 @@ let totalData = {
       hit: false,
       disc: 10,
       category: "Сантехника",
+      images: [
+        perforator_PIT,
+        perforator_PIT,
+        perforator_PIT,
+        perforator_PIT,
+        perforator_PIT,
+      ],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -521,6 +738,14 @@ let totalData = {
       hit: false,
       disc: 15,
       category: "Сантехника",
+      images: [
+        kley_pistolet_stayer,
+        kley_pistolet_stayer,
+        kley_pistolet_stayer,
+        kley_pistolet_stayer,
+        kley_pistolet_stayer,
+      ],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -534,6 +759,8 @@ let totalData = {
       hit: false,
       disc: 15,
       category: "Набор",
+      images: [nabor, nabor, nabor, nabor, nabor],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -546,6 +773,14 @@ let totalData = {
       color: "синий",
       hit: true,
       disc: 0,
+      images: [
+        rubanok_makita,
+        rubanok_makita,
+        rubanok_makita,
+        rubanok_makita,
+        rubanok_makita,
+      ],
+      count: 1,
       category: "Стойка",
     },
     {
@@ -560,6 +795,14 @@ let totalData = {
       hit: true,
       disc: 0,
       category: "Держатель",
+      images: [
+        pilesos_zubr,
+        pilesos_zubr,
+        pilesos_zubr,
+        pilesos_zubr,
+        pilesos_zubr,
+      ],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -573,6 +816,14 @@ let totalData = {
       hit: true,
       disc: 12,
       category: "Адаптер",
+      images: [
+        drell_makita_bez2,
+        drell_makita_bez2,
+        drell_makita_bez2,
+        drell_makita_bez2,
+        drell_makita_bez2,
+      ],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -586,6 +837,8 @@ let totalData = {
       hit: true,
       disc: 12,
       category: "Держатель",
+      images: [bolgarka2, bolgarka2, bolgarka2, bolgarka2, bolgarka2],
+      count: 1,
     },
     {
       catalog: "goodsArr",
@@ -599,6 +852,8 @@ let totalData = {
       hit: false,
       disc: 15,
       category: "Фильтр",
+      images: [nabor, nabor, nabor, nabor, nabor],
+      count: 1,
     },
   ],
   news: [
@@ -787,7 +1042,7 @@ export default function TotalRedux(state = totalData, { type, payload }) {
           ...state,
           cart: [
             ...state.cart,
-            { ...payload, count: 1, stock: parseInt(Math.random() * 30) },
+            { ...payload, stock: parseInt(Math.random() * 30) },
           ],
         };
         toast.success("Вы успещно добавили продукт в корзину");
