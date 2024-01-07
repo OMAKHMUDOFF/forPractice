@@ -1,74 +1,11 @@
 .SingleProduct .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
-
+  background: 
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.SingleProduct .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.SingleProduct .swiper {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.SingleProduct .swiper-slide {
-  background-size: cover;
-  background-position: center;
-}
-
-.SingleProduct .mySwiper2 {
-  height: 80%;
-  width: 100%;
-}
-
-.SingleProduct .mySwiper {
-  height: 20%;
-  box-sizing: border-box;
-  padding: 10px 0;
-}
-
-.SingleProduct .mySwiper .swiper-slide {
-  width: 25%;
-  height: 100%;
-  opacity: 0.4;
-}
-
-.SingleProduct .mySwiper .swiper-slide-thumb-active {
-  opacity: 1 !important;
-  border: 2px solid #186fd4;
-  object-fit: cover;
-}
-.SingleProduct .mySwiper .swiper-slide-thumb-active img {
-  opacity: 1 !important;
-  border: 2px solid #186fd4;
-  border-radius: 6px;
-}
-
-.SingleProduct .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.SingleProduct .mySwiper .swiper-slide {
-  border-radius: 6px;
-  width: 100px !important;
-  height: 100px !important;
-  opacity: 0.4;
-}
-
-.mySwiper .swiper-wrapper {
-  gap: 20px;
-}
+.S

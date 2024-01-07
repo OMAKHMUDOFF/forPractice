@@ -1,40 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-// Import Swiper styles
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "./singleProdstyle/singleprod.css";
-import Slider from "react-slick";
+import React from "react";
 
-import { IoIosArrowDown } from "react-icons/io";
-import { BsBox2Fill, BsCreditCard2Front } from "react-icons/bs";
-import { TbDiscount } from "react-icons/tb";
-import { FaRegAddressCard } from "react-icons/fa";
-
-function SingleProduct() {
-  const [nav1, setNav1] = useState(null);
-  const [nav2, setNav2] = useState(null);
-  const slider1 = useRef(null);
-  const slider2 = useRef(null);
-
-  useEffect(() => {
-    setNav1(slider1.current);
-    setNav2(slider2.current);
-  }, []);
-
-  let prodID = useParams();
-  let { bestSellers, bestOffers, goodsArr } = useSelector(
-    (state) => state.TotalRedux
-  );
-  let singleData = [...bestOffers, ...bestSellers, ...goodsArr];
-  let product = singleData.filter((elem) => elem?.id === +prodID?.id)?.[0];
-  const { images } = product;
-
+function code() {
   return (
-    <section className="SingleProduct">
-      <div className="singleSliders">
-        <div className="topSingle">
+    <div className="fullPage">
+      <div className="fulsPages">
+        <div className="tepaFull">
           <Slider
             asNavFor={nav1}
             ref={slider2}
@@ -44,7 +14,7 @@ function SingleProduct() {
             arrows={false}
             vertical={true}
           >
-            {images?.map((el, index) => {
+            {card2?.map((el, index) => {
               return (
                 <figure key={index}>
                   <img src={el} />
@@ -56,9 +26,9 @@ function SingleProduct() {
             <IoIosArrowDown />
           </button>
         </div>
-        <div className="botSingle">
+        <div className="pastFull">
           <Slider asNavFor={nav2} ref={slider1} arrows={false} vertical={true}>
-            {images?.map((el, index) => {
+            {card2?.map((el, index) => {
               return (
                 <figure key={index}>
                   <img src={el} />
@@ -70,19 +40,19 @@ function SingleProduct() {
         <div className="fullmalumot">
           <div className="pagesFull">
             <p>Тип товара</p>
-            <b>{product.category}</b>
+            <b>{elem.kategorya}</b>
           </div>
           <div className="pagesFull-imya">
             <p>Имя</p>
-            <b>{product.prodName}</b>
+            <b>{elem.nomi}</b>
           </div>
           <div className="pagesFull">
             <p>Бренд</p>
-            <b>{product.brand}</b>
+            <b>{elem.brend}</b>
           </div>
           <div className="pagesFull">
             <p>Цвет</p>
-            <b>{product.color}</b>
+            <b>{elem.color}</b>
           </div>
           <b className="bolshe">Больше характеристик</b>
           <div className="tolov-s">
@@ -105,8 +75,52 @@ function SingleProduct() {
           </div>
         </div>
       </div>
-    </section>
+      <div className="kupit-korzinka">
+        <p>{elem.art}</p>
+        <p>
+          <i>
+            <FaCheck />
+          </i>{" "}
+          В наличии
+        </p>
+        <div className="kupit-narx">
+          {elem.skidka ? (
+            <b className="b1">
+              <del>{elem.narxi}₽</del>
+              {(elem.narxi - (elem.narxi / 100) * elem.skidka).toFixed(2)}₽
+              <b className="foiz">-{elem.skidka}%</b>
+            </b>
+          ) : (
+            <span>{elem.narxi}₽</span>
+          )}
+        </div>
+        <div className="kolichestva">
+          <p>Количество:</p>
+          <div className="plus-minus-kupits">
+            <button className="plus-kupits" onClick={handleMinus}>
+              <FaMinus />
+            </button>
+            <h1 className="count">{elem.count}</h1>
+            <button className="minus-kupits" onClick={handlePlus}>
+              <FaPlus />
+            </button>
+          </div>
+        </div>
+        <button className="qosh-korzinka">Добавить в корзину</button>
+        <div className="like-kozinka">
+          <button onClick={() => dispatch(Kupit())}>Купить в 1 клик</button>
+          <button
+            onClick={() => {
+              dispatch(setLike(elem)) && dispatch(setingLike(elem));
+            }}
+          >
+            {elem.like ? <AiFillHeart /> : <AiOutlineHeart />}В избранное
+          </button>
+        </div>
+      </div>
+      <ModalOyna2 />
+    </div>
   );
 }
 
-export default SingleProduct;
+export default code;
