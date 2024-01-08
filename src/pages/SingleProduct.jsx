@@ -2,15 +2,16 @@ import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 // Import Swiper styles
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "./singleProdstyle/singleprod.css";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "./singleProdstyle/singleprod.css";
 
-import { IoIosArrowDown } from "react-icons/io";
 import { BsBox2Fill, BsCreditCard2Front } from "react-icons/bs";
-import { TbDiscount } from "react-icons/tb";
 import { FaRegAddressCard } from "react-icons/fa";
+import { IoIosArrowDown } from "react-icons/io";
+import { TbDiscount } from "react-icons/tb";
+import TitleNavigation from "../components/UI/TitleNavigationUI";
 
 function SingleProduct() {
   const [nav1, setNav1] = useState(null);
@@ -33,8 +34,13 @@ function SingleProduct() {
 
   return (
     <section className="SingleProduct">
+      <TitleNavigation
+        path={"/catalogGoods/:id/:art"}
+        pathName={"Электроинструмент"}
+        title={product.prodName}
+      />
       <div className="singleSliders">
-        <div className="topSingle">
+        <div className="leftSingle">
           <Slider
             asNavFor={nav1}
             ref={slider2}
@@ -47,7 +53,7 @@ function SingleProduct() {
             {images?.map((el, index) => {
               return (
                 <figure key={index}>
-                  <img src={el} />
+                  <img src={el} alt="" />
                 </figure>
               );
             })}
@@ -56,51 +62,59 @@ function SingleProduct() {
             <IoIosArrowDown />
           </button>
         </div>
-        <div className="botSingle">
+        <div className="rightSingle">
           <Slider asNavFor={nav2} ref={slider1} arrows={false} vertical={true}>
             {images?.map((el, index) => {
               return (
                 <figure key={index}>
-                  <img src={el} />
+                  <img src={el} alt="" />
                 </figure>
               );
             })}
           </Slider>
         </div>
-        <div className="fullmalumot">
-          <div className="pagesFull">
-            <p>Тип товара</p>
-            <b>{product.category}</b>
-          </div>
-          <div className="pagesFull-imya">
-            <p>Имя</p>
-            <b>{product.prodName}</b>
-          </div>
-          <div className="pagesFull">
-            <p>Бренд</p>
-            <b>{product.brand}</b>
-          </div>
-          <div className="pagesFull">
-            <p>Цвет</p>
-            <b>{product.color}</b>
-          </div>
-          <b className="bolshe">Больше характеристик</b>
-          <div className="tolov-s">
-            <div className="t-usuli">
-              <BsCreditCard2Front className="kok-icons" />
-              <b>Оплата любым удобным способом</b>
+        <div className="fullInfo">
+          <div className="topFullInfo">
+            <div className="prodInfo">
+              <p>Тип товара</p>
+              <p>{product.category}</p>
             </div>
-            <div className="t-usuli">
-              <FaRegAddressCard className="kok-icons" />
-              <b>Большой выбор товаров в каталоге</b>
+            <div className="prodNameInfo">
+              <p>Имя</p>
+              <p>{product.prodName}</p>
             </div>
-            <div className="t-usuli">
-              <BsBox2Fill className="kok-icons" />
-              <b>Осуществляем быструю доставку</b>
+            <div className="prodInfo">
+              <p>Бренд</p>
+              <p>{product.brand}</p>
             </div>
-            <div className="t-usuli">
-              <TbDiscount className="kok-icons" />
-              <b>Делаем скидки на крупные покупки</b>
+            <div className="prodInfo">
+              <p>Цвет</p>
+              <p>{product.color}</p>
+            </div>
+          </div>
+          <b className="moreInfo">Больше характеристик</b>
+          <div className="paymentInfo">
+            <div className="paymentMethods">
+              <BsCreditCard2Front
+                className="payment-icon"
+                style={{ strokeWidth: "1.6px", stroke: "#9BA4AB" }}
+              />
+              <p>Оплата любым удобным способом</p>
+            </div>
+            <div className="moreInCatalogInfo">
+              <FaRegAddressCard className="moreInCatalog" />
+              <p>Большой выбор товаров в каталоге</p>
+            </div>
+            <div className="fastDeliveryInfo">
+              <BsBox2Fill className="fastDelivery" />
+              <p>Осуществляем быструю доставку</p>
+            </div>
+            <div className="largePurchaseInfo">
+              <TbDiscount
+                className="discountLargePurchases"
+                style={{ strokeWidth: "1.6px", stroke: "#9BA4AB" }}
+              />
+              <p>Делаем скидки на крупные покупки</p>
             </div>
           </div>
         </div>
