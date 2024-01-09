@@ -67,6 +67,20 @@ function singleCountDec(p) {
   };
 }
 
+function clickOrder(p) {
+  return {
+    type: TotalTypes.clickOrder,
+    payload: p,
+  };
+}
+
+function closeClickOrder(p) {
+  return {
+    type: TotalTypes.closeClickOrder,
+    payload: p,
+  };
+}
+
 export {
   answerOpen,
   chooseCategory1,
@@ -78,4 +92,6 @@ export {
   setTotalLike,
   singleCountDec,
   singleCountIn,
+  clickOrder,
+  closeClickOrder,
 };

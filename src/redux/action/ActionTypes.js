@@ -35,6 +35,8 @@ let TotalTypes = {
   delete: "delete",
   singleIn: "singleIn",
   singleDec: "singleDec",
+  clickOrder: "clickOrder",
+  closeClickOrder: "closeClickOrder",
 };
 
 export { FavoriteTypes, GoodsTypes, NavbarTypes, TotalTypes };

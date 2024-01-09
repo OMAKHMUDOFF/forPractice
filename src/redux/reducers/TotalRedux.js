@@ -1012,6 +1012,7 @@ let totalData = {
   ],
   cart: [],
   cartDisc: 0,
+  oneClickOrder: false,
 };
 export default function TotalRedux(state = totalData, { type, payload }) {
   switch (type) {
@@ -1105,6 +1106,14 @@ export default function TotalRedux(state = totalData, { type, payload }) {
           ),
         };
       }
+      return state;
+    case TotalTypes.clickOrder:
+      document.body.style.overflowY = "hidden";
+      state = { ...state, oneClickOrder: true };
+      return state;
+    case TotalTypes.closeClickOrder:
+      document.body.style.overflowY = "scroll";
+      state = { ...state, oneClickOrder: false };
       return state;
     default:
       return state;
