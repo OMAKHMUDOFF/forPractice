@@ -1,5 +1,3 @@
-let HomeTypes = {};
-
 let NavbarTypes = {
   catalog: "catalog",
   mapCatalog: "mapCatalog",
@@ -35,6 +33,8 @@ let TotalTypes = {
   decrement: "decrement",
   increment: "increment",
   delete: "delete",
+  singleIn: "singleIn",
+  singleDec: "singleDec",
 };
 
-export { FavoriteTypes, GoodsTypes, HomeTypes, NavbarTypes, TotalTypes };
+export { FavoriteTypes, GoodsTypes, NavbarTypes, TotalTypes };

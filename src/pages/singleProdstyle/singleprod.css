@@ -134,3 +134,110 @@
 .slick-slide {
   border: none !important;
 }
+
+.buy_addCart {
+  display: flex;
+  width: 351px;
+  height: 100%;
+  padding: 25px;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 4px 19px 0px rgba(23, 27, 32, 0.07);
+}
+
+.productArt p {
+  color: #787c80;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.inStock {
+  color: #3b4048;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.productDiscPrice {
+  position: relative;
+  display: flex;
+  gap: 7px;
+}
+
+.productDiscPrice .discPrice {
+  color: #003b73;
+  font-size: 30px;
+  font-weight: 550;
+}
+
+.productDiscPrice .withoutDiscPrice del {
+  color: #8f9296;
+  font-size: 17px;
+  font-weight: 400;
+  text-decoration-line: strikethrough;
+}
+
+.productDiscPrice .discPercentage {
+  position: absolute;
+  right: 25px;
+  top: 0px;
+  display: flex;
+  padding: 4px 5px;
+  border-radius: 4px;
+  background: #1b9665;
+
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 11px; /* 100% */
+}
+
+.countToBuy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.count_decr_incr {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.countToBuy > p {
+  color: #2c333d;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.count_decr_incr button {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px 27px;
+  border-radius: 900px;
+  background: #f3f4f5;
+  width: 75px;
+}
+
+.compareAddFav {
+  display: flex;
+  justify-content: center;
+  gap: 34px;
+  align-items: center;
+}
+
+.compareAddFav > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.compareAddFav > div button {
+  padding: 10px;
+  background: transparent;
+  border-radius: 6px;
+  border: 1px solid #f3f4f5;
+}

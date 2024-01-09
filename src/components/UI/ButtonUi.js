@@ -1,8 +1,9 @@
 import React from "react";
 
-function ButtonUi({ title, variant, fz, fw, pad, br }) {
+function ButtonUi({ title, variant, fz, fw, pad, br, action }) {
   return (
     <button
+      onClick={action}
       style={{
         background:
           variant === "primary"
