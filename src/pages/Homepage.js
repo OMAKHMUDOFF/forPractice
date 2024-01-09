@@ -33,8 +33,16 @@ function Homepage() {
   let { discInfo, popularBrands } = homeState;
 
   let totalState = useSelector((state) => state.TotalRedux);
-  let { categories, setBSeller, bestSellers, setBOffer, bestOffers, news } =
-    totalState;
+  let {
+    categories,
+    setBSeller,
+    bestSellers,
+    setBOffer,
+    bestOffers,
+    news,
+    hurryUp,
+  } = totalState;
+
   return (
     <div className="homePage">
       <div className="mainSliders-Swiper">
@@ -212,19 +220,18 @@ function Homepage() {
           <div className="hurry-up-buy">
             <div className="hurry-disc">
               <span>Успейте купить по скидке</span>
-              <span>-{bestSellers[4].disc}%</span>
+              <span>-{hurryUp.disc}%</span>
             </div>
             <div className="hurry-bot">
               <div className="hurry-img">
-                <img src={bestSellers[4].img} alt="" />
+                <img src={hurryUp.img} alt="" />
               </div>
-              <div className="hurry-title">{bestSellers[4].prodName}</div>
+              <div className="hurry-title">{hurryUp.prodName}</div>
               <div className="hurry-price">
                 <span>
-                  <del>{bestSellers[4].price} ₽</del>
+                  <del>{hurryUp.price} ₽</del>
                   {parseInt(
-                    bestSellers[4].price -
-                      (bestSellers[4].price / 100) * bestSellers[4].disc
+                    hurryUp.price - (hurryUp.price / 100) * hurryUp.disc
                   )}
                   ₽
                 </span>
@@ -364,121 +371,3 @@ function Homepage() {
   );
 }
 export default Homepage;
-
-//comments
-/*
-best offers card comment
- {elem.sale | elem.new ? (
-                  <div className="sale-or-new">
-                    {elem.sale ? (
-                      <div className="sale-info">Распродажа</div>
-                    ) : elem.new ? (
-                      <div className="new-info">Новинка</div>
-                    ) : (
-                      ""
-                    )}
-                  </div>
-                ) : (
-                  ""
-                )}
-                <div className="btitle-img">
-                  <div className="bOffer-card-img">
-                    <img src={elem.img} alt={elem.prodName} />
-                  </div>
-                </div>
-                <div className="bSeller-card-bottom">
-                  <div className="bSeller-articul">
-                    <span>Артикул: {elem.art}</span>
-                  </div>
-                  <div className="bSeller-prod-name">
-                    <h4>{elem.prodName}</h4>
-                  </div>
-                  {elem.disc > 0 ? (
-                    <div className="bSeller-price">
-                      <span>
-                        <del>{elem.price} ₽</del>
-                        {parseInt(elem.price - (elem.price / 100) * elem.disc)}₽
-                      </span>
-                      <div className="bSeller-disc">
-                        <span>-{elem.disc}%</span>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="bSeller-price">
-                      <span>{elem.price} ₽</span>
-                    </div>
-                  )}
-                  <div className="bSeller-card-btns">
-                    <div className="cart-btn">
-                      <button>
-                        <HiOutlineShoppingCart />
-                        Купить
-                      </button>
-                    </div>
-                    <div className="like-cart-btn">
-                      <button onClick={() => dispatch(setTotalLike(elem))}>
-                        {elem.like ? <AiFillHeart /> : <AiOutlineHeart />}
-                      </button>
-                      <button>
-                        <FiBarChart2 />
-                      </button>
-                    </div>
-                  </div>
-                </div> 
-
-best sellers card comment
-<div className="bsellecomment">
-  <div className="btitle-img">
-        {elem.hit && (
-          <div className="bestTitle">
-            <span>Хит</span>
-          </div>
-        )}
-        <div className="bSeller-card-img">
-          <img src={elem.img} alt={elem.prodName} />
-        </div>
-      </div>
-      <div className="bSeller-card-bottom">
-        <div className="bSeller-articul">
-          <span>Артикул: {elem.art}</span>
-        </div>
-        <div className="bSeller-prod-name">
-          <h4>{elem.prodName}</h4>
-        </div>
-        {elem.disc > 0 ? (
-          <div className="bSeller-price">
-            <span>
-              <del>{elem.price} ₽</del>
-              {parseInt(
-                elem.price - (elem.price / 100) * elem.disc
-              )}
-              ₽
-            </span>
-            <div className="bSeller-disc">
-              <span>-{elem.disc}%</span>
-            </div>
-          </div>
-        ) : (
-          <div className="bSeller-price">
-            <span>{elem.price} ₽</span>
-          </div>
-        )}
-        <div className="bSeller-card-btns">
-          <div className="cart-btn">
-            <button>
-              <HiOutlineShoppingCart />
-              Купить
-            </button>
-          </div>
-          <div className="like-cart-btn">
-            <button onClick={() => dispatch(setTotalLike(elem))}>
-              {elem.like ? <AiFillHeart /> : <AiOutlineHeart />}
-            </button>
-            <button>
-              <FiBarChart2 />
-            </button>
-          </div>
-        </div>
-      </div> 
-</div>
-*/

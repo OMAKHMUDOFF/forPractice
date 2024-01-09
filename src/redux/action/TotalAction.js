@@ -81,7 +81,7 @@ function closeClickOrder(p) {
   };
 }
 
-function getApi(p) {
+function getApiData(p) {
   return {
     type: TotalTypes.getApi,
     payload: p,
@@ -101,5 +101,5 @@ export {
   singleCountIn,
   closeClickOrder,
   clickOrder,
-  getApi,
+  getApiData,
 };

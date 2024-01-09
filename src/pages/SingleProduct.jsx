@@ -41,6 +41,7 @@ function SingleProduct() {
   let product = singleData.filter((elem) => elem?.id === +prodID?.id)?.[0];
   const { images } = product;
   const dispatch = useDispatch();
+  console.log(images);
 
   return (
     <section className="SingleProduct">
@@ -72,7 +73,7 @@ function SingleProduct() {
           </button>
         </div>
         <div className="rightSingle">
-          <Slider asNavFor={nav2} ref={slider1} arrows={false} vertical={true} >
+          <Slider asNavFor={nav2} ref={slider1} arrows={false} vertical={true}>
             {images?.map((el, index) => {
               return (
                 <figure key={index}>
