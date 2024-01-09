@@ -227,7 +227,7 @@ let totalData = {
     {
       catalog: "goodsArr",
       id: 11,
-      img: perforator1,
+      img: "./img/catalogGOODS/perforator.png",
       art: "XJ89YHGO",
       prodName: "Перфоратор универсальный Wander X645-46 GF 1450W",
       price: 15999,
@@ -886,9 +886,6 @@ let totalData = {
       date: "5 августа 2023",
     },
   ],
-  categories: ["", "Инструменты", "Сантехника", "Для дома", "Для сада"],
-  setBSeller: "",
-  setBOffer: "",
   discInfo: [
     {
       id: 1,
@@ -1010,8 +1007,12 @@ let totalData = {
       answer: "Проводится платная диагностика и ремонт товара",
     },
   ],
+  categories: ["", "Инструменты", "Сантехника", "Для дома", "Для сада"],
+  setBSeller: "",
+  setBOffer: "",
   cart: [],
   cartDisc: 0,
+  oneClickOrder: false,
 };
 export default function TotalRedux(state = totalData, { type, payload }) {
   switch (type) {
@@ -1105,6 +1106,14 @@ export default function TotalRedux(state = totalData, { type, payload }) {
           ),
         };
       }
+      return state;
+    case TotalTypes.clickOrder:
+      document.body.style.overflowY = "hidden";
+      state = { ...state, oneClickOrder: true };
+      return state;
+    case TotalTypes.closeClickOrder:
+      document.body.style.overflowY = "scroll";
+      state = { ...state, oneClickOrder: false };
       return state;
     default:
       return state;

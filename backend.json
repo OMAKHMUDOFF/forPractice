@@ -1,5 +1,1041 @@
 {
-  "data":{
-    
+  "data": {
+    "bestSellers": [
+      {
+        "id": 1,
+        "art": "XJ89YHGO",
+        "prodName": "Перфоратор универсальный Wander X645-46 GF 1450W",
+        "price": 15999,
+        "like": false,
+        "disc": 15,
+        "category": "Инструменты",
+        "img": "./img/homePage_IMG/Rectangle 22.png",
+        "catalog": "bestSellers",
+        "hit": true,
+        "images": [
+          "./img/homePage_IMG/Rectangle 22.png",
+          "./img/homePage_IMG/Rectangle 22.png",
+          "./img/homePage_IMG/Rectangle 22.png",
+          "./img/homePage_IMG/Rectangle 22.png",
+          "./img/homePage_IMG/Rectangle 22.png",
+          "./img/homePage_IMG/Rectangle 22.png"
+        ],
+        "count": 1
+      },
+      {
+        "id": 2,
+        "art": "XJ89YHGO",
+        "prodName": "Смеситель Faris G-120 для раковины",
+        "price": 1789,
+        "like": false,
+        "disc": 0,
+        "category": "Сантехника",
+        "catalog": "bestSellers",
+        "img": "./img/homePage_IMG/smesitel.png",
+        "hit": true,
+        "images": [
+          "./img/homePage_IMG/smesitel.png",
+          "./img/homePage_IMG/smesitel.png",
+          "./img/homePage_IMG/smesitel.png",
+          "./img/homePage_IMG/smesitel.png",
+          "./img/homePage_IMG/smesitel.png",
+          "./img/homePage_IMG/smesitel.png"
+        ],
+        "count": 1
+      },
+      {
+        "id": 3,
+        "art": "XJ89YHGO",
+        "prodName": "Триммерная леска «Спираль-100»",
+        "price": 312,
+        "like": false,
+        "disc": 10,
+        "category": "Для дома",
+        "catalog": "bestSellers",
+        "img": "./img/homePage_IMG/leska.png",
+        "hit": true,
+        "images": [
+          "./img/homePage_IMG/leska.png",
+          "./img/homePage_IMG/leska.png",
+          "./img/homePage_IMG/leska.png",
+          "./img/homePage_IMG/leska.png",
+          "./img/homePage_IMG/leska.png",
+          "./img/homePage_IMG/leska.png",
+          "./img/homePage_IMG/leska.png"
+        ],
+        "count": 1
+      },
+      {
+        "id": 4,
+        "art": "XJ89YHGO",
+        "prodName": "Унитаз подвесной Aragio с двойным сливом",
+        "price": 15999,
+        "like": false,
+        "disc": 12,
+        "category": "Для дома",
+        "catalog": "bestSellers",
+        "img": "./img/homePage_IMG/unitaz.png",
+        "hit": true,
+        "images": [
+          "./img/homePage_IMG/unitaz.png",
+          "./img/homePage_IMG/unitaz.png",
+          "./img/homePage_IMG/unitaz.png",
+          "./img/homePage_IMG/unitaz.png",
+          "./img/homePage_IMG/unitaz.png",
+          "./img/homePage_IMG/unitaz.png"
+        ],
+        "count": 1
+      },
+      {
+        "id": 5,
+        "art": "XJ89YHGO",
+        "prodName": "Клей для напольных покрытий Porret",
+        "price": 15999,
+        "like": false,
+        "disc": 12,
+        "category": "Инструменты",
+        "catalog": "bestSellers",
+        "hit": true,
+        "img": "./img/homePage_IMG/kley.png",
+        "images": [
+          "./img/homePage_IMG/kley.png",
+          "./img/homePage_IMG/kley.png",
+          "./img/homePage_IMG/kley.png",
+          "./img/homePage_IMG/kley.png",
+          "./img/homePage_IMG/kley.png",
+          "./img/homePage_IMG/kley.png"
+        ],
+        "count": 1
+      }
+    ],
+    "bestOffers": [
+      {
+        "id": 6,
+        "art": "XJ89YHGO",
+        "prodName": "Набор гравировальных насадок Nozzle-Tok",
+        "price": 15999,
+        "like": false,
+        "disc": 15,
+        "category": "Инструменты",
+        "img": "./img/catalogGOODS/nabor.png",
+        "sale": false,
+        "catalog": "bestOffers",
+        "new": false,
+        "images": [
+          "./img/catalogGOODS/nabor.png",
+          "./img/catalogGOODS/nabor.png",
+          "./img/catalogGOODS/nabor.png",
+          "./img/catalogGOODS/nabor.png",
+          "./img/catalogGOODS/nabor.png",
+          "./img/catalogGOODS/nabor.png"
+        ],
+        "count": 1
+      },
+      {
+        "id": 7,
+        "art": "XJ89YHGO",
+        "prodName": "Термостат для душа Torso V-6000",
+        "price": 1789,
+        "like": false,
+        "disc": 0,
+        "category": "Сантехника",
+        "img": "./img/homePage_IMG/termostat.png",
+        "sale": true,
+        "catalog": "bestOffers",
+        "images": [
+          "./img/homePage_IMG/termostat.png",
+          "./img/homePage_IMG/termostat.png",
+          "./img/homePage_IMG/termostat.png",
+          "./img/homePage_IMG/termostat.png",
+          "./img/homePage_IMG/termostat.png",
+          "./img/homePage_IMG/termostat.png"
+        ],
+        "count": 1,
+        "new": false
+      },
+      {
+        "id": 8,
+        "art": "XJ89YHGO",
+        "prodName": "Аккумуляторный шуруповерт «Гладиатор»",
+        "price": 312,
+        "like": false,
+        "disc": 10,
+        "category": "Для дома",
+        "img": "./img/homePage_IMG/drell_gladiator.png",
+        "new": false,
+        "catalog": "bestOffers",
+        "images": [
+          "./img/homePage_IMG/drell_gladiator.png",
+          "./img/homePage_IMG/drell_gladiator.png",
+          "./img/homePage_IMG/drell_gladiator.png",
+          "./img/homePage_IMG/drell_gladiator.png",
+          "./img/homePage_IMG/drell_gladiator.png",
+          "./img/homePage_IMG/drell_gladiator.png"
+        ],
+        "count": 1,
+        "sale": false
+      },
+      {
+        "id": 9,
+        "art": "XJ89YHGO",
+        "prodName": "Унитаз подвесной Aragio с двойным сливом",
+        "price": 15999,
+        "like": false,
+        "disc": 12,
+        "category": "Для дома",
+        "img": "./img/homePage_IMG/circular.png",
+        "sale": false,
+        "catalog": "bestOffers",
+        "new": true,
+        "images": [
+          "./img/homePage_IMG/circular.png",
+          "./img/homePage_IMG/circular.png",
+          "./img/homePage_IMG/circular.png",
+          "./img/homePage_IMG/circular.png",
+          "./img/homePage_IMG/circular.png",
+          "./img/homePage_IMG/circular.png"
+        ],
+        "count": 1
+      },
+      {
+        "id": 10,
+        "art": "XJ89YHGO",
+        "prodName": "Водно-дисперсионный клей Cob",
+        "price": 15999,
+        "like": false,
+        "disc": 15,
+        "category": "Инструменты",
+        "img": "./img/homePage_IMG/vodno_kley.png",
+        "sale": false,
+        "catalog": "bestOffers",
+        "images": [
+          "./img/homePage_IMG/vodno_kley.png",
+          "./img/homePage_IMG/vodno_kley.png",
+          "./img/homePage_IMG/vodno_kley.png",
+          "./img/homePage_IMG/vodno_kley.png",
+          "./img/homePage_IMG/vodno_kley.png",
+          "./img/homePage_IMG/vodno_kley.png"
+        ],
+        "count": 1,
+        "new": false
+      }
+    ],
+    "goodsArr": [
+      {
+        "catalog": "goodsArr",
+        "id": 11,
+        "img": "./img/catalogGOODS/perforator.png",
+        "art": "XJ89YHGO",
+        "prodName": "Перфоратор универсальный Wander X645-46 GF 1450W",
+        "price": 15999,
+        "like": false,
+        "hit": false,
+        "disc": 15,
+        "color": "синий",
+        "category": "Сантехника",
+        "brand": "MAKITA",
+        "images": [
+          "./img/catalogGOODS/perforator.png",
+          "./img/catalogGOODS/perforator.png",
+          "./img/catalogGOODS/perforator.png",
+          "./img/catalogGOODS/perforator.png",
+          "./img/catalogGOODS/perforator.png",
+          "./img/catalogGOODS/perforator.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 12,
+        "img": "./img/catalogGOODS/bolgarka1.png",
+        "art": "XJ89YHGO",
+        "prodName": "Смеситель Faris G-120 для раковины",
+        "price": 1789,
+        "like": false,
+        "hit": true,
+        "disc": 0,
+        "color": "серый",
+        "images": [
+          "./img/catalogGOODS/bolgarka1.png",
+          "./img/catalogGOODS/bolgarka1.png",
+          "./img/catalogGOODS/bolgarka1.png",
+          "./img/catalogGOODS/bolgarka1.png",
+          "./img/catalogGOODS/bolgarka1.png",
+          "./img/catalogGOODS/bolgarka1.png"
+        ],
+        "count": 1,
+        "category": "Сантехника"
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 13,
+        "img": "./img/catalogGOODS/circular_pila_bosch.png",
+        "art": "XJ89YHGO",
+        "prodName": "Триммерная леска «Спираль-100»",
+        "price": 312,
+        "like": false,
+        "hit": false,
+        "color": "серый",
+        "images": [
+          "./img/catalogGOODS/circular_pila_bosch.png",
+          "./img/catalogGOODS/circular_pila_bosch.png",
+          "./img/catalogGOODS/circular_pila_bosch.png",
+          "./img/catalogGOODS/circular_pila_bosch.png",
+          "./img/catalogGOODS/circular_pila_bosch.png",
+          "./img/catalogGOODS/circular_pila_bosch.png"
+        ],
+        "count": 1,
+        "disc": 10,
+        "category": "Инструмент"
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 14,
+        "img": "./img/catalogGOODS/shlifovka.png",
+        "art": "XJ89YHGO",
+        "prodName": "Унитаз подвесной Aragio с двойным сливом",
+        "price": 15999,
+        "like": false,
+        "color": "синий",
+        "hit": true,
+        "images": [
+          "./img/catalogGOODS/shlifovka.png",
+          "./img/catalogGOODS/shlifovka.png",
+          "./img/catalogGOODS/shlifovka.png",
+          "./img/catalogGOODS/shlifovka.png",
+          "./img/catalogGOODS/shlifovka.png",
+          "./img/catalogGOODS/shlifovka.png"
+        ],
+        "count": 1,
+        "disc": 12,
+        "category": "Инструмент"
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 15,
+        "img": "./img/catalogGOODS/nabor.png",
+        "art": "XJ89YHGO",
+        "prodName": "Набор гравировальных насадок Nozzle-Tok",
+        "price": 15999,
+        "like": false,
+        "hit": false,
+        "color": "желтый",
+        "disc": 15,
+        "category": "Набор",
+        "images": [
+          "./img/catalogGOODS/nabor.png",
+          "./img/catalogGOODS/nabor.png",
+          "./img/catalogGOODS/nabor.png",
+          "./img/catalogGOODS/nabor.png",
+          "./img/catalogGOODS/nabor.png",
+          "./img/catalogGOODS/nabor.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 16,
+        "img": "./img/catalogGOODS/circular_pila_zubr.png",
+        "art": "XJ89YHGO",
+        "prodName": "Перфоратор универсальный Wander X645-46 GF 1450W",
+        "price": 15999,
+        "like": false,
+        "hit": false,
+        "color": "красный",
+        "disc": 15,
+        "category": "Инструмент",
+        "images": [
+          "./img/catalogGOODS/circular_pila_zubr.png",
+          "./img/catalogGOODS/circular_pila_zubr.png",
+          "./img/catalogGOODS/circular_pila_zubr.png",
+          "./img/catalogGOODS/circular_pila_zubr.png",
+          "./img/catalogGOODS/circular_pila_zubr.png",
+          "./img/catalogGOODS/circular_pila_zubr.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 17,
+        "img": "./img/catalogGOODS/bolgarka2.png",
+        "art": "XJ89YHGO",
+        "prodName": "Смеситель Faris G-120 для раковины",
+        "price": 1789,
+        "like": false,
+        "color": "серый",
+        "hit": true,
+        "images": [
+          "./img/catalogGOODS/bolgarka2.png",
+          "./img/catalogGOODS/bolgarka2.png",
+          "./img/catalogGOODS/bolgarka2.png",
+          "./img/catalogGOODS/bolgarka2.png",
+          "./img/catalogGOODS/bolgarka2.png",
+          "./img/catalogGOODS/bolgarka2.png"
+        ],
+        "count": 1,
+        "disc": 0,
+        "category": "Инструмент"
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 18,
+        "img": "./img/catalogGOODS/drell_makita_s_ruchkoy.png",
+        "art": "XJ89YHGO",
+        "prodName": "Триммерная леска «Спираль-100»",
+        "price": 312,
+        "like": false,
+        "color": "синий",
+        "hit": false,
+        "disc": 10,
+        "images": [
+          "./img/catalogGOODS/drell_makita_s_ruchkoy.png",
+          "./img/catalogGOODS/drell_makita_s_ruchkoy.png",
+          "./img/catalogGOODS/drell_makita_s_ruchkoy.png",
+          "./img/catalogGOODS/drell_makita_s_ruchkoy.png",
+          "./img/catalogGOODS/drell_makita_s_ruchkoy.png"
+        ],
+        "count": 1,
+        "category": "Сантехника"
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 19,
+        "img": "./img/catalogGOODS/betonomeshalka.png",
+        "art": "XJ89YHGO",
+        "prodName": "Набор гравировальных насадок Nozzle-Tok",
+        "price": 15999,
+        "like": false,
+        "color": "оранжевый",
+        "hit": false,
+        "disc": 15,
+        "images": [
+          "./img/catalogGOODS/betonomeshalka.png",
+          "./img/catalogGOODS/betonomeshalka.png",
+          "./img/catalogGOODS/betonomeshalka.png",
+          "./img/catalogGOODS/betonomeshalka.png",
+          "./img/catalogGOODS/betonomeshalka.png"
+        ],
+        "count": 1,
+        "category": "Инструмент"
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 20,
+        "img": "./img/catalogGOODS/perforator_bosch.png",
+        "art": "XJ89YHGO",
+        "prodName": "Унитаз подвесной Aragio с двойным сливом",
+        "price": 15999,
+        "like": false,
+        "color": "черный",
+        "hit": true,
+        "disc": 12,
+        "category": "Инструмент",
+        "images": [
+          "./img/catalogGOODS/perforator_bosch.png",
+          "./img/catalogGOODS/perforator_bosch.png",
+          "./img/catalogGOODS/perforator_bosch.png",
+          "./img/catalogGOODS/perforator_bosch.png",
+          "./img/catalogGOODS/perforator_bosch.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 21,
+        "img": "./img/catalogGOODS/constr_mixer.png",
+        "art": "XJ89YHGO",
+        "prodName": "Перфоратор универсальный Wander X645-46 GF 1450W",
+        "price": 15999,
+        "like": false,
+        "color": "серый",
+        "hit": false,
+        "disc": 15,
+        "images": [
+          "./img/catalogGOODS/constr_mixer.png",
+          "./img/catalogGOODS/constr_mixer.png",
+          "./img/catalogGOODS/constr_mixer.png",
+          "./img/catalogGOODS/constr_mixer.png",
+          "./img/catalogGOODS/constr_mixer.png"
+        ],
+        "count": 1,
+        "category": "Инструмент"
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 22,
+        "img": "./img/catalogGOODS/drell_makita_bez_ruchki.png",
+        "art": "XJ89YHGO",
+        "prodName": "Набор гравировальных насадок Nozzle-Tok",
+        "price": 15999,
+        "like": false,
+        "color": "синий",
+        "hit": false,
+        "disc": 15,
+        "category": "Сантехника",
+        "images": [
+          "./img/catalogGOODS/drell_makita_bez_ruchki.png",
+          "./img/catalogGOODS/drell_makita_bez_ruchki.png",
+          "./img/catalogGOODS/drell_makita_bez_ruchki.png",
+          "./img/catalogGOODS/drell_makita_bez_ruchki.png",
+          "./img/catalogGOODS/drell_makita_bez_ruchki.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 23,
+        "img": "./img/catalogGOODS/bolgarka_makita.png",
+        "art": "XJ89YHGO",
+        "prodName": "Смеситель Faris G-120 для раковины",
+        "price": 1789,
+        "like": false,
+        "color": "синий",
+        "hit": true,
+        "disc": 0,
+        "category": "Инструмент",
+        "images": [
+          "./img/catalogGOODS/bolgarka_makita.png",
+          "./img/catalogGOODS/bolgarka_makita.png",
+          "./img/catalogGOODS/bolgarka_makita.png",
+          "./img/catalogGOODS/bolgarka_makita.png",
+          "./img/catalogGOODS/bolgarka_makita.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 24,
+        "img": "./img/catalogGOODS/shlifovka_zubr.png",
+        "art": "XJ89YHGO",
+        "prodName": "Триммерная леска «Спираль-100»",
+        "price": 312,
+        "like": false,
+        "color": "белый",
+        "hit": false,
+        "disc": 10,
+        "category": "Инструмент",
+        "images": [
+          "./img/catalogGOODS/shlifovka_zubr.png",
+          "./img/catalogGOODS/shlifovka_zubr.png",
+          "./img/catalogGOODS/shlifovka_zubr.png",
+          "./img/catalogGOODS/shlifovka_zubr.png",
+          "./img/catalogGOODS/shlifovka_zubr.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 25,
+        "img": "./img/catalogGOODS/lobzik_makita.png",
+        "art": "XJ89YHGO",
+        "prodName": "Унитаз подвесной Aragio с двойным сливом",
+        "price": 15999,
+        "like": false,
+        "color": "синий",
+        "hit": true,
+        "disc": 12,
+        "category": "Инструмент",
+        "images": [
+          "./img/catalogGOODS/lobzik_makita.png",
+          "./img/catalogGOODS/lobzik_makita.png",
+          "./img/catalogGOODS/lobzik_makita.png",
+          "./img/catalogGOODS/lobzik_makita.png",
+          "./img/catalogGOODS/lobzik_makita.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 26,
+        "img": "./img/catalogGOODS/shlifovka_makita.png",
+        "art": "XJ89YHGO",
+        "prodName": "Перфоратор универсальный Wander X645-46 GF 1450W",
+        "price": 15999,
+        "like": false,
+        "color": "синий",
+        "hit": false,
+        "disc": 15,
+        "category": "Сантехника",
+        "images": [
+          "./img/catalogGOODS/shlifovka_makita.png",
+          "./img/catalogGOODS/shlifovka_makita.png",
+          "./img/catalogGOODS/shlifovka_makita.png",
+          "./img/catalogGOODS/shlifovka_makita.png",
+          "./img/catalogGOODS/shlifovka_makita.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 27,
+        "img": "./img/catalogGOODS/stanok_vixr.png",
+        "art": "XJ89YHGO",
+        "prodName": "Триммерная леска «Спираль-100»",
+        "price": 312,
+        "like": false,
+        "color": "белый",
+        "hit": false,
+        "disc": 10,
+        "category": "Сантехника",
+        "images": [
+          "./img/catalogGOODS/stanok_vixr.png",
+          "./img/catalogGOODS/stanok_vixr.png",
+          "./img/catalogGOODS/stanok_vixr.png",
+          "./img/catalogGOODS/stanok_vixr.png",
+          "./img/catalogGOODS/stanok_vixr.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 28,
+        "img": "./img/catalogGOODS/graver_zubr.png",
+        "art": "XJ89YHGO",
+        "prodName": "Набор гравировальных насадок Nozzle-Tok",
+        "price": 15999,
+        "like": false,
+        "color": "красный",
+        "hit": false,
+        "disc": 15,
+        "category": "Набор",
+        "images": [
+          "./img/catalogGOODS/graver_zubr.png",
+          "./img/catalogGOODS/graver_zubr.png",
+          "./img/catalogGOODS/graver_zubr.png",
+          "./img/catalogGOODS/graver_zubr.png",
+          "./img/catalogGOODS/graver_zubr.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 29,
+        "img": "./img/catalogGOODS/drell_makita_bez_ruchki_2.png",
+        "art": "XJ89YHGO",
+        "prodName": "Унитаз подвесной Aragio с двойным сливом",
+        "price": 15999,
+        "like": false,
+        "color": "синий",
+        "hit": true,
+        "disc": 12,
+        "category": "Инструмент",
+        "images": [
+          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png",
+          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png",
+          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png",
+          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png",
+          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 30,
+        "img": "./img/catalogGOODS/perforator_bosch_siniy.png",
+        "art": "XJ89YHGO",
+        "prodName": "Смеситель Faris G-120 для раковины",
+        "price": 1789,
+        "like": false,
+        "color": "синий",
+        "hit": true,
+        "disc": 0,
+        "category": "Инструмент",
+        "images": [
+          "./img/catalogGOODS/perforator_bosch_siniy.png",
+          "./img/catalogGOODS/perforator_bosch_siniy.png",
+          "./img/catalogGOODS/perforator_bosch_siniy.png",
+          "./img/catalogGOODS/perforator_bosch_siniy.png",
+          "./img/catalogGOODS/perforator_bosch_siniy.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 31,
+        "img": "./img/catalogGOODS/drell_PIT.png",
+        "art": "XJ89YHGO",
+        "prodName": "Перфоратор универсальный Wander X645-46 GF 1450W",
+        "price": 15999,
+        "like": false,
+        "color": "черный",
+        "hit": false,
+        "disc": 15,
+        "category": "Сантехника",
+        "images": [
+          "./img/catalogGOODS/drell_PIT.png",
+          "./img/catalogGOODS/drell_PIT.png",
+          "./img/catalogGOODS/drell_PIT.png",
+          "./img/catalogGOODS/drell_PIT.png",
+          "./img/catalogGOODS/drell_PIT.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 32,
+        "img": "./img/catalogGOODS/perforator_zubr.png",
+        "art": "XJ89YHGO",
+        "prodName": "Унитаз подвесной Aragio с двойным сливом",
+        "price": 15999,
+        "like": false,
+        "color": "белый",
+        "hit": true,
+        "disc": 12,
+        "category": "Стойка",
+        "images": [
+          "./img/catalogGOODS/perforator_zubr.png",
+          "./img/catalogGOODS/perforator_zubr.png",
+          "./img/catalogGOODS/perforator_zubr.png",
+          "./img/catalogGOODS/perforator_zubr.png",
+          "./img/catalogGOODS/perforator_zubr.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 33,
+        "img": "./img/catalogGOODS/stanok_vixr.png",
+        "art": "XJ89YHGO",
+        "prodName": "Перфоратор универсальный Wander X645-46 GF 1450W",
+        "price": 15999,
+        "like": false,
+        "color": "оранжевый",
+        "hit": false,
+        "disc": 15,
+        "category": "Стойка",
+        "images": [
+          "./img/catalogGOODS/stanok_vixr.png",
+          "./img/catalogGOODS/stanok_vixr.png",
+          "./img/catalogGOODS/stanok_vixr.png",
+          "./img/catalogGOODS/stanok_vixr.png",
+          "./img/catalogGOODS/stanok_vixr.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 34,
+        "img": "./img/catalogGOODS/rubanok_vixr.png",
+        "art": "XJ89YHGO",
+        "prodName": "Триммерная леска «Спираль-100»",
+        "price": 312,
+        "like": false,
+        "color": "оранжевый",
+        "hit": false,
+        "disc": 10,
+        "category": "Набор",
+        "images": [
+          "./img/catalogGOODS/rubanok_vixr.png",
+          "./img/catalogGOODS/rubanok_vixr.png",
+          "./img/catalogGOODS/rubanok_vixr.png",
+          "./img/catalogGOODS/rubanok_vixr.png",
+          "./img/catalogGOODS/rubanok_vixr.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 35,
+        "img": "./img/catalogGOODS/perforator_PIT.png",
+        "art": "XJ89YHGO",
+        "prodName": "Триммерная леска «Спираль-100»",
+        "price": 312,
+        "like": false,
+        "color": "черный",
+        "hit": false,
+        "disc": 10,
+        "category": "Сантехника",
+        "images": [
+          "./img/catalogGOODS/perforator_PIT.png",
+          "./img/catalogGOODS/perforator_PIT.png",
+          "./img/catalogGOODS/perforator_PIT.png",
+          "./img/catalogGOODS/perforator_PIT.png",
+          "./img/catalogGOODS/perforator_PIT.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 36,
+        "img": "./img/catalogGOODS/kley_pistolet_stayer.png",
+        "art": "XJ89YHGO",
+        "prodName": "Набор гравировальных насадок Nozzle-Tok",
+        "price": 15999,
+        "like": false,
+        "color": "черный",
+        "hit": false,
+        "disc": 15,
+        "category": "Сантехника",
+        "images": [
+          "./img/catalogGOODS/kley_pistolet_stayer.png",
+          "./img/catalogGOODS/kley_pistolet_stayer.png",
+          "./img/catalogGOODS/kley_pistolet_stayer.png",
+          "./img/catalogGOODS/kley_pistolet_stayer.png",
+          "./img/catalogGOODS/kley_pistolet_stayer.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 37,
+        "img": "./img/catalogGOODS/nabor.png",
+        "art": "XJ89YHGO",
+        "prodName": "Набор гравировальных насадок Nozzle-Tok",
+        "price": 15999,
+        "like": false,
+        "color": "желтый",
+        "hit": false,
+        "disc": 15,
+        "category": "Набор",
+        "images": [
+          "./img/catalogGOODS/nabor.png",
+          "./img/catalogGOODS/nabor.png",
+          "./img/catalogGOODS/nabor.png",
+          "./img/catalogGOODS/nabor.png",
+          "./img/catalogGOODS/nabor.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 38,
+        "img": "./img/catalogGOODS/rubanok_makita.png",
+        "art": "XJ89YHGO",
+        "prodName": "Смеситель Faris G-120 для раковины",
+        "price": 1789,
+        "like": false,
+        "color": "синий",
+        "hit": true,
+        "disc": 0,
+        "images": [
+          "./img/catalogGOODS/rubanok_makita.png",
+          "./img/catalogGOODS/rubanok_makita.png",
+          "./img/catalogGOODS/rubanok_makita.png",
+          "./img/catalogGOODS/rubanok_makita.png",
+          "./img/catalogGOODS/rubanok_makita.png"
+        ],
+        "count": 1,
+        "category": "Стойка"
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 39,
+        "img": "./img/catalogGOODS/pilesos_zubr.png",
+        "art": "XJ89YHGO",
+        "prodName": "Смеситель Faris G-120 для раковины",
+        "price": 1789,
+        "like": false,
+        "color": "красный",
+        "hit": true,
+        "disc": 0,
+        "category": "Держатель",
+        "images": [
+          "./img/catalogGOODS/pilesos_zubr.png",
+          "./img/catalogGOODS/pilesos_zubr.png",
+          "./img/catalogGOODS/pilesos_zubr.png",
+          "./img/catalogGOODS/pilesos_zubr.png",
+          "./img/catalogGOODS/pilesos_zubr.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 40,
+        "img": "./img/catalogGOODS/drell_makita_bez_ruchki_2.png",
+        "art": "XJ89YHGO",
+        "prodName": "Унитаз подвесной Aragio с двойным сливом",
+        "price": 15999,
+        "like": false,
+        "color": "синий",
+        "hit": true,
+        "disc": 12,
+        "category": "Адаптер",
+        "images": [
+          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png",
+          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png",
+          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png",
+          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png",
+          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 41,
+        "img": "./img/catalogGOODS/bolgarka2.png",
+        "art": "XJ89YHGO",
+        "prodName": "Унитаз подвесной Aragio с двойным сливом",
+        "price": 15999,
+        "like": false,
+        "color": "синий",
+        "hit": true,
+        "disc": 12,
+        "category": "Держатель",
+        "images": [
+          "./img/catalogGOODS/bolgarka2.png",
+          "./img/catalogGOODS/bolgarka2.png",
+          "./img/catalogGOODS/bolgarka2.png",
+          "./img/catalogGOODS/bolgarka2.png",
+          "./img/catalogGOODS/bolgarka2.png"
+        ],
+        "count": 1
+      },
+      {
+        "catalog": "goodsArr",
+        "id": 42,
+        "img": "./img/catalogGOODS/nabor.png",
+        "art": "XJ89YHGO",
+        "prodName": "Набор гравировальных насадок Nozzle-Tok",
+        "price": 15999,
+        "like": false,
+        "color": "желтый",
+        "hit": false,
+        "disc": 15,
+        "category": "Фильтр",
+        "images": [
+          "./img/catalogGOODS/nabor.png",
+          "./img/catalogGOODS/nabor.png",
+          "./img/catalogGOODS/nabor.png",
+          "./img/catalogGOODS/nabor.png",
+          "./img/catalogGOODS/nabor.png"
+        ],
+        "count": 1
+      }
+    ],
+    "news": [
+      {
+        "img": "./img/homePage_IMG/news1.png",
+        "title": "Масштабное обновление каталога инструментов",
+        "description": "С радостью сообщаем вам о крупном пополнении нашего каталога инструментов.",
+        "date": "5 августа 2023"
+      },
+      {
+        "img": "./img/homePage_IMG/news2.png",
+        "title": "Масштабное обновление каталога инструментов",
+        "description": "С радостью сообщаем вам о крупном пополнении нашего каталога инструментов.",
+        "date": "5 августа 2023"
+      },
+      {
+        "img": "./img/homePage_IMG/news3.png",
+        "title": "Масштабное обновление каталога инструментов",
+        "description": "С радостью сообщаем вам о крупном пополнении нашего каталога инструментов.",
+        "date": "5 августа 2023"
+      },
+      {
+        "img": "./img/homePage_IMG/news4.png",
+        "title": "Масштабное обновление каталога инструментов",
+        "description": "С радостью сообщаем вам о крупном пополнении нашего каталога инструментов.",
+        "date": "5 августа 2023"
+      }
+    ],
+    "discInfo": [
+      {
+        "id": 1,
+        "img": "./img/QAImg/discInfo1.png",
+        "title": "Все для отоплления",
+        "disc": 30
+      },
+      {
+        "id": 2,
+        "img": "./img/QAImg/discInfo2.png",
+        "title": "Лакокрасочные материалы",
+        "disc": 30
+      }
+    ],
+    "qapage": [
+      {
+        "catalog": "qapage",
+        "id": 1,
+        "quest": "Могу ли я сделать возврат материалов, не использованных в процессе строительства?",
+        "bool": false,
+        "answer": "Система кредитования и рассрочки действует в организации при обращении к кредитным специалистам, которые оформят вам договор по предложенным кредитным продуктам от банка, в который будет подана заявка."
+      },
+      {
+        "catalog": "qapage",
+        "id": 2,
+        "quest": "Входит ли в стоимость доставки разгрузка машины?",
+        "bool": false,
+        "answer": "Система кредитования и рассрочки действует в организации при обращении к кредитным специалистам, которые оформят вам договор по предложенным кредитным продуктам от банка, в который будет подана заявка."
+      },
+      {
+        "catalog": "qapage",
+        "id": 3,
+        "quest": "Продаются ли у вас в магазине товары под заказ, которые можно купить только по предоплате?",
+        "bool": false,
+        "answer": "Система кредитования и рассрочки действует в организации при обращении к кредитным специалистам, которые оформят вам договор по предложенным кредитным продуктам от банка, в который будет подана заявка."
+      },
+      {
+        "catalog": "qapage",
+        "id": 4,
+        "quest": "Какая минимальная сумма заказа?",
+        "bool": false,
+        "answer": "Система кредитования и рассрочки действует в организации при обращении к кредитным специалистам, которые оформят вам договор по предложенным кредитным продуктам от банка, в который будет подана заявка."
+      },
+      {
+        "catalog": "qapage",
+        "id": 5,
+        "quest": "Есть ли у вас бесплатная доставка?",
+        "bool": false,
+        "answer": "Система кредитования и рассрочки действует в организации при обращении к кредитным специалистам, которые оформят вам договор по предложенным кредитным продуктам от банка, в который будет подана заявка."
+      },
+      {
+        "catalog": "qapage",
+        "id": 6,
+        "quest": "Есть ли возможность оформить рассрочку или кредит при покупке? Если есть, то какие условия?",
+        "bool": false,
+        "answer": "Система кредитования и рассрочки действует в организации при обращении к кредитным специалистам, которые оформят вам договор по предложенным кредитным продуктам от банка, в который будет подана заявка."
+      },
+      {
+        "catalog": "qapage",
+        "id": 7,
+        "quest": "Возможно ли проверить инструмент или технику перед покупкой?",
+        "bool": false,
+        "answer": "Система кредитования и рассрочки действует в организации при обращении к кредитным специалистам, которые оформят вам договор по предложенным кредитным продуктам от банка, в который будет подана заявка."
+      },
+      {
+        "catalog": "qapage",
+        "id": 8,
+        "quest": "Какие дополнительные услуги есть у вас?",
+        "bool": false,
+        "answer": "Система кредитования и рассрочки действует в организации при обращении к кредитным специалистам, которые оформят вам договор по предложенным кредитным продуктам от банка, в который будет подана заявка."
+      },
+      {
+        "catalog": "qapage",
+        "id": 9,
+        "quest": "Как часто у вас проходят акции?",
+        "bool": false,
+        "answer": "Система кредитования и рассрочки действует в организации при обращении к кредитным специалистам, которые оформят вам договор по предложенным кредитным продуктам от банка, в который будет подана заявка."
+      }
+    ],
+    "refundPage": [
+      {
+        "catalog": "refundPage",
+        "id": 1,
+        "quest": "Куда обращаться в случае поломки в течении гарантийного срока?",
+        "bool": false,
+        "answer": "Проводится платная диагностика и ремонт товара"
+      },
+      {
+        "catalog": "refundPage",
+        "id": 2,
+        "quest": "Куда обращаться в случае поломки в течении гарантийного срока?",
+        "bool": false,
+        "answer": "Проводится платная диагностика и ремонт товара"
+      },
+      {
+        "catalog": "refundPage",
+        "id": 3,
+        "quest": "Есть ли гарантийный ремонт?",
+        "bool": false,
+        "answer": "Проводится платная диагностика и ремонт товара"
+      },
+      {
+        "catalog": "refundPage",
+        "id": 4,
+        "quest": "Какой срок действия гарантии?",
+        "bool": false,
+        "answer": "Проводится платная диагностика и ремонт товара"
+      }
+    ]
   }
 }
