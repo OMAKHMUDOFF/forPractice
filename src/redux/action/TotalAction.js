@@ -54,6 +54,19 @@ function delGoods(p) {
   };
 }
 
+function singleCountIn(p) {
+  return {
+    type: TotalTypes.singleIn,
+    payload: p,
+  };
+}
+function singleCountDec(p) {
+  return {
+    type: TotalTypes.singleDec,
+    payload: p,
+  };
+}
+
 export {
   answerOpen,
   chooseCategory1,
@@ -63,4 +76,6 @@ export {
   delGoods,
   setTotalCart,
   setTotalLike,
+  singleCountDec,
+  singleCountIn,
 };

@@ -1045,7 +1045,7 @@ export default function TotalRedux(state = totalData, { type, payload }) {
             { ...payload, stock: parseInt(Math.random() * 30) },
           ],
         };
-        toast.success("Вы успещно добавили продукт в корзину");
+        toast.success("Вы успешно добавили продукт в корзину");
       } else {
         toast.error("Этот продукт уже есть в корзине!");
       }
@@ -1085,6 +1085,26 @@ export default function TotalRedux(state = totalData, { type, payload }) {
         toast.warn("Вы отменили");
       }
 
+      return state;
+    case TotalTypes.singleIn:
+      if (payload.count < 10) {
+        state = {
+          ...state,
+          [payload.catalog]: state?.[payload.catalog].map((elem) =>
+            elem.id === payload.id ? { ...elem, count: elem.count + 1 } : elem
+          ),
+        };
+      }
+      return state;
+    case TotalTypes.singleDec:
+      if (payload.count > 1) {
+        state = {
+          ...state,
+          [payload.catalog]: state?.[payload.catalog].map((elem) =>
+            elem.id === payload.id ? { ...elem, count: elem.count - 1 } : elem
+          ),
+        };
+      }
       return state;
     default:
       return state;

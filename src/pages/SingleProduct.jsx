@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 // Import Swiper styles
 import Slider from "react-slick";
@@ -8,10 +8,19 @@ import "slick-carousel/slick/slick.css";
 import "./singleProdstyle/singleprod.css";
 
 import { BsBox2Fill, BsCreditCard2Front } from "react-icons/bs";
-import { FaRegAddressCard } from "react-icons/fa";
+import { FaHeart, FaRegAddressCard, FaRegHeart } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
 import { TbDiscount } from "react-icons/tb";
 import TitleNavigation from "../components/UI/TitleNavigationUI";
+import {
+  setTotalCart,
+  setTotalLike,
+  singleCountDec,
+  singleCountIn,
+} from "../redux/action/TotalAction";
+import ButtonUi from "../components/UI/ButtonUi";
+import { FiBarChart2 } from "react-icons/fi";
 
 function SingleProduct() {
   const [nav1, setNav1] = useState(null);
@@ -31,6 +40,7 @@ function SingleProduct() {
   let singleData = [...bestOffers, ...bestSellers, ...goodsArr];
   let product = singleData.filter((elem) => elem?.id === +prodID?.id)?.[0];
   const { images } = product;
+  const dispatch = useDispatch();
 
   return (
     <section className="SingleProduct">
@@ -46,7 +56,6 @@ function SingleProduct() {
             ref={slider2}
             slidesToShow={5}
             swipeToSlide={true}
-            focusOnSelect={true}
             arrows={false}
             vertical={true}
           >
@@ -63,7 +72,7 @@ function SingleProduct() {
           </button>
         </div>
         <div className="rightSingle">
-          <Slider asNavFor={nav2} ref={slider1} arrows={false} vertical={true}>
+          <Slider asNavFor={nav2} ref={slider1} arrows={false} vertical={true} >
             {images?.map((el, index) => {
               return (
                 <figure key={index}>
@@ -115,6 +124,75 @@ function SingleProduct() {
                 style={{ strokeWidth: "1.6px", stroke: "#9BA4AB" }}
               />
               <p>Делаем скидки на крупные покупки</p>
+            </div>
+          </div>
+        </div>
+        <div className="buy_addCart">
+          <div className="productArt">
+            <p>Артикул: {product.art}</p>
+          </div>
+          <div className="inStock">
+            <p>
+              <FaCheck style={{ color: "#1B9665" }} /> В наличии
+            </p>
+          </div>
+          <div className="productDiscPrice">
+            <div className="discPrice">
+              <p>{product.price - (product.price / 100) * product.disc} ₽</p>
+            </div>
+            <div className="withoutDiscPrice">
+              <del>{product.price} ₽</del>
+            </div>
+            <div className="discPercentage">
+              <p>-{product.disc}%</p>
+            </div>
+          </div>
+          <div className="countToBuy">
+            <p className="countTitle">Количество: </p>
+            <div className="count_decr_incr">
+              <button onClick={() => dispatch(singleCountDec(product))}>
+                -
+              </button>
+              <p>{product.count}</p>
+              <button onClick={() => dispatch(singleCountIn(product))}>
+                +
+              </button>
+            </div>
+          </div>
+          <div className="addToCart">
+            <ButtonUi
+              action={() => dispatch(setTotalCart(product))}
+              title={"Добавить в корзину"}
+              variant={"secondary"}
+              fw={700}
+              fz={13}
+              br={"8px"}
+              pad={"24px 73px"}
+            />
+          </div>
+          <div className="buyOneClick">
+            <ButtonUi
+              title={"Купить в 1 клик"}
+              variant={"primary"}
+              fw={550}
+              fz={15}
+              br={"8px"}
+              pad={"24px 79px"}
+            />
+          </div>
+
+          <div className="compareAddFav">
+            <div className="addFav_BTN">
+              <button onClick={() => dispatch(setTotalLike(product))}>
+                {product.like ? <FaHeart /> : <FaRegHeart />}
+              </button>
+              <p>в Избранное</p>
+            </div>
+            <div className="compareBtn">
+              <button>
+                <FiBarChart2 />
+              </button>
+              <p>Сравнить</p>
             </div>
           </div>
         </div>
