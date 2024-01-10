@@ -13,12 +13,12 @@
         "catalog": "bestSellers",
         "hit": true,
         "images": [
-          "./img/homePage_IMG/Rectangle 22.png",
-          "./img/homePage_IMG/Rectangle 22.png",
-          "./img/homePage_IMG/Rectangle 22.png",
-          "./img/homePage_IMG/Rectangle 22.png",
-          "./img/homePage_IMG/Rectangle 22.png",
-          "./img/homePage_IMG/Rectangle 22.png"
+          "../../img/homePage_IMG/Rectangle 22.png",
+          "../../img/homePage_IMG/Rectangle 22.png",
+          "../../img/homePage_IMG/Rectangle 22.png",
+          "../../img/homePage_IMG/Rectangle 22.png",
+          "../../img/homePage_IMG/Rectangle 22.png",
+          "../../img/homePage_IMG/Rectangle 22.png"
         ],
         "count": 1
       },
@@ -34,12 +34,12 @@
         "img": "./img/homePage_IMG/smesitel.png",
         "hit": true,
         "images": [
-          "./img/homePage_IMG/smesitel.png",
-          "./img/homePage_IMG/smesitel.png",
-          "./img/homePage_IMG/smesitel.png",
-          "./img/homePage_IMG/smesitel.png",
-          "./img/homePage_IMG/smesitel.png",
-          "./img/homePage_IMG/smesitel.png"
+          "../../img/homePage_IMG/smesitel.png",
+          "../../img/homePage_IMG/smesitel.png",
+          "../../img/homePage_IMG/smesitel.png",
+          "../../img/homePage_IMG/smesitel.png",
+          "../../img/homePage_IMG/smesitel.png",
+          "../../img/homePage_IMG/smesitel.png"
         ],
         "count": 1
       },
@@ -55,13 +55,13 @@
         "img": "./img/homePage_IMG/leska.png",
         "hit": true,
         "images": [
-          "./img/homePage_IMG/leska.png",
-          "./img/homePage_IMG/leska.png",
-          "./img/homePage_IMG/leska.png",
-          "./img/homePage_IMG/leska.png",
-          "./img/homePage_IMG/leska.png",
-          "./img/homePage_IMG/leska.png",
-          "./img/homePage_IMG/leska.png"
+          "../../img/homePage_IMG/leska.png",
+          "../../img/homePage_IMG/leska.png",
+          "../../img/homePage_IMG/leska.png",
+          "../../img/homePage_IMG/leska.png",
+          "../../img/homePage_IMG/leska.png",
+          "../../img/homePage_IMG/leska.png",
+          "../../img/homePage_IMG/leska.png"
         ],
         "count": 1
       },
@@ -77,12 +77,12 @@
         "img": "./img/homePage_IMG/unitaz.png",
         "hit": true,
         "images": [
-          "./img/homePage_IMG/unitaz.png",
-          "./img/homePage_IMG/unitaz.png",
-          "./img/homePage_IMG/unitaz.png",
-          "./img/homePage_IMG/unitaz.png",
-          "./img/homePage_IMG/unitaz.png",
-          "./img/homePage_IMG/unitaz.png"
+          "../../img/homePage_IMG/unitaz.png",
+          "../../img/homePage_IMG/unitaz.png",
+          "../../img/homePage_IMG/unitaz.png",
+          "../../img/homePage_IMG/unitaz.png",
+          "../../img/homePage_IMG/unitaz.png",
+          "../../img/homePage_IMG/unitaz.png"
         ],
         "count": 1
       },
@@ -98,12 +98,12 @@
         "hit": true,
         "img": "./img/homePage_IMG/kley.png",
         "images": [
-          "./img/homePage_IMG/kley.png",
-          "./img/homePage_IMG/kley.png",
-          "./img/homePage_IMG/kley.png",
-          "./img/homePage_IMG/kley.png",
-          "./img/homePage_IMG/kley.png",
-          "./img/homePage_IMG/kley.png"
+          "../../img/homePage_IMG/kley.png",
+          "../../img/homePage_IMG/kley.png",
+          "../../img/homePage_IMG/kley.png",
+          "../../img/homePage_IMG/kley.png",
+          "../../img/homePage_IMG/kley.png",
+          "../../img/homePage_IMG/kley.png"
         ],
         "count": 1
       }
@@ -122,12 +122,12 @@
         "catalog": "bestOffers",
         "new": false,
         "images": [
-          "./img/catalogGOODS/nabor.png",
-          "./img/catalogGOODS/nabor.png",
-          "./img/catalogGOODS/nabor.png",
-          "./img/catalogGOODS/nabor.png",
-          "./img/catalogGOODS/nabor.png",
-          "./img/catalogGOODS/nabor.png"
+          "../../img/catalogGOODS/nabor.png",
+          "../../img/catalogGOODS/nabor.png",
+          "../../img/catalogGOODS/nabor.png",
+          "../../img/catalogGOODS/nabor.png",
+          "../../img/catalogGOODS/nabor.png",
+          "../../img/catalogGOODS/nabor.png"
         ],
         "count": 1
       },
@@ -143,12 +143,12 @@
         "sale": true,
         "catalog": "bestOffers",
         "images": [
-          "./img/homePage_IMG/termostat.png",
-          "./img/homePage_IMG/termostat.png",
-          "./img/homePage_IMG/termostat.png",
-          "./img/homePage_IMG/termostat.png",
-          "./img/homePage_IMG/termostat.png",
-          "./img/homePage_IMG/termostat.png"
+          "../../img/homePage_IMG/termostat.png",
+          "../../img/homePage_IMG/termostat.png",
+          "../../img/homePage_IMG/termostat.png",
+          "../../img/homePage_IMG/termostat.png",
+          "../../img/homePage_IMG/termostat.png",
+          "../../img/homePage_IMG/termostat.png"
         ],
         "count": 1,
         "new": false
@@ -165,12 +165,12 @@
         "new": false,
         "catalog": "bestOffers",
         "images": [
-          "./img/homePage_IMG/drell_gladiator.png",
-          "./img/homePage_IMG/drell_gladiator.png",
-          "./img/homePage_IMG/drell_gladiator.png",
-          "./img/homePage_IMG/drell_gladiator.png",
-          "./img/homePage_IMG/drell_gladiator.png",
-          "./img/homePage_IMG/drell_gladiator.png"
+          "../../img/homePage_IMG/drell_gladiator.png",
+          "../../img/homePage_IMG/drell_gladiator.png",
+          "../../img/homePage_IMG/drell_gladiator.png",
+          "../../img/homePage_IMG/drell_gladiator.png",
+          "../../img/homePage_IMG/drell_gladiator.png",
+          "../../img/homePage_IMG/drell_gladiator.png"
         ],
         "count": 1,
         "sale": false
@@ -188,12 +188,12 @@
         "catalog": "bestOffers",
         "new": true,
         "images": [
-          "./img/homePage_IMG/circular.png",
-          "./img/homePage_IMG/circular.png",
-          "./img/homePage_IMG/circular.png",
-          "./img/homePage_IMG/circular.png",
-          "./img/homePage_IMG/circular.png",
-          "./img/homePage_IMG/circular.png"
+          "../../img/homePage_IMG/circular.png",
+          "../../img/homePage_IMG/circular.png",
+          "../../img/homePage_IMG/circular.png",
+          "../../img/homePage_IMG/circular.png",
+          "../../img/homePage_IMG/circular.png",
+          "../../img/homePage_IMG/circular.png"
         ],
         "count": 1
       },
@@ -209,12 +209,12 @@
         "sale": false,
         "catalog": "bestOffers",
         "images": [
-          "./img/homePage_IMG/vodno_kley.png",
-          "./img/homePage_IMG/vodno_kley.png",
-          "./img/homePage_IMG/vodno_kley.png",
-          "./img/homePage_IMG/vodno_kley.png",
-          "./img/homePage_IMG/vodno_kley.png",
-          "./img/homePage_IMG/vodno_kley.png"
+          "../../img/homePage_IMG/vodno_kley.png",
+          "../../img/homePage_IMG/vodno_kley.png",
+          "../../img/homePage_IMG/vodno_kley.png",
+          "../../img/homePage_IMG/vodno_kley.png",
+          "../../img/homePage_IMG/vodno_kley.png",
+          "../../img/homePage_IMG/vodno_kley.png"
         ],
         "count": 1,
         "new": false
@@ -235,12 +235,12 @@
         "category": "Сантехника",
         "brand": "MAKITA",
         "images": [
-          "./img/catalogGOODS/perforator.png",
-          "./img/catalogGOODS/perforator.png",
-          "./img/catalogGOODS/perforator.png",
-          "./img/catalogGOODS/perforator.png",
-          "./img/catalogGOODS/perforator.png",
-          "./img/catalogGOODS/perforator.png"
+          "../../img/catalogGOODS/perforator.png",
+          "../../img/catalogGOODS/perforator.png",
+          "../../img/catalogGOODS/perforator.png",
+          "../../img/catalogGOODS/perforator.png",
+          "../../img/catalogGOODS/perforator.png",
+          "../../img/catalogGOODS/perforator.png"
         ],
         "count": 1
       },
@@ -256,12 +256,12 @@
         "disc": 0,
         "color": "серый",
         "images": [
-          "./img/catalogGOODS/bolgarka1.png",
-          "./img/catalogGOODS/bolgarka1.png",
-          "./img/catalogGOODS/bolgarka1.png",
-          "./img/catalogGOODS/bolgarka1.png",
-          "./img/catalogGOODS/bolgarka1.png",
-          "./img/catalogGOODS/bolgarka1.png"
+          "../../img/catalogGOODS/bolgarka1.png",
+          "../../img/catalogGOODS/bolgarka1.png",
+          "../../img/catalogGOODS/bolgarka1.png",
+          "../../img/catalogGOODS/bolgarka1.png",
+          "../../img/catalogGOODS/bolgarka1.png",
+          "../../img/catalogGOODS/bolgarka1.png"
         ],
         "count": 1,
         "category": "Сантехника"
@@ -277,12 +277,12 @@
         "hit": false,
         "color": "серый",
         "images": [
-          "./img/catalogGOODS/circular_pila_bosch.png",
-          "./img/catalogGOODS/circular_pila_bosch.png",
-          "./img/catalogGOODS/circular_pila_bosch.png",
-          "./img/catalogGOODS/circular_pila_bosch.png",
-          "./img/catalogGOODS/circular_pila_bosch.png",
-          "./img/catalogGOODS/circular_pila_bosch.png"
+          "../../img/catalogGOODS/circular_pila_bosch.png",
+          "../../img/catalogGOODS/circular_pila_bosch.png",
+          "../../img/catalogGOODS/circular_pila_bosch.png",
+          "../../img/catalogGOODS/circular_pila_bosch.png",
+          "../../img/catalogGOODS/circular_pila_bosch.png",
+          "../../img/catalogGOODS/circular_pila_bosch.png"
         ],
         "count": 1,
         "disc": 10,
@@ -299,12 +299,12 @@
         "color": "синий",
         "hit": true,
         "images": [
-          "./img/catalogGOODS/shlifovka.png",
-          "./img/catalogGOODS/shlifovka.png",
-          "./img/catalogGOODS/shlifovka.png",
-          "./img/catalogGOODS/shlifovka.png",
-          "./img/catalogGOODS/shlifovka.png",
-          "./img/catalogGOODS/shlifovka.png"
+          "../../img/catalogGOODS/shlifovka.png",
+          "../../img/catalogGOODS/shlifovka.png",
+          "../../img/catalogGOODS/shlifovka.png",
+          "../../img/catalogGOODS/shlifovka.png",
+          "../../img/catalogGOODS/shlifovka.png",
+          "../../img/catalogGOODS/shlifovka.png"
         ],
         "count": 1,
         "disc": 12,
@@ -323,12 +323,12 @@
         "disc": 15,
         "category": "Набор",
         "images": [
-          "./img/catalogGOODS/nabor.png",
-          "./img/catalogGOODS/nabor.png",
-          "./img/catalogGOODS/nabor.png",
-          "./img/catalogGOODS/nabor.png",
-          "./img/catalogGOODS/nabor.png",
-          "./img/catalogGOODS/nabor.png"
+          "../../img/catalogGOODS/nabor.png",
+          "../../img/catalogGOODS/nabor.png",
+          "../../img/catalogGOODS/nabor.png",
+          "../../img/catalogGOODS/nabor.png",
+          "../../img/catalogGOODS/nabor.png",
+          "../../img/catalogGOODS/nabor.png"
         ],
         "count": 1
       },
@@ -345,12 +345,12 @@
         "disc": 15,
         "category": "Инструмент",
         "images": [
-          "./img/catalogGOODS/circular_pila_zubr.png",
-          "./img/catalogGOODS/circular_pila_zubr.png",
-          "./img/catalogGOODS/circular_pila_zubr.png",
-          "./img/catalogGOODS/circular_pila_zubr.png",
-          "./img/catalogGOODS/circular_pila_zubr.png",
-          "./img/catalogGOODS/circular_pila_zubr.png"
+          "../../img/catalogGOODS/circular_pila_zubr.png",
+          "../../img/catalogGOODS/circular_pila_zubr.png",
+          "../../img/catalogGOODS/circular_pila_zubr.png",
+          "../../img/catalogGOODS/circular_pila_zubr.png",
+          "../../img/catalogGOODS/circular_pila_zubr.png",
+          "../../img/catalogGOODS/circular_pila_zubr.png"
         ],
         "count": 1
       },
@@ -365,12 +365,12 @@
         "color": "серый",
         "hit": true,
         "images": [
-          "./img/catalogGOODS/bolgarka2.png",
-          "./img/catalogGOODS/bolgarka2.png",
-          "./img/catalogGOODS/bolgarka2.png",
-          "./img/catalogGOODS/bolgarka2.png",
-          "./img/catalogGOODS/bolgarka2.png",
-          "./img/catalogGOODS/bolgarka2.png"
+          "../../img/catalogGOODS/bolgarka2.png",
+          "../../img/catalogGOODS/bolgarka2.png",
+          "../../img/catalogGOODS/bolgarka2.png",
+          "../../img/catalogGOODS/bolgarka2.png",
+          "../../img/catalogGOODS/bolgarka2.png",
+          "../../img/catalogGOODS/bolgarka2.png"
         ],
         "count": 1,
         "disc": 0,
@@ -388,11 +388,11 @@
         "hit": false,
         "disc": 10,
         "images": [
-          "./img/catalogGOODS/drell_makita_s_ruchkoy.png",
-          "./img/catalogGOODS/drell_makita_s_ruchkoy.png",
-          "./img/catalogGOODS/drell_makita_s_ruchkoy.png",
-          "./img/catalogGOODS/drell_makita_s_ruchkoy.png",
-          "./img/catalogGOODS/drell_makita_s_ruchkoy.png"
+          "../../img/catalogGOODS/drell_makita_s_ruchkoy.png",
+          "../../img/catalogGOODS/drell_makita_s_ruchkoy.png",
+          "../../img/catalogGOODS/drell_makita_s_ruchkoy.png",
+          "../../img/catalogGOODS/drell_makita_s_ruchkoy.png",
+          "../../img/catalogGOODS/drell_makita_s_ruchkoy.png"
         ],
         "count": 1,
         "category": "Сантехника"
@@ -409,11 +409,11 @@
         "hit": false,
         "disc": 15,
         "images": [
-          "./img/catalogGOODS/betonomeshalka.png",
-          "./img/catalogGOODS/betonomeshalka.png",
-          "./img/catalogGOODS/betonomeshalka.png",
-          "./img/catalogGOODS/betonomeshalka.png",
-          "./img/catalogGOODS/betonomeshalka.png"
+          "../../img/catalogGOODS/betonomeshalka.png",
+          "../../img/catalogGOODS/betonomeshalka.png",
+          "../../img/catalogGOODS/betonomeshalka.png",
+          "../../img/catalogGOODS/betonomeshalka.png",
+          "../../img/catalogGOODS/betonomeshalka.png"
         ],
         "count": 1,
         "category": "Инструмент"
@@ -431,11 +431,11 @@
         "disc": 12,
         "category": "Инструмент",
         "images": [
-          "./img/catalogGOODS/perforator_bosch.png",
-          "./img/catalogGOODS/perforator_bosch.png",
-          "./img/catalogGOODS/perforator_bosch.png",
-          "./img/catalogGOODS/perforator_bosch.png",
-          "./img/catalogGOODS/perforator_bosch.png"
+          "../../img/catalogGOODS/perforator_bosch.png",
+          "../../img/catalogGOODS/perforator_bosch.png",
+          "../../img/catalogGOODS/perforator_bosch.png",
+          "../../img/catalogGOODS/perforator_bosch.png",
+          "../../img/catalogGOODS/perforator_bosch.png"
         ],
         "count": 1
       },
@@ -451,11 +451,11 @@
         "hit": false,
         "disc": 15,
         "images": [
-          "./img/catalogGOODS/constr_mixer.png",
-          "./img/catalogGOODS/constr_mixer.png",
-          "./img/catalogGOODS/constr_mixer.png",
-          "./img/catalogGOODS/constr_mixer.png",
-          "./img/catalogGOODS/constr_mixer.png"
+          "../../img/catalogGOODS/constr_mixer.png",
+          "../../img/catalogGOODS/constr_mixer.png",
+          "../../img/catalogGOODS/constr_mixer.png",
+          "../../img/catalogGOODS/constr_mixer.png",
+          "../../img/catalogGOODS/constr_mixer.png"
         ],
         "count": 1,
         "category": "Инструмент"
@@ -473,32 +473,11 @@
         "disc": 15,
         "category": "Сантехника",
         "images": [
-          "./img/catalogGOODS/drell_makita_bez_ruchki.png",
-          "./img/catalogGOODS/drell_makita_bez_ruchki.png",
-          "./img/catalogGOODS/drell_makita_bez_ruchki.png",
-          "./img/catalogGOODS/drell_makita_bez_ruchki.png",
-          "./img/catalogGOODS/drell_makita_bez_ruchki.png"
-        ],
-        "count": 1
-      },
-      {
-        "catalog": "goodsArr",
-        "id": 23,
-        "img": "./img/catalogGOODS/bolgarka_makita.png",
-        "art": "XJ89YHGO",
-        "prodName": "Смеситель Faris G-120 для раковины",
-        "price": 1789,
-        "like": false,
-        "color": "синий",
-        "hit": true,
-        "disc": 0,
-        "category": "Инструмент",
-        "images": [
-          "./img/catalogGOODS/bolgarka_makita.png",
-          "./img/catalogGOODS/bolgarka_makita.png",
-          "./img/catalogGOODS/bolgarka_makita.png",
-          "./img/catalogGOODS/bolgarka_makita.png",
-          "./img/catalogGOODS/bolgarka_makita.png"
+          "../../img/catalogGOODS/drell_makita_bez_ruchki.png",
+          "../../img/catalogGOODS/drell_makita_bez_ruchki.png",
+          "../../img/catalogGOODS/drell_makita_bez_ruchki.png",
+          "../../img/catalogGOODS/drell_makita_bez_ruchki.png",
+          "../../img/catalogGOODS/drell_makita_bez_ruchki.png"
         ],
         "count": 1
       },
@@ -515,11 +494,11 @@
         "disc": 10,
         "category": "Инструмент",
         "images": [
-          "./img/catalogGOODS/shlifovka_zubr.png",
-          "./img/catalogGOODS/shlifovka_zubr.png",
-          "./img/catalogGOODS/shlifovka_zubr.png",
-          "./img/catalogGOODS/shlifovka_zubr.png",
-          "./img/catalogGOODS/shlifovka_zubr.png"
+          "../../img/catalogGOODS/shlifovka_zubr.png",
+          "../../img/catalogGOODS/shlifovka_zubr.png",
+          "../../img/catalogGOODS/shlifovka_zubr.png",
+          "../../img/catalogGOODS/shlifovka_zubr.png",
+          "../../img/catalogGOODS/shlifovka_zubr.png"
         ],
         "count": 1
       },
@@ -536,11 +515,11 @@
         "disc": 12,
         "category": "Инструмент",
         "images": [
-          "./img/catalogGOODS/lobzik_makita.png",
-          "./img/catalogGOODS/lobzik_makita.png",
-          "./img/catalogGOODS/lobzik_makita.png",
-          "./img/catalogGOODS/lobzik_makita.png",
-          "./img/catalogGOODS/lobzik_makita.png"
+          "../../img/catalogGOODS/lobzik_makita.png",
+          "../../img/catalogGOODS/lobzik_makita.png",
+          "../../img/catalogGOODS/lobzik_makita.png",
+          "../../img/catalogGOODS/lobzik_makita.png",
+          "../../img/catalogGOODS/lobzik_makita.png"
         ],
         "count": 1
       },
@@ -557,11 +536,11 @@
         "disc": 15,
         "category": "Сантехника",
         "images": [
-          "./img/catalogGOODS/shlifovka_makita.png",
-          "./img/catalogGOODS/shlifovka_makita.png",
-          "./img/catalogGOODS/shlifovka_makita.png",
-          "./img/catalogGOODS/shlifovka_makita.png",
-          "./img/catalogGOODS/shlifovka_makita.png"
+          "../../img/catalogGOODS/shlifovka_makita.png",
+          "../../img/catalogGOODS/shlifovka_makita.png",
+          "../../img/catalogGOODS/shlifovka_makita.png",
+          "../../img/catalogGOODS/shlifovka_makita.png",
+          "../../img/catalogGOODS/shlifovka_makita.png"
         ],
         "count": 1
       },
@@ -578,11 +557,11 @@
         "disc": 10,
         "category": "Сантехника",
         "images": [
-          "./img/catalogGOODS/stanok_vixr.png",
-          "./img/catalogGOODS/stanok_vixr.png",
-          "./img/catalogGOODS/stanok_vixr.png",
-          "./img/catalogGOODS/stanok_vixr.png",
-          "./img/catalogGOODS/stanok_vixr.png"
+          "../../img/catalogGOODS/stanok_vixr.png",
+          "../../img/catalogGOODS/stanok_vixr.png",
+          "../../img/catalogGOODS/stanok_vixr.png",
+          "../../img/catalogGOODS/stanok_vixr.png",
+          "../../img/catalogGOODS/stanok_vixr.png"
         ],
         "count": 1
       },
@@ -599,11 +578,11 @@
         "disc": 15,
         "category": "Набор",
         "images": [
-          "./img/catalogGOODS/graver_zubr.png",
-          "./img/catalogGOODS/graver_zubr.png",
-          "./img/catalogGOODS/graver_zubr.png",
-          "./img/catalogGOODS/graver_zubr.png",
-          "./img/catalogGOODS/graver_zubr.png"
+          "../../img/catalogGOODS/graver_zubr.png",
+          "../../img/catalogGOODS/graver_zubr.png",
+          "../../img/catalogGOODS/graver_zubr.png",
+          "../../img/catalogGOODS/graver_zubr.png",
+          "../../img/catalogGOODS/graver_zubr.png"
         ],
         "count": 1
       },
@@ -620,11 +599,11 @@
         "disc": 12,
         "category": "Инструмент",
         "images": [
-          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png",
-          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png",
-          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png",
-          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png",
-          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png"
+          "../../img/catalogGOODS/drell_makita_bez_ruchki_2.png",
+          "../../img/catalogGOODS/drell_makita_bez_ruchki_2.png",
+          "../../img/catalogGOODS/drell_makita_bez_ruchki_2.png",
+          "../../img/catalogGOODS/drell_makita_bez_ruchki_2.png",
+          "../../img/catalogGOODS/drell_makita_bez_ruchki_2.png"
         ],
         "count": 1
       },
@@ -641,11 +620,11 @@
         "disc": 0,
         "category": "Инструмент",
         "images": [
-          "./img/catalogGOODS/perforator_bosch_siniy.png",
-          "./img/catalogGOODS/perforator_bosch_siniy.png",
-          "./img/catalogGOODS/perforator_bosch_siniy.png",
-          "./img/catalogGOODS/perforator_bosch_siniy.png",
-          "./img/catalogGOODS/perforator_bosch_siniy.png"
+          "../../img/catalogGOODS/perforator_bosch_siniy.png",
+          "../../img/catalogGOODS/perforator_bosch_siniy.png",
+          "../../img/catalogGOODS/perforator_bosch_siniy.png",
+          "../../img/catalogGOODS/perforator_bosch_siniy.png",
+          "../../img/catalogGOODS/perforator_bosch_siniy.png"
         ],
         "count": 1
       },
@@ -662,11 +641,11 @@
         "disc": 15,
         "category": "Сантехника",
         "images": [
-          "./img/catalogGOODS/drell_PIT.png",
-          "./img/catalogGOODS/drell_PIT.png",
-          "./img/catalogGOODS/drell_PIT.png",
-          "./img/catalogGOODS/drell_PIT.png",
-          "./img/catalogGOODS/drell_PIT.png"
+          "../../img/catalogGOODS/drell_PIT.png",
+          "../../img/catalogGOODS/drell_PIT.png",
+          "../../img/catalogGOODS/drell_PIT.png",
+          "../../img/catalogGOODS/drell_PIT.png",
+          "../../img/catalogGOODS/drell_PIT.png"
         ],
         "count": 1
       },
@@ -683,11 +662,11 @@
         "disc": 12,
         "category": "Стойка",
         "images": [
-          "./img/catalogGOODS/perforator_zubr.png",
-          "./img/catalogGOODS/perforator_zubr.png",
-          "./img/catalogGOODS/perforator_zubr.png",
-          "./img/catalogGOODS/perforator_zubr.png",
-          "./img/catalogGOODS/perforator_zubr.png"
+          "../../img/catalogGOODS/perforator_zubr.png",
+          "../../img/catalogGOODS/perforator_zubr.png",
+          "../../img/catalogGOODS/perforator_zubr.png",
+          "../../img/catalogGOODS/perforator_zubr.png",
+          "../../img/catalogGOODS/perforator_zubr.png"
         ],
         "count": 1
       },
@@ -704,11 +683,11 @@
         "disc": 15,
         "category": "Стойка",
         "images": [
-          "./img/catalogGOODS/stanok_vixr.png",
-          "./img/catalogGOODS/stanok_vixr.png",
-          "./img/catalogGOODS/stanok_vixr.png",
-          "./img/catalogGOODS/stanok_vixr.png",
-          "./img/catalogGOODS/stanok_vixr.png"
+          "../../img/catalogGOODS/stanok_vixr.png",
+          "../../img/catalogGOODS/stanok_vixr.png",
+          "../../img/catalogGOODS/stanok_vixr.png",
+          "../../img/catalogGOODS/stanok_vixr.png",
+          "../../img/catalogGOODS/stanok_vixr.png"
         ],
         "count": 1
       },
@@ -725,11 +704,11 @@
         "disc": 10,
         "category": "Набор",
         "images": [
-          "./img/catalogGOODS/rubanok_vixr.png",
-          "./img/catalogGOODS/rubanok_vixr.png",
-          "./img/catalogGOODS/rubanok_vixr.png",
-          "./img/catalogGOODS/rubanok_vixr.png",
-          "./img/catalogGOODS/rubanok_vixr.png"
+          "../../img/catalogGOODS/rubanok_vixr.png",
+          "../../img/catalogGOODS/rubanok_vixr.png",
+          "../../img/catalogGOODS/rubanok_vixr.png",
+          "../../img/catalogGOODS/rubanok_vixr.png",
+          "../../img/catalogGOODS/rubanok_vixr.png"
         ],
         "count": 1
       },
@@ -746,11 +725,11 @@
         "disc": 10,
         "category": "Сантехника",
         "images": [
-          "./img/catalogGOODS/perforator_PIT.png",
-          "./img/catalogGOODS/perforator_PIT.png",
-          "./img/catalogGOODS/perforator_PIT.png",
-          "./img/catalogGOODS/perforator_PIT.png",
-          "./img/catalogGOODS/perforator_PIT.png"
+          "../../img/catalogGOODS/perforator_PIT.png",
+          "../../img/catalogGOODS/perforator_PIT.png",
+          "../../img/catalogGOODS/perforator_PIT.png",
+          "../../img/catalogGOODS/perforator_PIT.png",
+          "../../img/catalogGOODS/perforator_PIT.png"
         ],
         "count": 1
       },
@@ -767,11 +746,11 @@
         "disc": 15,
         "category": "Сантехника",
         "images": [
-          "./img/catalogGOODS/kley_pistolet_stayer.png",
-          "./img/catalogGOODS/kley_pistolet_stayer.png",
-          "./img/catalogGOODS/kley_pistolet_stayer.png",
-          "./img/catalogGOODS/kley_pistolet_stayer.png",
-          "./img/catalogGOODS/kley_pistolet_stayer.png"
+          "../../img/catalogGOODS/kley_pistolet_stayer.png",
+          "../../img/catalogGOODS/kley_pistolet_stayer.png",
+          "../../img/catalogGOODS/kley_pistolet_stayer.png",
+          "../../img/catalogGOODS/kley_pistolet_stayer.png",
+          "../../img/catalogGOODS/kley_pistolet_stayer.png"
         ],
         "count": 1
       },
@@ -788,11 +767,11 @@
         "disc": 15,
         "category": "Набор",
         "images": [
-          "./img/catalogGOODS/nabor.png",
-          "./img/catalogGOODS/nabor.png",
-          "./img/catalogGOODS/nabor.png",
-          "./img/catalogGOODS/nabor.png",
-          "./img/catalogGOODS/nabor.png"
+          "../../img/catalogGOODS/nabor.png",
+          "../../img/catalogGOODS/nabor.png",
+          "../../img/catalogGOODS/nabor.png",
+          "../../img/catalogGOODS/nabor.png",
+          "../../img/catalogGOODS/nabor.png"
         ],
         "count": 1
       },
@@ -808,11 +787,11 @@
         "hit": true,
         "disc": 0,
         "images": [
-          "./img/catalogGOODS/rubanok_makita.png",
-          "./img/catalogGOODS/rubanok_makita.png",
-          "./img/catalogGOODS/rubanok_makita.png",
-          "./img/catalogGOODS/rubanok_makita.png",
-          "./img/catalogGOODS/rubanok_makita.png"
+          "../../img/catalogGOODS/rubanok_makita.png",
+          "../../img/catalogGOODS/rubanok_makita.png",
+          "../../img/catalogGOODS/rubanok_makita.png",
+          "../../img/catalogGOODS/rubanok_makita.png",
+          "../../img/catalogGOODS/rubanok_makita.png"
         ],
         "count": 1,
         "category": "Стойка"
@@ -830,11 +809,11 @@
         "disc": 0,
         "category": "Держатель",
         "images": [
-          "./img/catalogGOODS/pilesos_zubr.png",
-          "./img/catalogGOODS/pilesos_zubr.png",
-          "./img/catalogGOODS/pilesos_zubr.png",
-          "./img/catalogGOODS/pilesos_zubr.png",
-          "./img/catalogGOODS/pilesos_zubr.png"
+          "../../img/catalogGOODS/pilesos_zubr.png",
+          "../../img/catalogGOODS/pilesos_zubr.png",
+          "../../img/catalogGOODS/pilesos_zubr.png",
+          "../../img/catalogGOODS/pilesos_zubr.png",
+          "../../img/catalogGOODS/pilesos_zubr.png"
         ],
         "count": 1
       },
@@ -851,11 +830,11 @@
         "disc": 12,
         "category": "Адаптер",
         "images": [
-          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png",
-          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png",
-          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png",
-          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png",
-          "./img/catalogGOODS/drell_makita_bez_ruchki_2.png"
+          "../../img/catalogGOODS/drell_makita_bez_ruchki_2.png",
+          "../../img/catalogGOODS/drell_makita_bez_ruchki_2.png",
+          "../../img/catalogGOODS/drell_makita_bez_ruchki_2.png",
+          "../../img/catalogGOODS/drell_makita_bez_ruchki_2.png",
+          "../../img/catalogGOODS/drell_makita_bez_ruchki_2.png"
         ],
         "count": 1
       },
@@ -872,11 +851,11 @@
         "disc": 12,
         "category": "Держатель",
         "images": [
-          "./img/catalogGOODS/bolgarka2.png",
-          "./img/catalogGOODS/bolgarka2.png",
-          "./img/catalogGOODS/bolgarka2.png",
-          "./img/catalogGOODS/bolgarka2.png",
-          "./img/catalogGOODS/bolgarka2.png"
+          "../../img/catalogGOODS/bolgarka2.png",
+          "../../img/catalogGOODS/bolgarka2.png",
+          "../../img/catalogGOODS/bolgarka2.png",
+          "../../img/catalogGOODS/bolgarka2.png",
+          "../../img/catalogGOODS/bolgarka2.png"
         ],
         "count": 1
       },
@@ -893,11 +872,11 @@
         "disc": 15,
         "category": "Фильтр",
         "images": [
-          "./img/catalogGOODS/nabor.png",
-          "./img/catalogGOODS/nabor.png",
-          "./img/catalogGOODS/nabor.png",
-          "./img/catalogGOODS/nabor.png",
-          "./img/catalogGOODS/nabor.png"
+          "../../img/catalogGOODS/nabor.png",
+          "../../img/catalogGOODS/nabor.png",
+          "../../img/catalogGOODS/nabor.png",
+          "../../img/catalogGOODS/nabor.png",
+          "../../img/catalogGOODS/nabor.png"
         ],
         "count": 1
       }
