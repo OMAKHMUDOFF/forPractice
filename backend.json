@@ -1042,5 +1042,36 @@
       "count": 1
     }
   },
-  "crud": []
+  "crud": [
+    {
+      "id": "25c1",
+      "prodName": "Перфератор",
+      "price": "12000",
+      "brand": "Makita",
+      "color": "Серый",
+      "category": "Инструменты",
+      "disc": "15",
+      "art": 96183
+    },
+    {
+      "id": "d492",
+      "prodName": "Перфератор",
+      "price": "123",
+      "brand": "Makita",
+      "color": "Серый",
+      "category": "Инструменты",
+      "disc": "15",
+      "art": 68600
+    },
+    {
+      "id": "9c54",
+      "prodName": "Cnfh",
+      "price": "1234455",
+      "brand": "Makita",
+      "color": "белый белый",
+      "category": "Инструменты",
+      "disc": "12",
+      "art": 28775
+    }
+  ]
 }
